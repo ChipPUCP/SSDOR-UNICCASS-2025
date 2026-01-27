@@ -1,4 +1,4 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
@@ -241,6 +241,7 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
+C {SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym} 2350 -580 1 1 {name=x1}
 C {capa.sym} 2880 -800 0 0 {name=C1
 m=1
 value=1p
@@ -267,6 +268,7 @@ m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
+C {SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym} 1140 -580 1 1 {name=x2}
 C {sg13g2_pr/sg13_lv_pmos.sym} 750 -820 0 1 {name=M14
 l=2u
 w=5u
@@ -304,5 +306,3 @@ m=1}
 C {iopin.sym} 1800 -960 0 0 {name=p1 lab=VDD}
 C {iopin.sym} 1800 -180 0 0 {name=p2 lab=GND}
 C {iopin.sym} 1800 -720 0 0 {name=p3 lab=Ibias}
-C {/shared/designs/SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym} 1140 -580 1 1 {name=x1}
-C {/shared/designs/SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym} 2350 -580 1 1 {name=x2}
