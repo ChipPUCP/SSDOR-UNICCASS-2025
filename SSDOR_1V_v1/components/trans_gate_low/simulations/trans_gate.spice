@@ -1,0 +1,41 @@
+** sch_path: /foss/designs/components/trans_gate/trans_gate.sch
+**.subckt trans_gate OUT IN VDD S VSS
+*.ipin S
+*.opin OUT
+*.ipin IN
+*.iopin VDD
+*.iopin VSS
+XM2 IN net2 OUT OUT sg13_lv_nmos w=5u l=0.13u ng=1 m=100
+XM1 OUT net1 IN IN sg13_lv_pmos w=5u l=0.13u ng=1 m=200
+buff1 VDD S net2 VSS tg_buff
+inv1 VSS net2 net1 VDD tg_inverter
+**.ends
+
+* expanding   symbol:  /foss/designs/components/trans_gate/tg_buff.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate/tg_buff.sym
+** sch_path: /foss/designs/components/trans_gate/tg_buff.sch
+.subckt tg_buff VDD IN OUT VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=50
+XM2 net1 IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=25
+XM3 OUT net1 VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=100
+XM4 OUT net1 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=50
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/trans_gate/tg_inverter.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate/tg_inverter.sym
+** sch_path: /foss/designs/components/trans_gate/tg_inverter.sch
+.subckt tg_inverter VSS IN OUT VDD
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 OUT IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=100
+XM2 OUT IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=50
+.ends
+
+.end

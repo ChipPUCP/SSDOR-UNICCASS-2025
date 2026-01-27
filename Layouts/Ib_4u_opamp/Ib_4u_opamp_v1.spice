@@ -1,0 +1,8 @@
+** sch_path: /shared/designs/Layouts/Ib_4u_opamp/Ib_4u_opamp_v1.sch
+.subckt Ib_4u_opamp_v1 VDD Vout V- V+ GND
+*.PININFO VDD:B V+:I V-:I GND:B Vout:O
+M5 Vout net1 VDD VDD sg13_lv_pmos w=1u l=10u ng=1 m=1
+M6 net1 net1 VDD VDD sg13_lv_pmos w=1u l=10u ng=1 m=1
+M7 net1 V+ GND GND sg13_lv_nmos w=10u l=10u ng=1 m=2
+M8 Vout V- GND GND sg13_lv_nmos w=10u l=10u ng=1 m=2
+.ends

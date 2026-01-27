@@ -1,0 +1,287 @@
+** sch_path: /foss/designs/SIDO_1V_v1/SIDO_1V_v1.sch
+**.subckt SIDO_1V_v1
+XM1 Vp Vmux1 Vout_1 Vb1 sg13_lv_pmos w={2*wn} l=0.13u ng={ng} m={m}
+XM2 Vn net5 Vout_1 net1 sg13_lv_pmos w={2*wn} l=0.13u ng={ng} m={m}
+XM3 Vp Vn GND GND sg13_lv_nmos w={wn} l=0.13u ng={ng} m={m}
+XM4 Vn Vp GND GND sg13_lv_nmos w={wn} l=0.13u ng={ng} m={m}
+XM5 Vb1 Vp Vout_1 Vb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM6 Vb1 Vout_1 Vp Vb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM7 net1 Vn Vout_1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM8 net1 Vout_1 Vn net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+Vin Vp Vn dc 0 sin 0 {Vin} 10meg
+x1 Vout_1 Vcomp1 Vg1 GND buffer4 wn=1u
+C1 Vout_1 GND {C1} m=1
+R1 net2 GND {R1} m=1
+Vamp_1 Vout_1 net2 0
+x3 Vp Vout_1 Vcomp1 net11 GND pmos_comp
+x2 Vout_1 net3 net4 GND buffer4 wn=1u
+x4 Vn Vout_1 net3 net12 GND pmos_comp
+XM9 Vp Vmux2 Vout_2 Vb2 sg13_lv_pmos w={2*wn} l=0.13u ng={ng} m={m}
+XM10 Vn net9 Vout_2 net6 sg13_lv_pmos w={2*wn} l=0.13u ng={ng} m={m}
+XM11 Vb2 Vp Vout_2 Vb2 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM12 Vb2 Vout_2 Vp Vb2 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM13 net6 Vn Vout_2 net6 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM14 net6 Vout_2 Vn net6 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+x5 Vout_2 Vcomp2 Vg2 GND buffer4 wn=1u
+x6 Vp Vout_2 Vcomp2 net13 GND pmos_comp
+x7 Vout_2 net7 net8 GND buffer4 wn=1u
+x8 Vn Vout_2 net7 net14 GND pmos_comp
+C2 Vout_2 GND {C1} m=1
+R2 net10 GND {R1} m=1
+Vamp_2 Vout_2 net10 0
+x9 Vout_1 SEL_1 GND startup_ckt
+x10 Vout_2 SEL_2 GND startup_ckt
+x11 Vout_1 Vn SEL_1 Vmux1 Vg1 GND mux2
+x12 Vout_1 Vp SEL_1 net5 net4 GND mux2
+x13 Vout_2 Vn SEL_2 Vmux2 Vg2 GND mux2
+x14 Vout_2 Vp SEL_2 net9 net8 GND mux2
+x15 Vout_1 net11 GND CTAT_PTAT
+x16 Vout_1 net12 GND CTAT_PTAT
+x17 Vout_2 net13 GND CTAT_PTAT
+x18 Vout_2 net14 GND CTAT_PTAT
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+
+
+
+
+.param R1=60
+.param C1=100n
+.param Vin=1
+.param wn=5u
+.param ng=1
+.param m=200
+**.ic v(Vout)=0.6
+.param t1=90u
+.param t2=100u
+**.tran 250p 100u
+.tran 1n 30u
+**.step Vin list 0.8 1
+.meas tran i_r1 AVG i(Vamp_1) from=t1 to=t2
+.meas tran v_reg AVG v(vout_1) from=t1 to=t2
+.meas tran p_out AVG par('(v(Vout_1)**2)/R1') from=t1 to=t2
+.meas tran p_in AVG par('-(v(Vp)-v(Vn))*i(Vin)') from=t1 to=t2
+.meas tran PCE param='p_out/p_in' from=t1 to=t2
+.meas tran VCR param='v_reg/Vin'
+.save all
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/components/buffer4/buffer4.sym # of pins=4
+** sym_path: /foss/designs/components/buffer4/buffer4.sym
+** sch_path: /foss/designs/components/buffer4/buffer4.sch
+.subckt buffer4 VDD IN OUT VSS  wn=1u
+*.iopin VDD
+*.iopin VSS
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VSS VSS sg13_lv_nmos w=wn l=0.13u ng=1 m=1
+XM2 net1 IN VDD VDD sg13_lv_pmos w=2*wn l=0.13u ng=1 m=1
+XM3 net2 net1 VSS VSS sg13_lv_nmos w=3*wn l=0.13u ng=1 m=1
+XM4 net2 net1 VDD VDD sg13_lv_pmos w=2*3*wn l=0.13u ng=1 m=1
+XM5 net3 net2 VSS VSS sg13_lv_nmos w=(3**2)*wn l=0.13u ng=1 m=1
+XM6 net3 net2 VDD VDD sg13_lv_pmos w=2*(3**2)*wn l=0.13u ng=1 m=1
+XM7 OUT net3 VSS VSS sg13_lv_nmos w=(3**3)*wn l=0.13u ng=1 m=1
+XM8 OUT net3 VDD VDD sg13_lv_pmos w=2*(3**3)*wn l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/pmos_comp/pmos_comp.sym # of pins=5
+** sym_path: /foss/designs/components/pmos_comp/pmos_comp.sym
+** sch_path: /foss/designs/components/pmos_comp/pmos_comp.sch
+.subckt pmos_comp Vin- Vin+ Vout I_bias VSS
+*.ipin I_bias
+*.ipin Vin-
+*.ipin Vin+
+*.ipin VSS
+*.opin Vout
+XM1 net2 net1 Vin- Vin- sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM2 net1 net1 Vin+ Vin+ sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM3 Vout net3 Vin+ Vin+ sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM4 net3 net3 Vin- Vin- sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM5 net2 net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM6 Vout net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM7 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM8 net1 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM9 net3 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/startup_ckt/startup_ckt.sym # of pins=3
+** sym_path: /foss/designs/components/startup_ckt/startup_ckt.sym
+** sch_path: /foss/designs/components/startup_ckt/startup_ckt.sch
+.subckt startup_ckt V_DETECT OUT VSS
+*.iopin V_DETECT
+*.iopin VSS
+*.opin OUT
+XM1 net1 net1 V_DETECT V_DETECT sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM2 net2 net2 net1 net1 sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM3 VSS VSS net2 net2 sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM4 net3 net1 V_DETECT V_DETECT sg13_lv_pmos w=5u l=0.13u ng=1 m=4
+XM5 net3 net1 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=2
+C1 net1 VSS 1p m=1
+XM6 OUT net3 V_DETECT V_DETECT sg13_lv_pmos w=5u l=0.13u ng=1 m=10
+XM7 OUT net3 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=5
+C2 OUT VSS 100p m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/mux2/mux2.sym # of pins=6
+** sym_path: /foss/designs/components/mux2/mux2.sym
+** sch_path: /foss/designs/components/mux2/mux2.sch
+.subckt mux2 VDD IN0 S OUT IN1 VSS
+*.ipin IN0
+*.ipin S
+*.ipin IN1
+*.iopin VDD
+*.iopin VSS
+*.opin OUT
+x1 OUT IN0 VDD S VSS trans_gate_low
+x2 OUT IN1 VDD S VSS trans_gate
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym # of pins=3
+** sym_path: /foss/designs/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym
+** sch_path: /foss/designs/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sch
+.subckt CTAT_PTAT VDD Ibias GND
+*.iopin VDD
+*.iopin GND
+*.iopin Ibias
+XM2 net9 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM3 net12 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM4 Ibias net5 VDD VDD sg13_lv_pmos w=5u l=2 ng=1 m=1
+XM5 Ibias net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM6 net14 net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM7 GND GND net2 VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=30
+XM8 net2 GND net14 VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+XM9 net13 net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM12 net1 net3 net4 net4 sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM13 net3 net4 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM16 net9 net9 net8 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=30
+XM17 net8 net9 net10 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=1
+C1 VDD net3 1p m=1
+XM10 net5 net6 net7 net7 sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM11 net6 net7 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+C2 VDD net6 1p m=1
+XM14 net11 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM1 net11 net11 net10 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=30
+XM15 net10 net11 GND GND sg13_lv_nmos w=2u l=0.5u ng=1 m=1
+R1 net12 GND 500k m=1
+R2 net13 GND 500k m=1
+x2 VDD net5 net8 net12 GND Ib_4u_opamp
+x1 VDD net1 net2 net13 GND Ib_4u_opamp
+.ends
+
+
+* expanding   symbol:  trans_gate_low.sym # of pins=5
+** sym_path: /foss/designs/components/trans_gate_low/trans_gate_low.sym
+** sch_path: /foss/designs/components/trans_gate_low/trans_gate_low.sch
+.subckt trans_gate_low OUT IN VDD S VSS
+*.ipin S
+*.opin OUT
+*.ipin IN
+*.iopin VDD
+*.iopin VSS
+XM2 IN net2 OUT OUT sg13_lv_nmos w=5u l=0.13u ng=1 m=100
+XM1 OUT net1 IN IN sg13_lv_pmos w=5u l=0.13u ng=1 m=200
+x1 VDD S net1 VSS tg_low_noninverbuff
+x2 VSS net1 net2 VDD tg_low_inverter
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/trans_gate/trans_gate.sym # of pins=5
+** sym_path: /foss/designs/components/trans_gate/trans_gate.sym
+** sch_path: /foss/designs/components/trans_gate/trans_gate.sch
+.subckt trans_gate OUT IN VDD S VSS
+*.ipin S
+*.opin OUT
+*.ipin IN
+*.iopin VDD
+*.iopin VSS
+XM2 IN net2 OUT OUT sg13_lv_nmos w=5u l=0.13u ng=1 m=100
+XM1 OUT net1 IN IN sg13_lv_pmos w=5u l=0.13u ng=1 m=200
+x1 VDD S net2 VSS tg_buff
+x2 VSS net2 net1 VDD tg_inverter
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym # of pins=5
+** sym_path: /foss/designs/components/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym
+** sch_path: /foss/designs/components/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sch
+.subckt Ib_4u_opamp VDD Vout V- V+ GND
+*.iopin VDD
+*.ipin V+
+*.ipin V-
+*.iopin GND
+*.opin Vout
+XM1 net1 V+ GND GND sg13_lv_nmos w=7.5u l=0.18u ng=1 m=4
+XM2 Vout V- GND GND sg13_lv_nmos w=7.5u l=0.18u ng=1 m=4
+XM3 Vout net1 VDD VDD sg13_lv_pmos w=5u l=0.8u ng=1 m=1
+XM4 net1 net1 VDD VDD sg13_lv_pmos w=5u l=0.8u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  tg_low_noninverbuff.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate_low/tg_low_noninverbuff.sym
+** sch_path: /foss/designs/components/trans_gate_low/tg_low_noninverbuff.sch
+.subckt tg_low_noninverbuff VDD IN OUT VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=20
+XM2 net1 IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=10
+XM3 OUT net1 VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=60
+XM4 OUT net1 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=30
+.ends
+
+
+* expanding   symbol:  tg_low_inverter.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate_low/tg_low_inverter.sym
+** sch_path: /foss/designs/components/trans_gate_low/tg_low_inverter.sch
+.subckt tg_low_inverter VSS IN OUT VDD
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 OUT IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=60
+XM2 OUT IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=30
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/trans_gate/tg_buff.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate/tg_buff.sym
+** sch_path: /foss/designs/components/trans_gate/tg_buff.sch
+.subckt tg_buff VDD IN OUT VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=50
+XM2 net1 IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=25
+XM3 OUT net1 VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=100
+XM4 OUT net1 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=50
+.ends
+
+
+* expanding   symbol:  /foss/designs/components/trans_gate/tg_inverter.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate/tg_inverter.sym
+** sch_path: /foss/designs/components/trans_gate/tg_inverter.sch
+.subckt tg_inverter VSS IN OUT VDD
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 OUT IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=100
+XM2 OUT IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=50
+.ends
+
+.GLOBAL GND
+.end
