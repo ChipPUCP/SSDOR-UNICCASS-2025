@@ -1,0 +1,90 @@
+** sch_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/tb_CTAT_PTAT.sch
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
+
+**.subckt tb_CTAT_PTAT
+V1 VDD GND 0.8
+x1 VDD net1 GND CTAT_PTAT
+V2 Vout GND 0.5
+Vmeas net1 Vout 0
+.save i(vmeas)
+XM1 Vout Vout GND net2 sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerHBT.lib hbt_typ
+.lib cornerRES.lib res_typ
+
+
+
+
+.param temp=27
+.control
+save all
+tran 1000p 10u
+plot i(Vmeas)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym # of pins=3
+** sym_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym
+** sch_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/CTAT_PTAT.sch
+.subckt CTAT_PTAT VDD Ibias GND
+*.iopin VDD
+*.iopin GND
+*.iopin Ibias
+XM2 net9 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM3 net12 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM4 Ibias net5 VDD VDD sg13_lv_pmos w=5u l=2 ng=1 m=1
+XM5 Ibias net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM6 net14 net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM7 GND GND net2 VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=30
+XM8 net2 GND net14 VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+XM9 net13 net1 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM12 net1 net3 net4 net4 sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM13 net3 net4 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM16 net9 net9 net8 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=30
+XM17 net8 net9 net10 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=1
+x1 VDD net1 net2 net13 GND Ib_4u_opamp
+C1 VDD net3 1p m=1
+XM10 net5 net6 net7 net7 sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM11 net6 net7 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+C2 VDD net6 1p m=1
+x2 VDD net5 net8 net12 GND Ib_4u_opamp
+XM14 net11 net5 VDD VDD sg13_lv_pmos w=5u l=2u ng=1 m=1
+XM1 net11 net11 net10 GND sg13_lv_nmos w=2u l=0.5u ng=1 m=30
+XM15 net10 net11 GND GND sg13_lv_nmos w=2u l=0.5u ng=1 m=1
+R1 net12 GND 500k m=1
+R2 net13 GND 500k m=1
+.ends
+
+
+* expanding   symbol:  SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym # of pins=5
+** sym_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sym
+** sch_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/Ib_4u_opamp.sch
+.subckt Ib_4u_opamp VDD Vout V- V+ GND
+*.iopin VDD
+*.ipin V+
+*.ipin V-
+*.iopin GND
+*.opin Vout
+x7 V+ VDD GND net1 sg13g2_inv_2
+x1 net1 VDD GND Vout sg13g2_inv_2
+x2 V- VDD GND Vout sg13g2_inv_2
+x3 Vout VDD GND Vout sg13g2_inv_2
+x4 Vout VDD GND net1 sg13g2_inv_2
+x5 net1 VDD GND net1 sg13g2_inv_2
+x6 Vout VDD GND Vout sg13g2_inv_2
+x8 net1 VDD GND Vout sg13g2_inv_2
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end

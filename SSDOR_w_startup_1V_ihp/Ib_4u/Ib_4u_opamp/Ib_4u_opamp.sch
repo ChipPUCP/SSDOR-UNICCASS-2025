@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 N 230 -380 440 -380 {lab=#net1}
-N 310 -470 480 -470 {lab=#net2}
+N 310 -470 480 -470 {lab=VDD}
 N 310 -100 480 -100 {lab=GND}
 N 520 -180 550 -180 {lab=V-}
 N 50 -180 90 -180 {lab=V+}
@@ -14,16 +14,16 @@ N 130 -350 130 -300 {lab=#net1}
 N 230 -380 230 -300 {lab=#net1}
 N 170 -380 230 -380 {lab=#net1}
 N 130 -100 310 -100 {lab=GND}
-N 310 -490 310 -470 {lab=#net2}
-N 130 -470 310 -470 {lab=#net2}
-N 130 -470 130 -410 {lab=#net2}
-N 480 -470 480 -410 {lab=#net2}
-N 60 -380 130 -380 {lab=#net2}
-N 60 -470 60 -380 {lab=#net2}
-N 60 -470 130 -470 {lab=#net2}
-N 470 -380 550 -380 {lab=#net2}
-N 550 -470 550 -380 {lab=#net2}
-N 480 -470 550 -470 {lab=#net2}
+N 310 -490 310 -470 {lab=VDD}
+N 130 -470 310 -470 {lab=VDD}
+N 130 -470 130 -410 {lab=VDD}
+N 480 -470 480 -410 {lab=VDD}
+N 60 -380 130 -380 {lab=VDD}
+N 60 -470 60 -380 {lab=VDD}
+N 60 -470 130 -470 {lab=VDD}
+N 470 -380 550 -380 {lab=VDD}
+N 550 -470 550 -380 {lab=VDD}
+N 480 -470 550 -470 {lab=VDD}
 N 130 -150 130 -100 {lab=GND}
 N 480 -150 480 -100 {lab=GND}
 N 310 -180 480 -180 {lab=GND}
@@ -41,34 +41,34 @@ C {iopin.sym} 310 -20 0 1 {name=p4 lab=GND
 }
 C {opin.sym} 560 -290 0 0 {name=p5 lab=Vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 460 -380 0 0 {name=M5
-l=10u
-w=1u
+l=0.5u
+w=10u
 ng=1
-m=1
+m=4
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 150 -380 0 1 {name=M6
-l=10u
-w=1u
+l=0.5u
+w=10u
 ng=1
-m=1
+m=4
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 110 -180 0 0 {name=M7
-l=10u
+l=8u
 w=10u
 ng=1
-m=2
+m=6
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 500 -180 0 1 {name=M8
-l=10u
+l=8u
 w=10u
 ng=1
-m=2
+m=6
 model=sg13_lv_nmos
 spiceprefix=X
 }

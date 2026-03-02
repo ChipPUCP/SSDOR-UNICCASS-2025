@@ -1,0 +1,41 @@
+** sch_path: /foss/designs/components/trans_gate_low/tb_tg_low_buff.sch
+**.subckt tb_tg_low_buff
+Vin Vin GND dc 0 pulse 0 1 0 1n 1n 1u 2u
+Vdc VDD GND 1
+C1 Vout GND {C1} ic=2 m=1
+Vmeas_Iin net2 Vin 0
+Vmeas_Iout Vout net1 0
+x1 VDD net2 net1 GND tg_low_noninverbuff
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+
+
+
+
+.param C1=10p
+**.tran 100p 10u uic
+.tran 500p 10u
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  tg_low_noninverbuff.sym # of pins=4
+** sym_path: /foss/designs/components/trans_gate_low/tg_low_noninverbuff.sym
+** sch_path: /foss/designs/components/trans_gate_low/tg_low_noninverbuff.sch
+.subckt tg_low_noninverbuff VDD IN OUT VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=20
+XM2 net1 IN VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=10
+XM3 OUT net1 VDD VDD sg13_lv_pmos w=5u l=0.13u ng=1 m=60
+XM4 OUT net1 VSS VSS sg13_lv_nmos w=5u l=0.13u ng=1 m=30
+.ends
+
+.GLOBAL GND
+.end

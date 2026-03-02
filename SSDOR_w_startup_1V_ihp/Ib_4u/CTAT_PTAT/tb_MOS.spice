@@ -1,0 +1,62 @@
+** sch_path: /shared/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/tb_MOS.sch
+**.subckt tb_MOS
+V1 VDD GND 0.81
+XM14 net1 net1 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+I0 net1 GND 250n
+XM1 net2 net1 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+V2 net3 GND 0.4
+Vmeas net2 net3 0
+.save i(vmeas)
+XM2 net4 net4 net6 net4 sg13_lv_nmos w=7.8u l=1u ng=1 m=100
+XM15 net6 net4 net5 net4 sg13_lv_nmos w=10u l=650n ng=1 m=5
+V3 net4 GND 1.2
+V4 net7 GND 0.6
+Vmeas1 net6 net7 0
+.save i(vmeas1)
+XM3 net4 net4 net5 net4 sg13_lv_nmos w=7.8u l=1u ng=1 m=100
+XM4 net5 net4 GND net4 sg13_lv_nmos w=10u l=650n ng=1 m=5
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerHBT.lib hbt_typ
+.lib cornerRES.lib res_typ
+
+
+
+
+.param temp=27
+.control
+save all
+op
+tran 1000p 10u
+plot i(Vmeas)
+.endc
+
+
+
+
+.control
+dc temp -40 125 5
+plot i(Vmeas1)
+.endc
+
+
+
+
+.control
+op
+save all
+dc temp -40 125 5
+write gm.raw
+.endc
+.save @m.xm15.sg13_lv_nmos[gm]
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.GLOBAL GND
+.end

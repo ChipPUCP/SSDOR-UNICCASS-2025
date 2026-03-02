@@ -1,0 +1,69 @@
+** sch_path: /foss/designs/SSDOR_w_startup_1V_ihp/Ib_4u/Ib_4u_opamp/tb_Ib_4u_opamp.sch
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
+
+**.subckt tb_Ib_4u_opamp
+V1 VDD GND 0.76
+XM4 net5 V_D1 VDD VDD sg13_lv_pmos w=0.8u l=5u ng=1 m=1
+XM3 V_D1 V_D1 VDD VDD sg13_lv_pmos w=5u l=0.8u ng=1 m=1
+XM1 V_D1 net2 GND GND sg13_lv_nmos w=7.5u l=0.18u ng=1 m=2
+XM2 net5 net1 GND GND sg13_lv_nmos w=7.5u l=0.18u ng=1 m=2
+C1 out GND 1p m=1
+V4 net4 GND dc 0.3 ac -0.5
+V5 net6 GND dc 0.3 ac 0.5
+x7 net6 VDD GND net3 sg13g2_inv_2
+x1 net3 VDD GND out sg13g2_inv_2
+x2 net4 VDD GND out sg13g2_inv_2
+x3 out VDD GND out sg13g2_inv_2
+x4 out VDD GND net3 sg13g2_inv_2
+x5 net3 VDD GND net3 sg13g2_inv_2
+x6 out VDD GND out sg13g2_inv_2
+x8 net3 VDD GND out sg13g2_inv_2
+x9 out VDD GND net3 sg13g2_inv_2
+x10 net3 VDD GND net3 sg13g2_inv_2
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+
+
+
+
+.control
+op
+tran 1000p 10u
+.save all
+write raw_sim_opamp.raw
+plot v(out)
+.endc
+
+
+
+
+
+.control
+save all
+op
+ac dec 100 1 1e9
+plot vdb(out)
+.endc
+
+
+
+
+
+
+.control
+op
+ac lin 1 1k 1k
+print vdb(out)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.GLOBAL GND
+.end

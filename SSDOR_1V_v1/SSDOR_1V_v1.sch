@@ -1,4 +1,4 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -47,7 +47,6 @@ N 1110 -330 1190 -330 {lab=Vn}
 N 1190 -370 1190 -330 {lab=Vn}
 N 670 -390 670 -370 {lab=Vn}
 N 670 -370 1190 -370 {lab=Vn}
-N 1190 -470 1190 -370 {lab=Vn}
 N 670 -470 670 -450 {lab=Vp}
 N 670 -470 750 -470 {lab=Vp}
 N 750 -510 750 -470 {lab=Vp}
@@ -120,94 +119,7 @@ N 1330 -570 1330 -550 {lab=GND}
 N 1330 -750 1330 -690 {lab=Vout_1}
 N 1330 -750 1480 -750 {lab=Vout_1}
 N 1390 -710 1390 -650 {lab=Vp}
-N 870 -1070 870 -1050 {lab=Vout_2}
-N 870 -850 870 -830 {lab=Vp}
-N 910 -1020 930 -1020 {lab=Vp}
-N 910 -880 950 -880 {lab=Vout_2}
-N 1010 -1020 1030 -1020 {lab=Vn}
-N 1070 -850 1070 -830 {lab=Vn}
-N 1070 -1070 1070 -1050 {lab=Vout_2}
-N 990 -880 1030 -880 {lab=Vout_2}
-N 1070 -950 1070 -910 {lab=#net6}
-N 1070 -990 1070 -950 {lab=#net6}
-N 870 -950 870 -910 {lab=Vb2}
-N 840 -950 870 -950 {lab=Vb2}
-N 870 -990 870 -950 {lab=Vb2}
-N 750 -1070 870 -1070 {lab=Vout_2}
-N 1070 -1070 1190 -1070 {lab=Vout_2}
-N 750 -1070 750 -980 {lab=Vout_2}
-N 1190 -1070 1190 -980 {lab=Vout_2}
-N 930 -1020 930 -830 {lab=Vp}
-N 870 -830 930 -830 {lab=Vp}
-N 750 -830 870 -830 {lab=Vp}
-N 750 -920 750 -830 {lab=Vp}
-N 1070 -830 1190 -830 {lab=Vn}
-N 1190 -920 1190 -830 {lab=Vn}
-N 1010 -1020 1010 -830 {lab=Vn}
-N 1010 -830 1070 -830 {lab=Vn}
-N 990 -1070 990 -880 {lab=Vout_2}
-N 990 -1070 1070 -1070 {lab=Vout_2}
-N 950 -1070 950 -880 {lab=Vout_2}
-N 870 -1070 950 -1070 {lab=Vout_2}
-N 840 -1020 870 -1020 {lab=Vb2}
-N 840 -1020 840 -950 {lab=Vb2}
-N 840 -880 870 -880 {lab=Vb2}
-N 840 -950 840 -880 {lab=Vb2}
-N 1070 -1020 1100 -1020 {lab=#net6}
-N 1100 -1020 1100 -950 {lab=#net6}
-N 1070 -950 1100 -950 {lab=#net6}
-N 1070 -880 1100 -880 {lab=#net6}
-N 1100 -950 1100 -880 {lab=#net6}
-N 400 -950 410 -950 {lab=Vcomp2}
-N 250 -920 250 -830 {lab=Vp}
-N 250 -1070 250 -980 {lab=Vout_2}
-N 460 -1070 460 -990 {lab=Vout_2}
-N 1100 -950 1190 -950 {lab=#net6}
-N 750 -950 840 -950 {lab=Vb2}
-N 530 -1000 530 -950 {lab=Vg2}
-N 510 -950 530 -950 {lab=Vg2}
-N 400 -1000 400 -950 {lab=Vcomp2}
-N 390 -950 400 -950 {lab=Vcomp2}
-N 870 -950 880 -950 {lab=Vb2}
-N 460 -910 460 -880 {lab=GND}
-N 330 -900 330 -880 {lab=GND}
-N 250 -830 750 -830 {lab=Vp}
-N 610 -1070 750 -1070 {lab=Vout_2}
-N 530 -950 550 -950 {lab=Vg2}
-N 550 -1030 550 -970 {lab=Vn}
-N 550 -930 550 -910 {lab=SEL_2}
-N 690 -950 710 -950 {lab=Vmux2}
-N 690 -1030 690 -950 {lab=Vmux2}
-N 670 -950 690 -950 {lab=Vmux2}
-N 610 -890 610 -870 {lab=GND}
-N 610 -1070 610 -1010 {lab=Vout_2}
-N 460 -1070 610 -1070 {lab=Vout_2}
-N 1530 -950 1550 -950 {lab=#net7}
-N 1690 -920 1690 -830 {lab=Vn}
-N 1690 -1070 1690 -980 {lab=Vout_2}
-N 1480 -1070 1480 -990 {lab=Vout_2}
-N 1480 -1070 1690 -1070 {lab=Vout_2}
-N 1480 -910 1480 -880 {lab=GND}
-N 1610 -900 1610 -880 {lab=GND}
-N 1190 -830 1690 -830 {lab=Vn}
-N 1190 -1070 1330 -1070 {lab=Vout_2}
-N 1390 -950 1430 -950 {lab=#net8}
-N 1390 -930 1390 -910 {lab=SEL_2}
-N 1230 -950 1270 -950 {lab=#net9}
-N 1330 -890 1330 -870 {lab=GND}
-N 1330 -1070 1330 -1010 {lab=Vout_2}
-N 1330 -1070 1480 -1070 {lab=Vout_2}
-N 1390 -1030 1390 -970 {lab=Vp}
-N 750 -470 960 -470 {lab=Vp}
-N 930 -830 960 -830 {lab=Vp}
-N 960 -830 960 -470 {lab=Vp}
-N 980 -830 1010 -830 {lab=Vn}
-N 980 -830 980 -470 {lab=Vn}
-N 980 -470 1190 -470 {lab=Vn}
-N 1190 -510 1190 -470 {lab=Vn}
-N 1960 -850 2000 -850 {lab=GND}
-N 1960 -850 1960 -830 {lab=GND}
-N 1920 -850 1960 -850 {lab=GND}
+N 1190 -510 1190 -370 {lab=Vn}
 N 970 -190 970 -150 {lab=GND}
 N 1480 -380 1480 -360 {lab=GND}
 N 1480 -220 1480 -200 {lab=GND}
@@ -215,39 +127,20 @@ N 1380 -290 1400 -290 {lab=Vout_1}
 N 1380 -450 1400 -450 {lab=Vout_2}
 N 1560 -450 1580 -450 {lab=SEL_2}
 N 1560 -290 1580 -290 {lab=SEL_1}
-N 2000 -900 2000 -850 {lab=GND}
-N 1920 -900 1920 -850 {lab=GND}
-N 1920 -1110 1920 -960 {lab=Vout_2}
-N 2000 -1000 2000 -960 {lab=#net10}
-N 2000 -1110 2000 -1060 {lab=Vout_2}
-N 750 -1110 750 -1070 {lab=Vout_2}
-N 1190 -1110 1920 -1110 {lab=Vout_2}
-N 1190 -1110 1190 -1070 {lab=Vout_2}
-N 750 -1110 1190 -1110 {lab=Vout_2}
 N 150 -570 150 -550 {lab=GND}
 N 150 -750 150 -690 {lab=Vout_1}
 N 150 -750 250 -750 {lab=Vout_1}
-N 220 -630 250 -630 {lab=#net11}
+N 220 -630 250 -630 {lab=#net6}
 N 1790 -570 1790 -550 {lab=GND}
 N 1190 -790 1920 -790 {lab=Vout_1}
 N 1920 -790 2000 -790 {lab=Vout_1}
 N 970 -150 1920 -150 {lab=GND}
-N 1920 -1110 2000 -1110 {lab=Vout_2}
-N 150 -890 150 -870 {lab=GND}
-N 150 -1070 150 -1010 {lab=Vout_2}
-N 250 -1070 460 -1070 {lab=Vout_2}
-N 150 -1070 250 -1070 {lab=Vout_2}
-N 220 -950 250 -950 {lab=#net12}
-N 1790 -890 1790 -870 {lab=GND}
-N 1790 -1070 1790 -1010 {lab=Vout_2}
-N 1690 -1070 1790 -1070 {lab=Vout_2}
-N 1690 -950 1720 -950 {lab=#net13}
 N 1790 -750 1790 -690 {lab=Vout_1}
 N 1690 -750 1790 -750 {lab=Vout_1}
-N 1720 -630 1720 -590 {lab=#net14}
-N 1700 -530 1720 -530 {lab=#net15}
-N 1700 -630 1700 -530 {lab=#net15}
-N 1690 -630 1700 -630 {lab=#net15}
+N 1720 -630 1720 -590 {lab=#net7}
+N 1700 -530 1720 -530 {lab=Vib_comp}
+N 1700 -630 1700 -530 {lab=Vib_comp}
+N 1690 -630 1700 -630 {lab=Vib_comp}
 C {sg13g2_pr/sg13_lv_pmos.sym} 730 -630 0 0 {name=M1
 l=0.13u
 w=\{2*wn\}
@@ -334,7 +227,7 @@ C {lab_pin.sym} 530 -680 0 0 {name=p5 sig_type=std_logic lab=Vg1}
 C {lab_pin.sym} 880 -630 0 1 {name=p6 sig_type=std_logic lab=Vb1}
 C {gnd.sym} 330 -560 0 0 {name=l4 lab=GND}
 C {gnd.sym} 460 -560 0 0 {name=l5 lab=GND}
-C {code_shown.sym} 2160 -865 0 0 {
+C {code_shown.sym} 2150 -945 0 0 {
 name=TT_MODELS
 only_toplevel=true
 value="
@@ -344,7 +237,7 @@ value="
 "
 spice_ignore=false
       }
-C {code_shown.sym} 2160 -745 0 0 {name=NGSPICE
+C {code_shown.sym} 2150 -805 0 0 {name=NGSPICE
 only_toplevel=false
 value="
 .param R1=60
@@ -377,105 +270,26 @@ C {gnd.sym} 1480 -560 0 1 {name=l7 lab=GND}
 C {lab_pin.sym} 1390 -590 0 1 {name=p12 sig_type=std_logic lab=SEL_1}
 C {gnd.sym} 1330 -550 0 1 {name=l9 lab=GND}
 C {lab_pin.sym} 1390 -710 0 1 {name=p10 sig_type=std_logic lab=Vp}
-C {sg13g2_pr/sg13_lv_pmos.sym} 730 -950 0 0 {name=M9
-l=0.13u
-w=\{2*wn\}
-ng=\{ng\}
-m=\{m\}
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 1210 -950 0 1 {name=M10
-l=0.13u
-w=\{2*wn\}
-ng=\{ng\}
-m=\{m\}
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 890 -1020 0 1 {name=M11
-l=0.13u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 890 -880 2 0 {name=M12
-l=0.13u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 1050 -1020 0 0 {name=M13
-l=0.13u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 1050 -880 2 1 {name=M14
-l=0.13u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {lab_pin.sym} 400 -1000 0 0 {name=p11 sig_type=std_logic lab=Vcomp2}
-C {lab_pin.sym} 530 -1000 0 0 {name=p13 sig_type=std_logic lab=Vg2}
-C {lab_pin.sym} 880 -950 0 1 {name=p14 sig_type=std_logic lab=Vb2}
-C {gnd.sym} 330 -880 0 0 {name=l11 lab=GND}
-C {gnd.sym} 460 -880 0 0 {name=l12 lab=GND}
-C {lab_pin.sym} 550 -910 0 0 {name=p15 sig_type=std_logic lab=SEL_2}
-C {lab_pin.sym} 550 -1030 0 0 {name=p16 sig_type=std_logic lab=Vn}
-C {lab_pin.sym} 690 -1030 0 0 {name=p17 sig_type=std_logic lab=Vmux2}
-C {gnd.sym} 610 -870 0 0 {name=l13 lab=GND}
-C {gnd.sym} 1610 -880 0 1 {name=l14 lab=GND}
-C {gnd.sym} 1480 -880 0 1 {name=l15 lab=GND}
-C {lab_pin.sym} 1390 -910 0 1 {name=p18 sig_type=std_logic lab=SEL_2}
-C {gnd.sym} 1330 -870 0 1 {name=l16 lab=GND}
-C {lab_pin.sym} 1390 -1030 0 1 {name=p19 sig_type=std_logic lab=Vp}
-C {capa.sym} 1920 -930 0 0 {name=C2
-m=1
-value=\{C1\}
-footprint=1206
-device="ceramic capacitor"}
-C {res.sym} 2000 -930 0 0 {name=R2
-value=\{R1\}
-footprint=1206
-device=resistor
-m=1}
-C {vsource.sym} 2000 -1030 0 0 {name=Vamp_2 value=0 savecurrent=false}
-C {gnd.sym} 1960 -830 0 1 {name=l18 lab=GND}
-C {lab_pin.sym} 2000 -1110 0 1 {name=p20 sig_type=std_logic lab=Vout_2}
 C {gnd.sym} 1480 -360 0 1 {name=l19 lab=GND}
 C {gnd.sym} 1480 -200 0 1 {name=l20 lab=GND}
 C {lab_pin.sym} 1380 -290 0 0 {name=p21 sig_type=std_logic lab=Vout_1}
 C {lab_pin.sym} 1380 -450 0 0 {name=p22 sig_type=std_logic lab=Vout_2}
 C {lab_pin.sym} 1580 -290 0 1 {name=p23 sig_type=std_logic lab=SEL_1}
 C {lab_pin.sym} 1580 -450 0 1 {name=p24 sig_type=std_logic lab=SEL_2}
-C {gnd.sym} 150 -870 0 0 {name=l10 lab=GND}
-C {gnd.sym} 1790 -870 0 1 {name=l17 lab=GND}
-C {SSDOR_1V_v1/components/buffer4/buffer4.sym} 390 -550 0 0 {name=x1 wn=1u}
-C {SSDOR_1V_v1/components/buffer4/buffer4.sym} 1550 -550 0 1 {name=x2 wn=1u}
-C {SSDOR_1V_v1/components/buffer4/buffer4.sym} 390 -870 0 0 {name=x5 wn=1u}
-C {SSDOR_1V_v1/components/buffer4/buffer4.sym} 1550 -870 0 1 {name=x7 wn=1u}
-C {SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 230 -560 0 0 {name=x3}
-C {SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 1710 -560 0 1 {name=x4}
-C {SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 230 -880 0 0 {name=x6}
-C {SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 1710 -880 0 1 {name=x8}
-C {SSDOR_1V_v1/components/mux2/mux2.sym} 610 -630 0 0 {name=x11}
-C {SSDOR_1V_v1/components/mux2/mux2.sym} 1330 -630 0 1 {name=x12}
-C {SSDOR_1V_v1/components/mux2/mux2.sym} 610 -950 0 0 {name=x13}
-C {SSDOR_1V_v1/components/mux2/mux2.sym} 1330 -950 0 1 {name=x14}
-C {SSDOR_1V_v1/components/startup_ckt/startup_ckt.sym} 1480 -270 0 0 {name=x9}
-C {SSDOR_1V_v1/components/startup_ckt/startup_ckt.sym} 1480 -430 0 0 {name=x10}
 C {ammeter.sym} 1720 -560 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
-C {SSDOR_1V_v1/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 110 -890 0 0 {name=x15}
-C {SSDOR_1V_v1/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 110 -570 0 0 {name=x16}
-C {SSDOR_1V_v1/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 1830 -890 0 1 {name=x17}
-C {SSDOR_1V_v1/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 1830 -570 0 1 {name=x18}
+C {/shared/designs/SSDOR_1V_v1/components/mux2/mux2.sym} 1330 -630 0 1 {name=x12}
+C {/shared/designs/SSDOR_1V_v1/components/buffer4/buffer4.sym} 1550 -550 0 1 {name=x19 wn=1u}
+C {/shared/designs/SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 1710 -560 0 1 {name=x2}
+C {/shared/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 1830 -570 0 1 {name=x4}
+C {/shared/designs/SSDOR_1V_v1/components/mux2/mux2.sym} 610 -630 0 0 {name=x5}
+C {/shared/designs/SSDOR_1V_v1/components/buffer4/buffer4.sym} 390 -550 0 0 {name=x6 wn=1u}
+C {/shared/designs/SSDOR_1V_v1/components/pmos_comp/pmos_comp.sym} 230 -560 0 0 {name=x7}
+C {/shared/designs/SSDOR_w_startup_1V_ihp/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 110 -570 0 0 {name=x1}
+C {/shared/designs/SSDOR_1V_v1/components/startup_ckt/startup_ckt.sym} 1480 -430 0 0 {name=x3}
+C {/shared/designs/SSDOR_1V_v1/components/startup_ckt/startup_ckt.sym} 1480 -270 0 0 {name=x8}
+C {lab_pin.sym} 1700 -630 3 1 {name=p11 sig_type=std_logic lab=Vib_comp}
+C {devices/code_shown.sym} 2500 -940 0 0 {name=MODEL only_toplevel=true
+format="tcleval( @value )"
+value="
+.lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
+"}

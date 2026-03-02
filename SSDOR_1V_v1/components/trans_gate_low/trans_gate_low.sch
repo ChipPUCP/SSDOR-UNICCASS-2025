@@ -1,4 +1,4 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -52,5 +52,5 @@ C {opin.sym} 620 -290 0 0 {name=p2 lab=OUT}
 C {ipin.sym} 140 -290 0 0 {name=p3 lab=IN}
 C {iopin.sym} 140 -180 0 1 {name=p4 lab=VDD}
 C {iopin.sym} 140 -20 0 1 {name=p5 lab=VSS}
-C {SSDOR_1V_v1/components/trans_gate_low/tg_low_inverter.sym} 420 -100 0 0 {name=x3}
-C {SSDOR_1V_v1/components/trans_gate_low/tg_low_noninverbuff.sym} 220 -100 0 0 {name=x2}
+C {/shared/designs/SSDOR_1V_v1/components/trans_gate_low/tg_low_noninverbuff.sym} 220 -100 0 0 {name=x1}
+C {/shared/designs/SSDOR_1V_v1/components/trans_gate_low/tg_low_inverter.sym} 420 -100 0 0 {name=x2}
