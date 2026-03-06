@@ -5,6 +5,9 @@ V {}
 S {}
 E {}
 P 4 1 1950 -490 {}
+P 4 1 1030 -1420 {}
+P 4 1 1390 -370 {}
+P 4 1 610 -1390 {}
 N 910 -700 930 -700 {lab=Vp}
 N 910 -560 950 -560 {lab=Vout_1}
 N 1010 -700 1030 -700 {lab=Vn}
@@ -159,7 +162,7 @@ N 80 -830 750 -830 {lab=Vp}
 N 970 -150 2090 -150 {lab=GND}
 N 230 -950 260 -950 {lab=Vcomp2}
 N 230 -630 260 -630 {lab=Vcomp1}
-N 140 -1400 140 -1370 {lab=GND}
+N 140 -1370 140 -1340 {lab=GND}
 N 1000 -1950 1000 -1930 {lab=Vx1}
 N 900 -1950 950 -1950 {lab=Vx1}
 N 900 -1950 900 -1930 {lab=Vx1}
@@ -169,8 +172,7 @@ N 950 -1950 1000 -1950 {lab=Vx1}
 N 950 -1890 970 -1890 {lab=Vx1}
 N 950 -1790 1030 -1790 {lab=Vx1}
 N 950 -1890 950 -1790 {lab=Vx1}
-N 990 -1730 990 -1690 {lab=Vref1}
-N 990 -1730 1030 -1730 {lab=Vref1}
+N 990 -1730 1030 -1730 {lab=Vb0v4}
 N 930 -1760 930 -1690 {lab=Ibias_6}
 N 930 -1760 1030 -1760 {lab=Ibias_6}
 N 990 -1630 990 -1610 {lab=GND}
@@ -186,8 +188,7 @@ N 950 -1550 1000 -1550 {lab=Vx2}
 N 950 -1490 970 -1490 {lab=Vx2}
 N 950 -1390 1030 -1390 {lab=Vx2}
 N 950 -1490 950 -1390 {lab=Vx2}
-N 990 -1330 990 -1290 {lab=Vref2}
-N 990 -1330 1030 -1330 {lab=Vref2}
+N 990 -1330 1030 -1330 {lab=Vb0v5}
 N 930 -1360 930 -1290 {lab=Ibias_5}
 N 930 -1360 1030 -1360 {lab=Ibias_5}
 N 990 -1230 990 -1210 {lab=GND}
@@ -240,9 +241,8 @@ N 1110 -1490 1230 -1490 {lab=Vout_2}
 N 1000 -1890 1690 -1890 {lab=Vout_1}
 N 1570 -1690 1570 -1630 {lab=S1_p}
 N 1540 -1630 1570 -1630 {lab=S1_p}
-N 1340 -1590 1380 -1590 {lab=#net15}
-N 1860 -630 1900 -630 {lab=#net16}
-N 1860 -950 1900 -950 {lab=#net17}
+N 1860 -630 1900 -630 {lab=#net15}
+N 1860 -950 1900 -950 {lab=#net16}
 N 40 -950 80 -950 {lab=Ibias_3}
 N 220 -1570 240 -1570 {lab=Ibias_1}
 N 220 -1550 240 -1550 {lab=Ibias_2}
@@ -250,15 +250,15 @@ N 220 -1530 240 -1530 {lab=Ibias_3}
 N 220 -1510 240 -1510 {lab=Ibias_4}
 N 220 -1490 240 -1490 {lab=Ibias_5}
 N 220 -1470 240 -1470 {lab=Ibias_6}
-N 220 -1450 240 -1450 {lab=Ibias_7}
+N 220 -1450 240 -1450 {lab=Vb0v5}
 N 900 -1290 930 -1290 {lab=Ibias_5}
 N 900 -1690 930 -1690 {lab=Ibias_6}
 N 710 -1070 750 -1070 {lab=Vout_2}
 N 710 -750 750 -750 {lab=Vout_1}
 N 460 -1070 460 -1060 {lab=#net5}
 N 320 -1070 460 -1070 {lab=#net5}
-N 460 -1000 460 -990 {lab=#net18}
-N 460 -680 460 -670 {lab=#net19}
+N 460 -1000 460 -990 {lab=#net17}
+N 460 -680 460 -670 {lab=#net18}
 N 460 -750 460 -740 {lab=#net1}
 N 320 -750 460 -750 {lab=#net1}
 N 640 -1070 650 -1070 {lab=#net5}
@@ -268,7 +268,7 @@ N 460 -1100 640 -1100 {lab=#net5}
 N 650 -780 650 -750 {lab=#net1}
 N 460 -780 460 -750 {lab=#net1}
 N 460 -780 650 -780 {lab=#net1}
-N 140 -1630 140 -1620 {lab=#net20}
+N 140 -1630 140 -1620 {lab=#net19}
 N 140 -1700 140 -1690 {lab=Vout_2}
 N 1960 -950 1980 -950 {lab=Ibias_4}
 N 1960 -630 1980 -630 {lab=Ibias_2}
@@ -304,8 +304,14 @@ N 1070 -530 1070 -510 {lab=Vn}
 N 1010 -510 1070 -510 {lab=Vn}
 N 1070 -850 1070 -830 {lab=Vn}
 N 1010 -830 1070 -830 {lab=Vn}
-N 1340 -1430 1340 -1410 {lab=GND}
-N 1340 -1590 1340 -1490 {lab=#net15}
+N 1340 -1340 1340 -1320 {lab=GND}
+N 220 -1430 240 -1430 {lab=Vb0v4}
+N 1340 -1590 1380 -1590 {lab=#net20}
+N 1500 -1310 1500 -1300 {lab=GND}
+N 1500 -1420 1540 -1420 {lab=Vout_2}
+N 1430 -1490 1430 -1370 {lab=#net20}
+N 1340 -1490 1430 -1490 {lab=#net20}
+N 1340 -1590 1340 -1490 {lab=#net20}
 C {sg13g2_pr/sg13_lv_pmos.sym} 730 -630 0 0 {name=M1
 l=0.13u
 w=\{wn\}
@@ -373,7 +379,7 @@ spiceprefix=X
 C {vsource.sym} 670 -420 0 1 {name=Vin value="dc 0 sin 0 \{Vin\} 10meg" savecurrent=false}
 C {lab_pin.sym} 670 -470 0 0 {name=p1 sig_type=std_logic lab=Vp}
 C {lab_pin.sym} 670 -370 0 0 {name=p2 sig_type=std_logic lab=Vn}
-C {gnd.sym} 140 -1370 0 0 {name=l1 lab=GND}
+C {gnd.sym} 140 -1340 0 0 {name=l1 lab=GND}
 C {capa.sym} 2090 -460 0 0 {name=C1
 m=1
 value=\{C1\}
@@ -406,18 +412,16 @@ only_toplevel=false
 value="
 .param R1=144
 .param R2=180
-.param C1=100n
+.param C1=300n
 .param C2=200n
 .param Vin=1.2
 .param wn=5u
 .param ng=35
 .param m=350
-**.ic v(Vout)=0.6
+.nodeset all=0
 .param t1=25u
 .param t2=30u
-**.tran 500p 100u
 .tran 500p 30u
-**.step Vin list 0.8 1
 .meas tran i_r1 AVG i(Vamp_1) from=t1 to=t2
 .meas tran v_reg_1 AVG v(vout_1) from=t1 to=t2
 .meas tran v_reg_2 AVG v(vout_2) from=t1 to=t2
@@ -566,8 +570,6 @@ C {lab_pin.sym} 950 -1790 0 0 {name=p38 sig_type=std_logic lab=Vx1}
 C {lab_pin.sym} 950 -1390 0 0 {name=p39 sig_type=std_logic lab=Vx2}
 C {lab_pin.sym} 1290 -1360 0 1 {name=p41 sig_type=std_logic lab=Y}
 C {lab_pin.sym} 1290 -1760 0 1 {name=p42 sig_type=std_logic lab=X}
-C {lab_pin.sym} 990 -1730 0 0 {name=p43 sig_type=std_logic lab=Vref1}
-C {lab_pin.sym} 990 -1330 0 0 {name=p44 sig_type=std_logic lab=Vref2}
 C {lab_pin.sym} 1570 -1690 0 0 {name=p45 sig_type=std_logic lab=S1_p}
 C {gnd.sym} 990 -1210 0 0 {name=l27 lab=GND}
 C {gnd.sym} 1110 -1290 0 0 {name=l38 lab=GND}
@@ -575,7 +577,7 @@ C {lab_pin.sym} 140 -1700 0 1 {name=p49 sig_type=std_logic lab=Vout_2}
 C {lab_pin.sym} 240 -1530 0 1 {name=p52 sig_type=std_logic lab=Ibias_3}
 C {lab_pin.sym} 240 -1490 0 1 {name=p54 sig_type=std_logic lab=Ibias_5}
 C {lab_pin.sym} 240 -1470 0 1 {name=p55 sig_type=std_logic lab=Ibias_6}
-C {lab_pin.sym} 240 -1450 0 1 {name=p56 sig_type=std_logic lab=Ibias_7}
+C {lab_pin.sym} 240 -1450 0 1 {name=p56 sig_type=std_logic lab=Vb0v5}
 C {lab_pin.sym} 50 -630 0 0 {name=p57 sig_type=std_logic lab=Ibias_1}
 C {lab_pin.sym} 1980 -630 0 1 {name=p58 sig_type=std_logic lab=Ibias_2}
 C {lab_pin.sym} 1980 -950 0 1 {name=p59 sig_type=std_logic lab=Ibias_4}
@@ -609,7 +611,6 @@ value="
 C {lab_pin.sym} 240 -1510 0 1 {name=p68 sig_type=std_logic lab=Ibias_4}
 C {lab_pin.sym} 240 -1570 0 1 {name=p53 sig_type=std_logic lab=Ibias_1}
 C {lab_pin.sym} 240 -1550 0 1 {name=p70 sig_type=std_logic lab=Ibias_2}
-C {/shared/designs/SSDOR_1.2V_v2/components/Ib_4u/CTAT_PTAT/CTAT_PTAT.sym} 140 -1510 0 0 {name=x22}
 C {lab_pin.sym} 1060 -950 0 0 {name=p51 sig_type=std_logic lab=Vb4}
 C {lab_pin.sym} 1060 -630 0 0 {name=p63 sig_type=std_logic lab=Vb3}
 C {/shared/designs/SSDOR_1.2V_v2/components/buffer4/buffer4.sym} 390 -870 0 0 {name=x5 wn=5u}
@@ -621,5 +622,12 @@ format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerCAP.lib cap_wcs
 "}
-C {vsource.sym} 1340 -1460 0 0 {name=V3 value=value="pulse 0 1 0 0.001n 0.001n 0.3u 0.6u" savecurrent=false}
-C {gnd.sym} 1340 -1410 0 0 {name=l2 lab=GND}
+C {vsource.sym} 1340 -1370 0 0 {name=V3 value=value="pulse 0 1 0 0.001n 0.001n 0.3u 0.6u" savecurrent=false}
+C {gnd.sym} 1340 -1320 0 0 {name=l2 lab=GND}
+C {/shared/designs/SSDOR_1.2V_v2/components/Ib_4u/CTAT_PTAT/CTAT_PTAT_3.sym} 80 -1370 0 0 {name=x2}
+C {lab_pin.sym} 240 -1430 0 1 {name=p5 sig_type=std_logic lab=Vb0v4}
+C {lab_pin.sym} 990 -1330 0 0 {name=p7 sig_type=std_logic lab=Vb0v5}
+C {lab_pin.sym} 990 -1730 0 0 {name=p8 sig_type=std_logic lab=Vb0v4}
+C {/shared/designs/SSDOR_1.2V_v2/components/cgenerator/clk_ringosc.sym} 1540 -1310 0 1 {name=x9}
+C {gnd.sym} 1500 -1300 0 0 {name=l8 lab=GND}
+C {lab_pin.sym} 1540 -1420 0 1 {name=p9 sig_type=std_logic lab=Vout_2}
