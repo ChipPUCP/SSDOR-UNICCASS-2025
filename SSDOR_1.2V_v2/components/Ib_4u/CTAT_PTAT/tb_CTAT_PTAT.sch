@@ -134,7 +134,7 @@ value="
 "
 spice_ignore=false
       }
-C {vsource.sym} 210 -370 0 0 {name=VDD value=0.85 savecurrent=false}
+C {vsource.sym} 210 -370 0 0 {name=VDD value=1 savecurrent=false}
 C {vdd.sym} 210 -400 0 0 {name=l1 lab=VDD}
 C {vdd.sym} 1520 -1070 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 210 -340 0 0 {name=l3 lab=GND}

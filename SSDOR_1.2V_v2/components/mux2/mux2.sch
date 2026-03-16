@@ -1,4 +1,4 @@
-v {xschem version=3.4.7 file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -32,5 +32,5 @@ C {ipin.sym} 240 -220 0 0 {name=p5 lab=IN1}
 C {iopin.sym} 240 -480 0 1 {name=p1 lab=VDD}
 C {iopin.sym} 240 -120 0 1 {name=p2 lab=VSS}
 C {opin.sym} 540 -300 0 0 {name=p6 lab=OUT}
-C {/foss/designs/components/trans_gate/trans_gate.sym} 360 -200 0 0 {name=x2}
-C {/foss/designs/components/trans_gate_low/trans_gate_low.sym} 360 -400 0 0 {name=x1}
+C {/shared/designs/SSDOR_1.2V_v2/components/trans_gate_low/trans_gate_low.sym} 360 -400 0 0 {name=x3}
+C {/shared/designs/SSDOR_1.2V_v2/components/trans_gate/trans_gate.sym} 360 -200 0 0 {name=x1}

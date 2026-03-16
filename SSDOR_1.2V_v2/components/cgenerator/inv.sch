@@ -24,7 +24,7 @@ N 360 -230 380 -230 {lab=out}
 N 360 -250 360 -230 {lab=out}
 C {sg13g2_pr/sg13_lv_nmos.sym} 340 -170 0 0 {name=M1
 l=0.13u
-w=1u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -32,7 +32,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 340 -280 0 0 {name=M2
 l=0.13u
-w=1.9u
+w=1u
 ng=1
 m=1
 model=sg13_lv_pmos

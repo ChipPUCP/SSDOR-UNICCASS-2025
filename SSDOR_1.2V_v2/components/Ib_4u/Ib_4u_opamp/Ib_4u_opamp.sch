@@ -21,7 +21,6 @@ N 480 -470 480 -410 {lab=VDD}
 N 60 -380 130 -380 {lab=VDD}
 N 60 -470 60 -380 {lab=VDD}
 N 60 -470 130 -470 {lab=VDD}
-N 470 -380 550 -380 {lab=VDD}
 N 550 -470 550 -380 {lab=VDD}
 N 480 -470 550 -470 {lab=VDD}
 N 130 -150 130 -100 {lab=GND}
@@ -34,41 +33,42 @@ N 480 -290 560 -290 {lab=Vout}
 N 480 -350 480 -290 {lab=Vout}
 N 130 -300 130 -210 {lab=#net1}
 N 480 -290 480 -210 {lab=Vout}
+N 480 -380 550 -380 {lab=VDD}
 C {iopin.sym} 310 -490 0 1 {name=p1 lab=VDD}
 C {ipin.sym} 50 -180 0 0 {name=p2 lab=V+}
 C {ipin.sym} 550 -180 0 1 {name=p3 lab=V-}
 C {iopin.sym} 310 -20 0 1 {name=p4 lab=GND
 }
 C {opin.sym} 560 -290 0 0 {name=p5 lab=Vout}
-C {sg13g2_pr/sg13_lv_pmos.sym} 460 -380 0 0 {name=M5
-l=0.5u
-w=10u
-ng=1
-m=4
-model=sg13_lv_pmos
-spiceprefix=X
-}
 C {sg13g2_pr/sg13_lv_pmos.sym} 150 -380 0 1 {name=M6
-l=0.5u
-w=10u
-ng=1
-m=4
+l=1u
+w=20u
+ng=2
+m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 110 -180 0 0 {name=M7
-l=8u
+C {sg13g2_pr/sg13_lv_nmos.sym} 110 -180 0 0 {name=M3
+l=1u
 w=10u
-ng=1
-m=6
+ng=3
+m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/sg13_lv_nmos.sym} 500 -180 0 1 {name=M8
-l=8u
+C {sg13g2_pr/sg13_lv_nmos.sym} 500 -180 0 1 {name=M2
+l=1u
 w=10u
-ng=1
-m=6
+ng=3
+m=1
 model=sg13_lv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_pmos.sym} 460 -380 0 0 {name=M1
+l=1u
+w=20u
+ng=2
+m=1
+model=sg13_lv_pmos
 spiceprefix=X
 }

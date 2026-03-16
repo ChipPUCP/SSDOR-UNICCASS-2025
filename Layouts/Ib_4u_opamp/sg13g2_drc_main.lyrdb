@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
  <description>Main DRC Run Report at</description>
- <original-file>/shared/designs/Layouts/Ib_4u_opamp/Ib_4u_opamp_v1.gds</original-file>
+ <original-file>/shared/designs/Layouts/Ib_4u_opamp/pmos_v1.gds</original-file>
  <generator>drc: script='/opt/pdks/ihp-sg13g2/libs.tech/klayout/tech/drc/ihp-sg13g2.drc'</generator>
  <top-cell>TOP</top-cell>
  <tags>
@@ -1134,24 +1134,13 @@
    </references>
   </cell>
   <cell>
-   <name>nmos$1</name>
-   <variant>m90</variant>
-   <layout-name>nmos$1</layout-name>
+   <name>pmos$1</name>
+   <variant/>
+   <layout-name>pmos$1</layout-name>
    <references>
     <ref>
      <parent>TOP</parent>
-     <trans>m90 *1 23.61,13.885</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
-   <name>nmos$1</name>
-   <variant>r0</variant>
-   <layout-name>nmos$1$VAR1</layout-name>
-   <references>
-    <ref>
-     <parent>TOP</parent>
-     <trans>r0 *1 -0.015,13.885</trans>
+     <trans>r0 *1 -0.455,0.095</trans>
     </ref>
    </references>
   </cell>
@@ -1159,26 +1148,506 @@
  <items>
   <item>
    <tags/>
-   <category>'LU.b'</category>
-   <cell>nmos$1:m90</cell>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (0,0;0,10;10.68,10;10.68,0)</value>
+    <value>edge-pair: (0.57,0.08;0.3,0.08)|(0.3,0.215;0.57,0.215)</value>
    </values>
   </item>
   <item>
    <tags/>
-   <category>'LU.b'</category>
-   <cell>nmos$1:r0</cell>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (0,0;0,10;10.68,10;10.68,0)</value>
+    <value>edge-pair: (1.14,0.08;0.87,0.08)|(0.87,0.215;1.14,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (1.71,0.08;1.44,0.08)|(1.44,0.215;1.71,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (2.28,0.08;2.01,0.08)|(2.01,0.215;2.28,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (2.85,0.08;2.58,0.08)|(2.58,0.215;2.85,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (3.42,0.08;3.15,0.08)|(3.15,0.215;3.42,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (3.99,0.08;3.72,0.08)|(3.72,0.215;3.99,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (4.56,0.08;4.29,0.08)|(4.29,0.215;4.56,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (5.13,0.08;4.86,0.08)|(4.86,0.215;5.13,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (5.7,0.08;5.43,0.08)|(5.43,0.215;5.7,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (6.27,0.08;6,0.08)|(6,0.215;6.27,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (6.84,0.08;6.57,0.08)|(6.57,0.215;6.84,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (7.41,0.08;7.14,0.08)|(7.14,0.215;7.41,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (7.98,0.08;7.71,0.08)|(7.71,0.215;7.98,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (8.55,0.08;8.28,0.08)|(8.28,0.215;8.55,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (9.12,0.08;8.85,0.08)|(8.85,0.215;9.12,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (9.69,0.08;9.42,0.08)|(9.42,0.215;9.69,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (10.26,0.08;9.99,0.08)|(9.99,0.215;10.26,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (10.83,0.08;10.56,0.08)|(10.56,0.215;10.83,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (11.4,0.08;11.13,0.08)|(11.13,0.215;11.4,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (11.97,0.08;11.7,0.08)|(11.7,0.215;11.97,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (12.54,0.08;12.27,0.08)|(12.27,0.215;12.54,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (13.11,0.08;12.84,0.08)|(12.84,0.215;13.11,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (13.68,0.08;13.41,0.08)|(13.41,0.215;13.68,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (14.25,0.08;13.98,0.08)|(13.98,0.215;14.25,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (14.82,0.08;14.55,0.08)|(14.55,0.215;14.82,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (15.39,0.08;15.12,0.08)|(15.12,0.215;15.39,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (15.96,0.08;15.69,0.08)|(15.69,0.215;15.96,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (16.53,0.08;16.26,0.08)|(16.26,0.215;16.53,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (17.1,0.08;16.83,0.08)|(16.83,0.215;17.1,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (17.67,0.08;17.4,0.08)|(17.4,0.215;17.67,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (18.24,0.08;17.97,0.08)|(17.97,0.215;18.24,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (18.81,0.08;18.54,0.08)|(18.54,0.215;18.81,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (19.38,0.08;19.11,0.08)|(19.11,0.215;19.38,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (19.95,0.08;19.68,0.08)|(19.68,0.215;19.95,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Act.a'</category>
+   <cell>pmos$1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (20.52,0.08;20.25,0.08)|(20.25,0.215;20.52,0.215)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.a'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>polygon: (-0.12,13.945;-0.12,14.145;0.08,14.145;0.08,13.945)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.d'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-0.12,13.945;-0.12,14.145)/(-0.17,13.895;-0.17,14.195)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.d'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-0.12,14.145;0.08,14.145)/(-0.17,14.195;0.13,14.195)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.d'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (0.08,13.945;-0.005,13.945)/(0.13,13.895;0.045,13.895)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.d'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (0.08,14.145;0.08,13.945)/(0.13,14.195;0.13,13.895)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'Cnt.d'</category>
+   <cell>TOP</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-0.035,13.945;-0.12,13.945)/(-0.085,13.895;-0.17,13.895)</value>
    </values>
   </item>
  </items>

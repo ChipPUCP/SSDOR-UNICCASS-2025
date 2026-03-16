@@ -32,9 +32,9 @@ N 590 -170 760 -170 {lab=GND}
 N 590 -170 590 -90 {lab=GND}
 N 410 -170 590 -170 {lab=GND}
 N 590 -90 590 -10 {lab=GND}
-N 760 -280 760 -200 {lab=out}
-N 760 -280 840 -280 {lab=out}
-N 760 -340 760 -280 {lab=out}
+N 760 -280 760 -200 {lab=out2_ac}
+N 760 -280 840 -280 {lab=out2_ac}
+N 760 -340 760 -280 {lab=out2_ac}
 N 510 -1010 720 -1010 {lab=#net1}
 N 590 -1100 760 -1100 {lab=VDD}
 N 590 -730 760 -730 {lab=GND}
@@ -91,31 +91,41 @@ N 1730 -850 1900 -850 {lab=GND}
 N 1730 -850 1730 -770 {lab=GND}
 N 1550 -850 1730 -850 {lab=GND}
 N 1730 -770 1730 -690 {lab=GND}
-N 1900 -960 1980 -960 {lab=out2_ac}
-N 1900 -1020 1900 -960 {lab=out2_ac}
+N 1960 -960 1980 -960 {lab=out}
+N 1900 -1020 1900 -960 {lab=out}
 N 1550 -970 1550 -880 {lab=#net4}
-N 1900 -960 1900 -880 {lab=out2_ac}
+N 1900 -960 1900 -880 {lab=out}
+N 1960 -960 1960 -950 {lab=out}
+N 1900 -960 1960 -960 {lab=out}
+N 2860 -1070 3070 -1070 {lab=#net1}
+N 2940 -790 3110 -790 {lab=GND}
+N 3150 -870 3180 -870 {lab=V-}
+N 2680 -870 2720 -870 {lab=V+}
+N 2760 -990 2860 -990 {lab=#net1}
+N 2760 -1040 2760 -990 {lab=#net1}
+N 2860 -1070 2860 -990 {lab=#net1}
+N 2800 -1070 2860 -1070 {lab=#net1}
+N 2760 -790 2940 -790 {lab=GND}
+N 2760 -840 2760 -790 {lab=GND}
+N 3110 -840 3110 -790 {lab=GND}
+N 2940 -870 3110 -870 {lab=GND}
+N 2940 -870 2940 -790 {lab=GND}
+N 2760 -870 2940 -870 {lab=GND}
+N 3110 -1040 3110 -980 {lab=Vout}
+N 2760 -990 2760 -900 {lab=#net1}
+N 3110 -980 3110 -900 {lab=Vout}
+N 2940 -790 2940 -670 {lab=GND}
+N 2760 -1130 2760 -1070 {lab=VDD}
+N 2950 -1130 3110 -1130 {lab=VDD}
+N 3110 -1130 3110 -1070 {lab=VDD}
+N 2950 -1170 2950 -1130 {lab=VDD}
+N 2760 -1130 2950 -1130 {lab=VDD}
+N 3110 -980 3320 -980 {lab=Vout}
 C {vsource.sym} 160 -210 0 0 {name=V1 value=0.76 savecurrent=false}
 C {vdd.sym} 160 -240 0 0 {name=l1 lab=VDD}
 C {vdd.sym} 590 -480 0 0 {name=l2 lab=VDD}
 C {gnd.sym} 160 -180 0 0 {name=l3 lab=GND}
 C {gnd.sym} 590 -10 0 0 {name=l4 lab=GND}
-C {sg13g2_pr/sg13_lv_pmos.sym} 740 -370 0 0 {name=M4
-l=1u
-w=1u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 430 -370 0 1 {name=M3
-l=1u
-w=1u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
 C {code_shown.sym} 1140 -150 0 0 {
 name=TT_MODELS
 only_toplevel=true
@@ -125,22 +135,6 @@ value="
 "
 spice_ignore=false
       }
-C {sg13g2_pr/sg13_lv_nmos.sym} 390 -170 0 0 {name=M1
-l=10u
-w=10u
-ng=1
-m=2
-model=sg13_lv_nmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_nmos.sym} 780 -170 0 1 {name=M2
-l=10u
-w=10u
-ng=1
-m=2
-model=sg13_lv_nmos
-spiceprefix=X
-}
 C {devices/code_shown.sym} 990 -920 0 0 {name=NGSPICE1 only_toplevel=true
 value="
 .control
@@ -167,6 +161,7 @@ save all
 op
 ac dec 100 1 1e9
 plot vdb(out2_ac) 
+
 .endc
 
 
@@ -174,7 +169,7 @@ plot vdb(out2_ac)
 
 
 }
-C {devices/code_shown.sym} 1690 -210 0 0 {name=NGSPICE3 only_toplevel=true
+C {devices/code_shown.sym} 1820 -220 0 0 {name=NGSPICE3 only_toplevel=true
 value="
 .control
 op
@@ -198,7 +193,7 @@ value="
 .include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 "
 place=header}
-C {lab_pin.sym} 760 -310 0 1 {name=p9 sig_type=std_logic lab=out}
+C {lab_pin.sym} 1980 -960 0 1 {name=p9 sig_type=std_logic lab=out}
 C {lab_pin.sym} 360 -170 0 0 {name=p1 sig_type=std_logic lab=vp}
 C {lab_pin.sym} 810 -170 0 1 {name=p2 sig_type=std_logic lab=vn}
 C {vdd.sym} 590 -1120 0 0 {name=l9 lab=VDD}
@@ -278,4 +273,103 @@ C {gnd.sym} 1970 -790 0 0 {name=l15 lab=GND}
 C {vsource.sym} 1470 -820 0 0 {name=V6 value="dc 0 ac 1" savecurrent=false}
 C {vsource.sym} 1970 -820 0 0 {name=V7 value="dc 0 ac 0" savecurrent=false}
 C {lab_pin.sym} 840 -920 0 1 {name=p4 sig_type=std_logic lab=out2_dc}
-C {lab_pin.sym} 1980 -960 0 1 {name=p5 sig_type=std_logic lab=out2_ac}
+C {lab_pin.sym} 760 -300 0 1 {name=p5 sig_type=std_logic lab=out2_ac}
+C {code.sym} 2040 -440 0 1 {name=simulation1 only_toplevel=false 
+value="
+
+* Models
+.lib cornerMOSlv.lib mos_tt
+
+* Data to save
+.save all
+
+* Simulation
+.control
+
+ set color0 = white
+
+ ac dec 100 1 1e9
+ meas ac GBW when vdb(out2_ac)=0
+ meas ac DCG find vdb(out2_ac) at=1
+ meas ac PHASE_UG find vp(out_2ac) when vdb(out_2ac)=0
+ let PM = 180 + Phase_UG*180/PI
+ print PM
+ plot vdb(out2_ac) \{vp(out2_ac)*180/PI\}
+  
+ reset
+ op
+ write tb_opamp.raw
+
+.endc
+
+"}
+C {sg13g2_pr/sg13_lv_pmos.sym} 430 -370 0 1 {name=M13
+l=0.5u
+w=10u
+ng=1
+m=4
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_pmos.sym} 740 -370 0 0 {name=M3
+l=0.5u
+w=10u
+ng=1
+m=4
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_nmos.sym} 390 -170 0 0 {name=M1
+l=8u
+w=10u
+ng=1
+m=6
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_nmos.sym} 780 -170 0 1 {name=M2
+l=8u
+w=10u
+ng=1
+m=6
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {iopin.sym} 2950 -1170 0 1 {name=p6 lab=VDD}
+C {ipin.sym} 2680 -870 0 0 {name=p7 lab=V+}
+C {ipin.sym} 3180 -870 0 1 {name=p8 lab=V-}
+C {iopin.sym} 2940 -670 0 1 {name=p10 lab=GND
+}
+C {opin.sym} 3320 -980 0 0 {name=p11 lab=Vout}
+C {sg13g2_pr/sg13_lv_nmos.sym} 2740 -870 0 0 {name=M4
+l=8u
+w=10u
+ng=1
+m=6
+model=sg13_lv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_pmos.sym} 2780 -1070 0 1 {name=M14
+l=0.5u
+w=10u
+ng=1
+m=4
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_pmos.sym} 3090 -1070 0 0 {name=M15
+l=0.5u
+w=10u
+ng=1
+m=4
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_nmos.sym} 3130 -870 0 1 {name=M16
+l=8u
+w=10u
+ng=1
+m=6
+model=sg13_lv_nmos
+spiceprefix=X
+}
