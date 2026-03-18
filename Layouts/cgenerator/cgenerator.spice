@@ -1,0 +1,38 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/cgenerator.sch
+.subckt cgenerator vdd vout vss
+*.PININFO vdd:B vss:B vout:O
+xi1 vdd net1 net9 vss inv_ring_osc
+xi2 vdd net9 net8 vss inv_ring_osc
+xi3 vdd net8 net7 vss inv_ring_osc
+xi4 vdd net7 net6 vss inv_ring_osc
+xi5 vdd net6 net5 vss inv_ring_osc
+xi6 vdd net5 net4 vss inv_ring_osc
+xi7 vdd net4 net3 vss inv_ring_osc
+xi8 vdd net3 net2 vss inv_ring_osc
+xi9 vdd net2 net11 vss inv_ring_osc
+x1 vdd net1 vout vss buff_ring_osc
+xi10 vdd net11 net10 vss inv_ring_osc
+xi11 vdd net10 net1 vss inv_ring_osc
+.ends
+
+* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym # of pins=4
+** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sch
+.subckt inv_ring_osc vdd in out vss
+*.PININFO vdd:B vss:B in:I out:O
+M1 out in vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M2 out in vdd vdd sg13_lv_pmos w=4u l=1u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym # of pins=4
+** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sch
+.subckt buff_ring_osc vdd in out vss
+*.PININFO in:I vdd:B vss:B out:O
+M1 net1 in vss vss sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M2 net1 in vdd vdd sg13_lv_pmos w=4u l=0.13u ng=1 m=1
+M3 out net1 vdd vdd sg13_lv_pmos w=8u l=0.13u ng=2 m=1
+M4 out net1 vss vss sg13_lv_nmos w=4u l=0.13u ng=2 m=1
+.ends
+
