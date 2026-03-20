@@ -1,6 +1,6 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 20/03/2026 06:20
+* Extracted by KLayout with SG13G2 LVS runset on : 20/03/2026 18:42
 
-.SUBCKT pmos_comp_v2 I_bias Vin+ Vin\x2d VSS Vout
+.SUBCKT pmos_comp_v2 I_bias VSS Vin+ Vin\x2d Vout
 M$1 VSS I_bias \$3 \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
 + PD=2.68u
 M$2 I_bias I_bias VSS \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
