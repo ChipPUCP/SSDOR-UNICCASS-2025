@@ -1,0 +1,26 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 20/03/2026 06:20
+
+.SUBCKT pmos_comp_v2 I_bias Vin+ Vin\x2d VSS Vout
+M$1 VSS I_bias \$3 \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$2 I_bias I_bias VSS \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$3 \$1 I_bias VSS \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$4 \$5 \$5 VSS \$15 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$5 VSS \$5 Vout \$15 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$6 Vin\x2d \$3 \$3 \$14 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$7 \$1 \$1 Vin+ \$12 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=0.76p PS=8.68u
++ PD=4.38u
+M$8 Vin+ \$3 Vout \$12 sg13_lv_pmos L=0.5u W=4u AS=0.76p AD=1.36p PS=4.38u
++ PD=8.68u
+M$9 \$5 \$1 Vin\x2d \$13 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+R$10 \$14 Vin\x2d ntap1 A=0.78p P=3.56u
+R$11 \$13 Vin\x2d ntap1 A=0.78p P=3.56u
+R$12 \$12 Vin+ ntap1 A=1.56p P=5.56u
+R$13 \$15 VSS ptap1 A=12p P=26u
+.ENDS pmos_comp_v2
