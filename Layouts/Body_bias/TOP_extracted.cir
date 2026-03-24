@@ -1,0 +1,41 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 04:56
+
+.SUBCKT TOP
+X$1 Vb DOWN|UP DOWN|UP \$4 \$5 pmos$2
+X$2 DOWN|UP \$5 via_stack$2
+X$3 Vb DOWN|UP DOWN|UP \$4 \$5 pmos$1
+X$4 DOWN|UP \$5 via_stack
+X$5 DOWN|UP \$5 via_stack$3
+X$6 DOWN|UP \$5 via_stack$1
+X$7 Vb \$5 via_stack$4
+X$8 Vb \$4 \$5 ntap1
+R$1 \$4 Vb ntap1 A=3.9p P=11.56u
+.ENDS TOP
+
+.SUBCKT via_stack$4 \$1 \$2
+.ENDS via_stack$4
+
+.SUBCKT via_stack$1 \$1 \$2
+.ENDS via_stack$1
+
+.SUBCKT via_stack \$1 \$2
+.ENDS via_stack
+
+.SUBCKT ntap1 \$1 \$2 \$4
+.ENDS ntap1
+
+.SUBCKT via_stack$3 \$1 \$2
+.ENDS via_stack$3
+
+.SUBCKT via_stack$2 \$1 \$2
+.ENDS via_stack$2
+
+.SUBCKT pmos$2 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+.ENDS pmos$2
+
+.SUBCKT pmos$1 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.13u W=9u AS=3.06p AD=3.06p PS=18.68u
++ PD=18.68u
+.ENDS pmos$1

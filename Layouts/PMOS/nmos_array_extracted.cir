@@ -1,0 +1,7 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 03:33
+
+.SUBCKT nmos_array VS_ARRAY VD_ARRAY VB_ARRAY VG_ARRAY
+M$1 VD_ARRAY VG_ARRAY VS_ARRAY \$1 sg13_lv_nmos L=0.13u W=777.6u AS=294.192p
++ AD=294.192p PS=3922.56u PD=3922.56u
+R$5185 \$1 VB_ARRAY ptap1 A=1491p P=2996u
+.ENDS nmos_array

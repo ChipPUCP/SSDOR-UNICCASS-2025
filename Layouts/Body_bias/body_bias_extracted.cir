@@ -1,0 +1,8 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 23/03/2026 05:50
+
+.SUBCKT body_bias UP DOWN VB
+R$1 \$4 VB ntap1 A=3.5p P=11.4u
+M$2 VB UP DOWN \$4 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u PD=6.68u
+M$3 VB DOWN UP \$4 sg13_lv_pmos L=0.13u W=9u AS=3.06p AD=3.06p PS=18.68u
++ PD=18.68u
+.ENDS body_bias

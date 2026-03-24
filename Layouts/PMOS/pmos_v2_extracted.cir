@@ -1,0 +1,7 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 21/03/2026 01:12
+
+.SUBCKT pmos_v2 Vb Vs_16 Vg
+M$1 Vs_16 Vg \$9 \$2 sg13_lv_pmos L=0.13u W=86.4u AS=32.694p AD=32.691p
++ PS=435.88u PD=435.86u
+R$577 \$2 Vb ntap1 A=186p P=378u
+.ENDS pmos_v2

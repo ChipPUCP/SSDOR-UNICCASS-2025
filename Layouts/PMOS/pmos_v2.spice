@@ -1,0 +1,8 @@
+** sch_path: /shared/designs/Layouts/PMOS/pmos_v2.sch
+.subckt pmos_v2 Vs_16 Vg Vb Vd_16
+*.PININFO Vg:I Vs_16:B Vd_16:B Vb:B
+M1 Vd_16 Vg Vs_16 net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+R1 Vb net1 ntap1 A=6.2e-11 P=0.000126
+R2 Vb net1 ntap1 A=6.2e-11 P=0.000126
+R3 Vb net1 ntap1 A=6.2e-11 P=0.000126
+.ends

@@ -1,0 +1,29 @@
+** sch_path: /shared/designs/Layouts/PMOS/pmos_array.sch
+.subckt pmos_array Vs_array Vg_array Vb_array Vd_array
+*.PININFO Vg_array:I Vs_array:B Vd_array:B Vb_array:B
+M2 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M3 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M4 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M5 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M6 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M7 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M8 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M9 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M10 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M11 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M12 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M13 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M14 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M15 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M16 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M17 Vd_array Vg_array Vs_array net1 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+R9 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R1 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R2 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R3 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R4 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R5 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R6 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R7 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+R8 Vb_array net1 ntap1 A=2.92e-10 P=0.000586
+.ends

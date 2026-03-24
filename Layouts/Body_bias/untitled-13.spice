@@ -1,0 +1,6 @@
+** sch_path: /home/designer/untitled-13.sch
+.subckt untitled-13 UP DOWN Vb
+*.PININFO UP:B DOWN:B Vb:B
+M11 Vb DOWN UP Vb sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+M12 Vb UP DOWN Vb sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+.ends
