@@ -1,0 +1,7 @@
+** sch_path: /home/designer/untitled-14.sch
+.subckt untitled-14 Vs Vb Vgd
+*.PININFO Vs:B Vb:B Vgd:B
+M24 Vgd Vgd net1 net2 sg13_lv_pmos w=10u l=0.36u ng=1 m=20
+M25 net1 Vgd Vs net2 sg13_lv_pmos w=10u l=0.36u ng=1 m=1
+R1 Vb net2 ntap1 A=8e-12 P=1.8e-05
+.ends

@@ -1,0 +1,11 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 26/03/2026 06:21
+
+.SUBCKT SCCT_PTAT GND Vd Vr Vl
+M$1 Vd Vr Vr \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u PD=332u
+M$31 Vl Vl \$4 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u PD=332u
+M$61 GND Vl \$4 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.17p AD=0.095p PS=1.68u
++ PD=0.88u
+M$62 \$4 Vr Vd \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.095p AD=0.17p PS=0.88u
++ PD=1.68u
+R$63 \$1 GND ptap1 A=19p P=40u
+.ENDS SCCT_PTAT

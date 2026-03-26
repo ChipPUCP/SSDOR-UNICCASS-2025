@@ -1,0 +1,9 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 26/03/2026 04:11
+
+.SUBCKT SCCT_CTAT Vgd Vb Vs
+M$1 Vs Vgd Vgd \$5 sg13_lv_pmos L=0.36u W=200u AS=41p AD=39.5p PS=228.2u
++ PD=217.9u
+M$21 Vs Vgd \$12 \$5 sg13_lv_pmos L=0.36u W=10u AS=1.9p AD=3.4p PS=10.38u
++ PD=20.68u
+R$22 \$5 Vb ntap1 A=8p P=18u
+.ENDS SCCT_CTAT

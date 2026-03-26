@@ -1,0 +1,9 @@
+** sch_path: /shared/designs/Layouts/ib_ctat_ptat/SCCT_PTAT.sch
+.subckt SCCT_PTAT GND Vd Vr Vl
+*.PININFO GND:B Vd:B Vr:B Vl:B
+M7 Vd Vr net2 net1 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M10 net2 Vl GND net1 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M11 Vl Vl net2 net1 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M16 Vr Vr Vd net1 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+R6 GND net1 ptap1 A=1.9e-11 P=4e-05
+.ends
