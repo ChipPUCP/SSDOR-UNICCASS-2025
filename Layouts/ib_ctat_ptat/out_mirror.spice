@@ -1,0 +1,31 @@
+** sch_path: /shared/designs/Layouts/ib_ctat_ptat/out_mirror.sch
+.subckt out_mirror Ibias_1 Ibias_2 Ibias_3 Ibias_4 Ibias_5 Ibias_6 Vb_0v4 Vb_0v5 GND VDD Iref
+*.PININFO Ibias_1:B Ibias_2:B Ibias_3:B Ibias_4:B Ibias_5:B Ibias_6:B Vb_0v4:B Vb_0v5:B GND:B VDD:B Iref:B
+M30 Iref Iref GND net5 sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+R2 net2 Vb_0v5 rppd w=0.5e-6 l=972.9e-6 m=1 b=0
+R6 net3 Vb_0v4 rppd w=0.5e-6 l=1167.4e-6 m=1 b=0
+M17 net1 Iref GND net5 sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+M23 net1 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M8 Ibias_1 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M15 Ibias_2 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M18 Ibias_3 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M19 Ibias_4 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M20 Ibias_5 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M22 Ibias_6 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+C5 Iref GND cap_cmim w=18e-6 l=18e-6 m=9
+C2 net1 VDD cap_cmim w=2.6e-6 l=2.6e-6 m=1
+R1 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R3 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R4 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R8 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R9 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R10 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R11 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R12 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R13 VDD net4 ntap1 A=4.2e-12 P=1.34e-05
+R14 GND net5 ptap1 A=5e-12 P=1.2e-05
+M1 net2 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M2 net3 net1 VDD net4 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+R15 Vb_0v5 GND rppd w=0.5e-6 l=994e-6 m=1 b=0
+R7 Vb_0v4 GND rppd w=0.5e-6 l=792e-6 m=1 b=0
+.ends

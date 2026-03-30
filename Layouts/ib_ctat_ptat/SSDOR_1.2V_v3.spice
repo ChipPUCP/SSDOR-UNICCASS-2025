@@ -1,0 +1,379 @@
+** sch_path: /shared/designs/SSDOR_1.2V_v3/SSDOR_1.2V_v3.sch
+**.subckt SSDOR_1.2V_v3
+XM1 Vp net17 Vout_1 Vb1 sg13_lv_pmos w={wn} l=0.13u ng={ng} m=256
+XM2 Vn net19 Vout_1 Vb3 sg13_lv_pmos w={wn} l=0.13u ng={ng} m=256
+XM3 Vp Vn GND GND sg13_lv_nmos w={wn} l=0.13u ng={ng} m=136
+XM4 Vn Vp GND GND sg13_lv_nmos w={wn} l=0.13u ng={ng} m=136
+XM5 Vb1 Vp Vout_1 Vb1 sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+XM6 Vb1 Vout_1 Vp Vb1 sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM7 Vb3 Vn Vout_1 Vb3 sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+XM8 Vb3 Vout_1 Vn Vb3 sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+Vin Vp Vn dc 0 sin 0 {Vin} 10meg 0
+C1 Vout_1 GND {C1} m=1
+R1 net2 GND {R1} m=1
+Vamp_1 Vout_1 net2 0
+XM9 net24 net23 net21 Vb2 sg13_lv_pmos w={wn} l=0.13u ng={ng} m=256
+XM10 Vn net18 Vout_2 Vb4 sg13_lv_pmos w={wn} l=0.13u ng={ng} m=256
+XM11 Vb2 Vp Vout_2 Vb2 sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+XM12 Vb2 Vout_2 Vp Vb2 sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM13 Vb4 Vn Vout_2 Vb4 sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+XM14 Vb4 Vout_2 Vn Vb4 sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+C2 Vout_2 GND {C2} m=1
+R2 net4 GND {R2} m=1
+Vamp_2 Vout_2 net4 0
+XM21 Vx1 Vx1 Vout_1 Vout_1 sg13_lv_pmos w=0.5u l=10u ng=1 m=19
+XM22 Vx1 Vx1 GND GND sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+XM23 Vx2 Vx2 Vout_2 Vout_2 sg13_lv_pmos w=0.5u l=10u ng=1 m=10
+XM24 Vx2 Vx2 GND GND sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+Vamp_d2 Vout_2 net3 0
+Vamp_d1 Vout_1 net1 0
+Vamp_buff2 net3 net9 0
+Vamp_buff1 net1 net10 0
+Vmeas Ibias_4 net7 0
+.save i(vmeas)
+Vmeas1 Ibias_2 net6 0
+.save i(vmeas1)
+Vmeas2 Ibias_1 net5 0
+.save i(vmeas2)
+Vmeas3 Ibias_3 net8 0
+.save i(vmeas3)
+Vamp_id Vout_2 net20 0
+x2 net20 GND Ibias_4 Ibias_1 Ibias_2 Ibias_5 Ibias_6 Ibias_3 Vb0v5 Vb0v4 CTAT_PTAT
+x16 Vout_2 GND Vb0v4 Vx1 X Ibias_5 comp_w_hyst
+x18 Vout_2 GND Vb0v5 Vx2 Y Ibias_6 comp_w_hyst
+x19 Vout_2 X S1_p CLKg Y S2 GND logic_controller
+x15 Vout_1 S1_p S1 GND logic_shift_down_v1
+x3 Vp net3 Vcomp2 net8 GND pmos_comp
+x4 Vp net1 Vcomp1 net5 GND pmos_comp
+x6 Vn Vout_1 net13 net6 GND pmos_comp
+x10 Vn Vout_2 net15 net7 GND pmos_comp
+x1 net3 Vout_2 S2 net11 Vcomp2 GND mux
+x7 net1 Vout_1 S1 net12 Vcomp1 GND mux
+x8 Vout_2 Vout_2 S2 net16 net15 GND mux
+x14 Vout_1 Vout_1 S1 net14 net13 GND mux
+x5 net9 net11 net22 GND buffer wn=1u
+x11 net10 net12 net17 GND buffer wn=1u
+x12 Vout_2 net16 net18 GND buffer wn=1u
+x13 Vout_1 net14 net19 GND buffer wn=1u
+xcg1 Vout_2 CLKg GND cgenerator
+Vsw_11_s Vout_2 net21 0
+Vsw_11_g net23 net22 0
+Vsw_11_d net24 Vp 0
+**** begin user architecture code
+
+
+** IHP models
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+
+
+
+.lib /opt/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+
+.lib /opt/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+
+
+.param R1=144
+.param R2=180
+.param C1=80n
+.param C2=60n
+.param Vin=1.2
+.param wn=5u
+.param ng=36
+.param m=45
+.param t1=10u
+.param t2=20u
+.tran 500p 20u
+.meas tran i_r1 AVG i(Vamp_1) from=t1 to=t2
+.meas tran v_reg_1 AVG v(vout_1) from=t1 to=t2
+.meas tran v_reg_2 AVG v(vout_2) from=t1 to=t2
+.meas tran p_out_1 AVG par('((v(Vout_1)**2)/R1)') from=t1 to=t2
+.meas tran p_out_2 AVG par('((v(Vout_2)**2)/R2)') from=t1 to=t2
+.meas tran p_out AVG par('((v(Vout_1)**2)/R1)+((v(Vout_2)**2)/R2)') from=t1 to=t2
+.meas tran p_in AVG par('-(v(Vp)-v(Vn))*i(Vin)') from=t1 to=t2
+*.meas tran p_d1 AVG par('v(Vout_1)*(i(Vamp_gate1)+i(Vamp_buff1))*2') from=t1 to=t2
+*.meas tran p_d2 AVG par('v(Vout_2)*(i(Vamp_gate2)+i(Vamp_buff2))*2') from=t1 to=t2
+.meas tran p_id AVG par('v(Vout_2)*i(Vamp_id)') from=t1 to=t2
+*.meas tran p_active_diodes param='(p_d1+p_d2)/p_in*100'
+.meas tran p_id_percent param='p_id/p_in*100'
+.meas tran i_driver1 AVG par('i(Vamp_d1)') from=t1 to=t2
+.meas tran i_driver2 AVG par('i(Vamp_d2)') from=t1 to=t2
+.meas tran PCE param='p_out/p_in' from=t1 to=t2
+.meas tran VCR_1 param='v_reg_1/Vin'
+.meas tran VCR_2 param='v_reg_2/Vin'
+.save all
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/CTAT_PTAT/CTAT_PTAT.sym # of pins=10
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/CTAT_PTAT/CTAT_PTAT.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/CTAT_PTAT/CTAT_PTAT.sch
+.subckt CTAT_PTAT VDD GND Ibias_4 Ibias_1 Ibias_2 Ibias_5 Ibias_6 Ibias_3 Vb_0v5 Vb_0v4
+*.iopin VDD
+*.iopin GND
+*.iopin Ibias_1
+*.iopin Ibias_2
+*.iopin Ibias_3
+*.iopin Ibias_4
+*.iopin Ibias_5
+*.iopin Ibias_6
+*.iopin Vb_0v4
+*.iopin Vb_0v5
+XM1 vRPTAT net2 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+XM2 net7 net2 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=6
+XM3 net7 net1 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=6
+XM4 net6 net1 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+XM12 net5 net2 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+XM13 net3 net2 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+XM5 vRCTAT net1 VDD VDD sg13_lv_pmos w=1u l=2u ng=1 m=1
+XM7 voSCCTP net3 net4 GND sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+XM10 net4 net5 GND GND sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+XM11 net5 net5 net4 GND sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+XM16 net3 net3 voSCCTP GND sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+XM30 net7 net7 GND GND sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+XR2 net9 Vb_0v5 GND rppd w=0.5e-6 l=972.9e-6 m=1 b=0
+XR6 net10 Vb_0v4 GND rppd w=0.5e-6 l=1167.4e-6 m=1 b=0
+XR7 Vb_0v4 GND GND rppd w=0.5e-6 l=792e-6 m=1 b=0
+XR5 Vb_0v5 GND GND rppd w=0.5e-6 l=994e-6 m=1 b=0
+XM17 net8 net7 GND GND sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+XM23 net8 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM8 Ibias_1 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM15 Ibias_2 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM18 Ibias_3 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM19 Ibias_4 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM20 Ibias_5 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM22 Ibias_6 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM24 GND GND voSCCTN VDD sg13_lv_pmos w=10u l=0.36u ng=1 m=20
+XM25 voSCCTN GND net6 VDD sg13_lv_pmos w=10u l=0.36u ng=1 m=1
+XM27 net11 net13 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM29 net12 net14 GND GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+XR1 vRCTAT net15 GND rppd w=0.5e-6 l=1170e-6 m=1 b=0
+XR3 net15 GND GND rhigh w=0.5e-6 l=27e-6 m=1 b=0
+XR10 vRPTAT GND GND rppd w=0.5e-6 l=2110e-6 m=1 b=0
+XC3 VDD net11 cap_cmim w=26.0e-6 l=26.0e-6 m=1
+XC1 VDD net12 cap_cmim w=26.0e-6 l=26.0e-6 m=1
+XM6 net2 net11 net13 GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+XM14 net1 net12 net14 GND sg13_lv_nmos w=10u l=1u ng=1 m=1
+x3 VDD net2 voSCCTP vRPTAT GND Ib_opamp
+x1 VDD net1 voSCCTN vRCTAT GND Ib_opamp
+XC5 net7 GND cap_cmim w=18e-6 l=18e-6 m=9
+XC2 net8 VDD cap_cmim w=2.6e-6 l=2.6e-6 m=1
+XM9 net9 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+XM21 net10 net8 VDD VDD sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/comp_w_hyst.sym # of pins=6
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/comp_w_hyst.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/comp_w_hyst.sch
+.subckt comp_w_hyst VDD VSS Vref Vin Vout I_bias
+*.ipin I_bias
+*.ipin Vref
+*.ipin Vin
+*.iopin VSS
+*.iopin VDD
+*.opin Vout
+XM3 net1 net1 VDD VDD sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+XM6 net2 net1 VDD VDD sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+XM7 net1 net2 VDD VDD sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+XM4 net2 net2 VDD VDD sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+XM1 net1 Vref net3 net3 sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+XM2 net2 Vin net3 net3 sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+XM5 net3 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM9 net5 net1 VDD VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+XM8 net4 net2 VDD VDD sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+XM11 net4 net5 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM10 net5 net5 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM12 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM13 net6 net4 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM14 net6 net4 VDD VDD sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+XM15 net7 net6 VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM16 net7 net6 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+XM17 Vout net7 VSS VSS sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+XM18 Vout net7 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.sym # of pins=7
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.sch
+.subckt logic_controller VDD X S1 CLK Y S2 VSS
+*.ipin X
+*.ipin CLK
+*.ipin Y
+*.opin S1
+*.opin S2
+*.iopin VSS
+*.iopin VDD
+XM1 net1 X VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 net1 CLK VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 net1 X net3 VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM4 net3 CLK VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM5 S1 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM6 S1 net1 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM7 net2 Y VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM8 net2 Y VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM9 net4 net2 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM10 S2 CLK net4 VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM11 S2 net2 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM12 S2 CLK VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/logic_shift_down_v1/logic_shift_down_v1.sym # of pins=4
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/logic_shift_down_v1/logic_shift_down_v1.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/logic_shift_down_v1/logic_shift_down_v1.sch
+.subckt logic_shift_down_v1 VDDL IN OUT VSS
+*.ipin IN
+*.opin OUT
+*.iopin VDDL
+*.iopin VSS
+XM1 net1 IN VDDL VDDL sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 net1 IN VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM3 OUT net1 VDDL VDDL sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM4 OUT net1 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sym # of pins=5
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sch
+.subckt pmos_comp Vin- Vin+ Vout I_bias VSS
+*.ipin I_bias
+*.ipin Vin-
+*.ipin Vin+
+*.ipin VSS
+*.opin Vout
+XM1 net2 net1 Vin- Vin- sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM2 net1 net1 Vin+ Vin+ sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM3 Vout net3 Vin+ Vin+ sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM4 net3 net3 Vin- Vin- sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+XM5 net2 net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM6 Vout net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM8 net1 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM7 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+XM9 net3 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/mux/mux.sym # of pins=6
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/mux/mux.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/mux/mux.sch
+.subckt mux VDD IN0 S OUT IN1 VSS
+*.ipin S
+*.ipin IN0
+*.ipin IN1
+*.opin OUT
+*.iopin VDD
+*.iopin VSS
+XM1 IN0 net1 OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM2 IN0 S OUT VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 IN1 S OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM4 IN1 net1 OUT VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+x1 VSS S net1 VDD mux_inverter
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sym # of pins=4
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sch
+.subckt buffer VDD IN OUT VSS  wn=1u
+*.iopin VDD
+*.iopin VSS
+*.ipin IN
+*.opin OUT
+XM1 net1 IN VSS VSS sg13_lv_nmos w=wn l=0.13u ng=1 m=1
+XM2 net1 IN VDD VDD sg13_lv_pmos w=wn l=0.13u ng=1 m=2
+XM3 net2 net1 VSS VSS sg13_lv_nmos w=wn l=0.13u ng=1 m=2
+XM4 net2 net1 VDD VDD sg13_lv_pmos w=wn l=0.13u ng=1 m=2*2
+XM5 net3 net2 VSS VSS sg13_lv_nmos w=wn l=0.13u ng=1 m=8
+XM6 net3 net2 VDD VDD sg13_lv_pmos w=wn l=0.13u ng=1 m=2*8
+XM8 OUT net3 VDD VDD sg13_lv_pmos w=wn l=0.13u ng=1 m=2*27
+XM7 OUT net3 VSS VSS sg13_lv_nmos w=wn l=0.13u ng=1 m=27
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/cgenerator/cgenerator.sym # of pins=3
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/cgenerator.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/cgenerator.sch
+.subckt cgenerator vdd vout vss
+*.iopin vdd
+*.iopin vss
+*.opin vout
+xi1 vdd net1 net9 vss inv_ring_osc
+xi2 vdd net9 net8 vss inv_ring_osc
+xi3 vdd net8 net7 vss inv_ring_osc
+xi4 vdd net7 net6 vss inv_ring_osc
+xi5 vdd net6 net5 vss inv_ring_osc
+xi6 vdd net5 net4 vss inv_ring_osc
+xi7 vdd net4 net3 vss inv_ring_osc
+xi8 vdd net3 net2 vss inv_ring_osc
+xi9 vdd net2 net11 vss inv_ring_osc
+xi10 vdd net11 net10 vss inv_ring_osc
+xi11 vdd net10 net1 vss inv_ring_osc
+x1 vdd net1 vout vss buff_ring_osc
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/ibias_opamp/Ib_opamp.sym # of pins=5
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/ibias_opamp/Ib_opamp.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/Ibias_uA/ibias_opamp/Ib_opamp.sch
+.subckt Ib_opamp VDD Vout V- V+ GND
+*.iopin VDD
+*.ipin V+
+*.ipin V-
+*.iopin GND
+*.opin Vout
+XM4 net1 V+ GND GND sg13_lv_nmos w=10u l=8u ng=1 m=6
+XM5 net1 net1 VDD VDD sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+XM7 Vout net1 VDD VDD sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+XM8 Vout V- GND GND sg13_lv_nmos w=10u l=8u ng=1 m=6
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/mux/mux_inverter/mux_inverter.sym # of pins=4
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/mux/mux_inverter/mux_inverter.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/mux/mux_inverter/mux_inverter.sch
+.subckt mux_inverter VSS IN OUT VDD
+*.ipin IN
+*.opin OUT
+*.iopin VSS
+*.iopin VDD
+XM1 OUT IN VSS VSS sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+XM2 OUT IN VDD VDD sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym # of pins=4
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sch
+.subckt inv_ring_osc vdd in out vss
+*.iopin vdd
+*.iopin vss
+*.ipin in
+*.opin out
+XM1 out in vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+XM2 out in vdd vdd sg13_lv_pmos w=4u l=1u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym # of pins=4
+** sym_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym
+** sch_path: /shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sch
+.subckt buff_ring_osc vdd in out vss
+*.ipin in
+*.iopin vdd
+*.iopin vss
+*.opin out
+XM1 net1 in vss vss sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM2 net1 in vdd vdd sg13_lv_pmos w=4u l=0.13u ng=1 m=1
+XM3 out net1 vdd vdd sg13_lv_pmos w=8u l=0.13u ng=2 m=1
+XM4 out net1 vss vss sg13_lv_nmos w=4u l=0.13u ng=2 m=1
+.ends
+
+.GLOBAL GND
+.end

@@ -1,0 +1,37 @@
+** sch_path: /shared/designs/Layouts/ib_ctat_ptat/ctat_ptat_core2.sch
+.subckt ctat_ptat_core2 VDD GND Iref
+*.PININFO VDD:B GND:B Iref:B
+M1 net9 net3 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M2 Iref net3 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M3 Iref net1 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M4 net11 net1 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M12 net8 net3 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M13 net6 net3 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M5 net10 net1 VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M7 net4 net6 net7 net5 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M10 net7 net8 GND net5 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M11 net8 net8 net7 net5 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M16 net6 net6 net4 net5 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M24 GND GND net2 net12 sg13_lv_pmos w=10u l=0.36u ng=1 m=20
+M25 net2 GND net11 net12 sg13_lv_pmos w=10u l=0.36u ng=1 m=1
+R1 net10 net13 rppd w=0.5e-6 l=1170e-6 m=1 b=0
+R3 net13 GND rhigh w=0.5e-6 l=27e-6 m=1 b=0
+R10 net9 GND rppd w=0.5e-6 l=2110e-6 m=1 b=0
+M6 VDD VDD VDD net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M8 net15 net9 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+M9 net15 net15 VDD net16 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M14 net3 net15 VDD net16 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M15 net3 net4 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+R2 VDD net16 ntap1 A=2e-11 P=4.2e-05
+R4_opamp GND net5 ptap1 A=5.6e-11 P=0.000114
+M17 net17 net10 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+M18 net17 net17 VDD net18 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M19 net1 net17 VDD net18 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M20 net1 net2 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+R5 VDD net18 ntap1 A=2e-11 P=4.2e-05
+R6_opamp GND net5 ptap1 A=5.6e-11 P=0.000114
+R7 VDD net14 ntap1 A=5e-12 P=1.2e-05
+R8 VDD net14 ntap1 A=5e-12 P=1.2e-05
+R9 VDD net12 ntap1 A=8e-12 P=1.8e-05
+R11_PTAT GND net5 ptap1 A=1.9e-11 P=4e-05
+.ends

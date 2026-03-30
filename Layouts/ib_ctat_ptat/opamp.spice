@@ -1,0 +1,10 @@
+** sch_path: /shared/designs/Layouts/ib_ctat_ptat/opamp.sch
+.subckt opamp VDD Vp Vn GND Vout
+*.PININFO VDD:B Vp:I Vn:I GND:B Vout:O
+M4 net1 Vp GND net2 sg13_lv_nmos w=10u l=8u ng=1 m=6
+M5 net1 net1 VDD net3 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M7 Vout net1 VDD net3 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M8 Vout Vn GND net2 sg13_lv_nmos w=10u l=8u ng=1 m=6
+R1 VDD net3 ntap1 A=1e-11 P=4.1e-05
+R2 GND net2 ptap1 A=5.6e-11 P=0.000114
+.ends

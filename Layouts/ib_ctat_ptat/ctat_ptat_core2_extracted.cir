@@ -1,0 +1,56 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 30/03/2026 05:01
+
+.SUBCKT ctat_ptat_core2 GND Iref VDD
+M$1 GND \$95 \$69 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.17p AD=0.095p PS=1.68u
++ PD=0.88u
+M$2 \$69 \$124 \$57 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.095p AD=0.17p PS=0.88u
++ PD=1.68u
+M$3 \$57 \$124 \$124 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u
++ PD=332u
+M$18 \$95 \$95 \$69 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u
++ PD=332u
+M$63 \$58 GND GND \$67 sg13_lv_pmos L=0.36u W=200u AS=41p AD=39.5p PS=228.2u
++ PD=217.9u
+M$73 \$58 GND \$93 \$67 sg13_lv_pmos L=0.36u W=10u AS=1.9p AD=3.4p PS=10.38u
++ PD=20.68u
+R$84 \$67 VDD ntap1 A=8p P=18u
+R$85 \$79 VDD ntap1 A=20p P=42u
+R$86 \$237 VDD ntap1 A=10p P=24u
+R$88 \$73 VDD ntap1 A=20p P=42u
+R$89 \$6 GND rhigh w=0.5u l=27u ps=0 b=0 m=1
+R$90 \$1 GND ptap1 A=131p P=268u
+R$104 \$85 \$6 rppd w=0.5u l=1170u ps=0 b=0 m=1
+M$118 GND \$70 \$143 \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$119 \$147 \$85 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$121 \$81 \$58 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$131 \$75 \$57 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$142 VDD \$143 \$75 \$73 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$143 \$81 \$147 VDD \$79 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$144 \$147 \$147 VDD \$79 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p
++ PS=82.72u PD=82.72u
+M$152 VDD \$143 \$143 \$73 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p
++ PS=82.72u PD=82.72u
+R$169 GND \$70 rppd w=0.5u l=2110u ps=0 b=0 m=1
+M$183 VDD \$75 Iref \$237 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p PS=16.08u
++ PD=16.08u
+M$186 Iref \$81 VDD \$237 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p PS=16.08u
++ PD=16.08u
+M$192 VDD VDD VDD \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$193 VDD \$75 \$124 \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$197 \$93 \$81 VDD \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$198 VDD \$75 \$95 \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$199 \$70 \$75 VDD \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$200 VDD \$81 \$85 \$237 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+.ENDS ctat_ptat_core2

@@ -92,7 +92,7 @@ N 1760 -1200 1760 -1100 {lab=#net7}
 N 1570 -1380 1570 -1330 {lab=VDD}
 N 1390 -1330 1570 -1330 {lab=VDD}
 N 1580 -630 1860 -630 {lab=GND}
-N 1580 -630 1580 -600 {lab=GND}
+N 1580 -630 1580 -520 {lab=GND}
 N 1440 -630 1440 -110 {lab=GND}
 N 1190 -630 1440 -630 {lab=GND}
 N 1570 -210 1570 -110 {lab=GND}
@@ -218,7 +218,7 @@ N 2560 -1070 2560 -630 {lab=GND}
 N 2400 -630 2560 -630 {lab=GND}
 N 1620 -210 1620 -170 {lab=#net7}
 C {iopin.sym} 1570 -1380 0 0 {name=p1 lab=VDD}
-C {iopin.sym} 1580 -600 0 0 {name=p2 lab=GND}
+C {iopin.sym} 1580 -520 0 0 {name=p2 lab=GND}
 C {iopin.sym} 1880 -260 0 0 {name=p3 lab=Ibias_1}
 C {lab_pin.sym} 940 -910 3 0 {name=p9 sig_type=std_logic lab=voSCCTP}
 C {lab_pin.sym} 2170 -910 3 0 {name=p10 sig_type=std_logic lab=voSCCTN}
@@ -345,7 +345,7 @@ m=1
 }
 C {sg13g2_pr/rppd.sym} 3150 -160 0 0 {name=R7
 w=0.5e-6
-l=826e-6
+l=792e-6
 model=rppd
 body=GND
 spiceprefix=X
@@ -356,7 +356,7 @@ C {iopin.sym} 3200 -210 0 0 {name=p16 lab=Vb_0v4}
 C {iopin.sym} 3000 -210 0 0 {name=p17 lab=Vb_0v5}
 C {sg13g2_pr/rppd.sym} 2970 -160 0 0 {name=R5
 w=0.5e-6
-l=1024e-6
+l=994e-6
 model=rppd
 body=GND
 spiceprefix=X
@@ -369,22 +369,6 @@ w=1.1u
 ng=1
 m=3
 model=sg13_lv_nmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 2950 -340 0 0 {name=M21
-l=1u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_lv_pmos.sym} 3130 -340 0 0 {name=M9
-l=1u
-w=2u
-ng=1
-m=1
-model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 1690 -340 0 1 {name=M23
@@ -536,7 +520,7 @@ C {sg13g2_pr/cap_cmim.sym} 1620 -140 0 0 {name=C5
 model=cap_cmim
 w=18e-6
 l=18e-6
-m=6
+m=9
 spiceprefix=X}
 C {sg13g2_pr/cap_cmim.sym} 1820 -440 0 0 {name=C2
 model=cap_cmim
@@ -544,3 +528,19 @@ w=2.6e-6
 l=2.6e-6
 m=1
 spiceprefix=X}
+C {sg13g2_pr/sg13_lv_pmos.sym} 2950 -340 0 0 {name=M9
+l=2u
+w=1.1u
+ng=1
+m=6
+model=sg13_lv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_lv_pmos.sym} 3130 -340 0 0 {name=M21
+l=2u
+w=1.1u
+ng=1
+m=6
+model=sg13_lv_pmos
+spiceprefix=X
+}

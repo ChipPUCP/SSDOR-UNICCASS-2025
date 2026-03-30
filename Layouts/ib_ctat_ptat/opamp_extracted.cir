@@ -1,0 +1,14 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 27/03/2026 04:30
+
+.SUBCKT opamp GND Vn Vp VDD Vout
+R$1 \$12 VDD ntap1 A=20p P=42u
+R$2 \$1 GND ptap1 A=56p P=114u
+M$3 VDD \$14 Vout \$12 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$5 \$14 \$14 VDD \$12 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$11 GND Vp \$14 \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$13 GND Vn Vout \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+.ENDS opamp
