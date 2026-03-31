@@ -1,0 +1,64 @@
+** sch_path: /shared/designs/Layouts/ib_ctat_ptat/ctat_ptat_int.sch
+.subckt ctat_ptat_int VDD Ibias_1 Ibias_2 Ibias_3 Ibias_4 Ibias_5 Ibias_6 Vb_0v4 Vb_0v5 GND
+*.PININFO VDD:B Ibias_1:B Ibias_2:B Ibias_3:B Ibias_4:B Ibias_5:B Ibias_6:B Vb_0v4:B Vb_0v5:B GND:B
+M1 net9 net3 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M2 net12 net3 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M3 net12 net1 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M4 net11 net1 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M12 net8 net3 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M13 net6 net3 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M5 net10 net1 VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M7 net4 net6 net7 net5 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M10 net7 net8 GND net5 sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M11 net8 net8 net7 net5 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M16 net6 net6 net4 net5 sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M24 GND GND net2 net13 sg13_lv_pmos w=10u l=0.36u ng=1 m=20
+M25 net2 GND net11 net13 sg13_lv_pmos w=10u l=0.36u ng=1 m=1
+R1 net10 net14 rppd w=0.5e-6 l=1170e-6 m=1 b=0
+R3 net14 GND rhigh w=0.5e-6 l=27e-6 m=1 b=0
+R10 net9 GND rppd w=0.5e-6 l=2110e-6 m=1 b=0
+M6 VDD VDD VDD net15 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M8 net16 net9 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+M9 net16 net16 VDD net17 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M14 net3 net16 VDD net17 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M15 net3 net4 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+R2 VDD net17 ntap1 A=2e-11 P=4.2e-05
+R4_opamp GND net5 ptap1 A=5.6e-11 P=0.000114
+M17 net18 net10 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+M18 net18 net18 VDD net19 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M19 net1 net18 VDD net19 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M20 net1 net2 GND net5 sg13_lv_nmos w=10u l=8u ng=1 m=6
+R5 VDD net19 ntap1 A=2e-11 P=4.2e-05
+R6_opamp GND net5 ptap1 A=5.6e-11 P=0.000114
+R7 VDD net15 ntap1 A=5e-12 P=1.2e-05
+R8 VDD net15 ntap1 A=5e-12 P=1.2e-05
+R9 VDD net13 ntap1 A=8e-12 P=1.8e-05
+R11_PTAT GND net5 ptap1 A=1.9e-11 P=4e-05
+M30 net12 net12 GND net5 sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+R4 net21 Vb_0v5 rppd w=0.5e-6 l=972.9e-6 m=1 b=0
+R6 net22 Vb_0v4 rppd w=0.5e-6 l=1167.4e-6 m=1 b=0
+M21 net20 net12 GND net5 sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+M23 net20 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M22 Ibias_1 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M26 Ibias_2 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M27 Ibias_3 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M28 Ibias_4 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M29 Ibias_5 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M31 Ibias_6 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+C5 net12 GND cap_cmim w=18e-6 l=18e-6 m=9
+C2 net20 VDD cap_cmim w=2.6e-6 l=2.6e-6 m=1
+R11 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R12 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R13 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R14 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R15 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R16 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R17 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R18 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R19 VDD net23 ntap1 A=4.2e-12 P=1.34e-05
+R20 GND net5 ptap1 A=5e-12 P=1.2e-05
+M32 net21 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M33 net22 net20 VDD net23 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+R21 Vb_0v5 GND rppd w=0.5e-6 l=994e-6 m=1 b=0
+R22 Vb_0v4 GND rppd w=0.5e-6 l=792e-6 m=1 b=0
+.ends

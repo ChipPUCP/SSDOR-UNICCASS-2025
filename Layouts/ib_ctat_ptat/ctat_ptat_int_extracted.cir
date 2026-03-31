@@ -1,0 +1,85 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 31/03/2026 05:02
+
+.SUBCKT ctat_ptat_int GND VDD Ibias_5 Ibias_4 Ibias_2 Ibias_3 Ibias_6 Ibias_1
++ Vb_0v4 Vb_0v5
+M$1 \$99 \$99 \$72 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u PD=332u
+M$31 \$59 \$127 \$127 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u
++ PD=332u
+M$61 GND \$99 \$72 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.17p AD=0.095p PS=1.68u
++ PD=0.88u
+M$62 \$72 \$127 \$59 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.095p AD=0.17p PS=0.88u
++ PD=1.68u
+M$63 \$60 GND GND \$70 sg13_lv_pmos L=0.36u W=200u AS=41p AD=39.5p PS=228.2u
++ PD=217.9u
+M$73 \$60 GND \$96 \$70 sg13_lv_pmos L=0.36u W=10u AS=1.9p AD=3.4p PS=10.38u
++ PD=20.68u
+R$84 \$70 VDD ntap1 A=8p P=18u
+R$85 \$82 VDD ntap1 A=20p P=42u
+R$86 \$76 VDD ntap1 A=20p P=42u
+R$87 \$242 VDD ntap1 A=10p P=24u
+R$89 \$355 VDD ntap1 A=37.8p P=120.6u
+R$98 \$6 GND rhigh w=0.5u l=27u ps=0 b=0 m=1
+R$100 \$50 \$6 rppd w=0.5u l=1170u ps=0 b=0 m=1
+R$124 \$1 GND ptap1 A=136p P=280u
+M$125 VDD \$146 \$78 \$76 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$126 VDD \$150 \$84 \$82 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p PS=82.72u
++ PD=82.72u
+M$128 VDD \$150 \$150 \$82 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p
++ PS=82.72u PD=82.72u
+M$134 VDD \$146 \$146 \$76 sg13_lv_pmos L=0.5u W=40u AS=13.6p AD=13.6p
++ PS=82.72u PD=82.72u
+M$141 GND \$49 \$146 \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$142 \$84 \$60 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$143 \$150 \$50 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+M$157 \$78 \$59 GND \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p PS=124.08u
++ PD=124.08u
+C$167 \$356 VDD cap_cmim w=2.6u l=2.6u A=6.76p P=10.4u m=1
+R$181 \$388 Vb_0v4 rppd w=0.5u l=1167.4u ps=0 b=0 m=1
+R$196 Vb_0v4 GND rppd w=0.5u l=792u ps=0 b=0 m=1
+M$201 \$53 \$53 GND \$1 sg13_lv_nmos L=2u W=3.3u AS=1.122p AD=1.122p PS=8.64u
++ PD=8.64u
+M$203 GND \$53 \$356 \$1 sg13_lv_nmos L=2u W=3.3u AS=1.122p AD=1.122p PS=8.64u
++ PD=8.64u
+R$217 Vb_0v5 GND rppd w=0.5u l=994u ps=0 b=0 m=1
+R$224 \$380 Vb_0v5 rppd w=0.5u l=972.9u ps=0 b=0 m=1
+R$260 GND \$49 rppd w=0.5u l=2110u ps=0 b=0 m=1
+M$263 VDD \$78 \$53 \$242 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p PS=16.08u
++ PD=16.08u
+M$266 VDD \$84 \$53 \$242 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p PS=16.08u
++ PD=16.08u
+M$270 \$49 \$78 VDD \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$275 VDD \$78 \$99 \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$277 VDD \$78 \$127 \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$278 VDD \$84 \$50 \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$279 VDD VDD VDD \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$280 \$96 \$84 VDD \$242 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$281 \$356 \$356 VDD \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$282 Ibias_4 \$356 VDD \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$284 VDD \$356 \$380 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$285 VDD \$356 Ibias_2 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$287 VDD \$356 \$388 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$288 VDD \$356 Ibias_5 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$296 VDD \$356 Ibias_3 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$304 Ibias_6 \$356 VDD \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+M$319 VDD \$356 Ibias_1 \$355 sg13_lv_pmos L=2u W=6.6u AS=2.244p AD=2.244p
++ PS=17.28u PD=17.28u
+C$335 \$53 GND cap_cmim w=18u l=18u A=324p P=72u m=9
+.ENDS ctat_ptat_int
