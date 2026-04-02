@@ -1,0 +1,36 @@
+** sch_path: /shared/designs/Layouts/PMOS/nmos_array_x2.sch
+.subckt nmos_array_x2 Vd_array_L Vs_array Vd_array_R Vb_array
+*.PININFO Vd_array_L:B Vs_array:B Vd_array_R:B Vb_array:B
+M2 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+R2 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+M1 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M3 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M4 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M5 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M6 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M7 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M8 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M9 Vd_array_L Vd_array_R Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+R1 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R3 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R4 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R5 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R6 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R7 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+M10 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+R8 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+M11 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M12 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M13 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M14 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M15 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M16 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M17 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+M18 Vd_array_R Vd_array_L Vs_array net1 sg13_lv_nmos w=86.4u l=0.13u ng=36 m=1
+R9 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R10 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R11 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R12 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R13 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+R14 Vb_array net1 ptap1 A=2.13e-10 P=0.000428
+.ends
