@@ -1,0 +1,49 @@
+** sch_path: /shared/designs/Layouts/Dig_control/dig_control_block2.sch
+.subckt dig_control_block2 Vout_2 vss X Y S2 S1 Vout_1
+*.PININFO Vout_2:B vss:B X:I Y:I S2:O S1:O Vout_1:B
+M1 net1 net2 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M2 net1 net2 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M3 net3 net1 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M4 net3 net1 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M5 net4 net3 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M6 net4 net3 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M7 net5 net4 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M8 net5 net4 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M9 net6 net5 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M10 net6 net5 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M11 net7 net6 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M12 net7 net6 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M13 net8 net7 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M14 net8 net7 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M15 net9 net8 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M16 net9 net8 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M17 net10 net9 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M18 net10 net9 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M19 net11 net10 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M20 net11 net10 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M21 net2 net11 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+M22 net2 net11 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M23 net12 net2 vss vss sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M24 net12 net2 Vout_2 well sg13_lv_pmos w=4u l=0.13u ng=1 m=1
+M26 net13 net12 Vout_2 well sg13_lv_pmos w=8u l=0.13u ng=2 m=1
+M25 net13 net12 vss vss sg13_lv_nmos w=4u l=0.13u ng=2 m=1
+R1 Vout_2 well ntap1 A=2.9e-11 P=6e-05
+M27 net15 X Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M28 net15 net13 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M29 net15 X net17 vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M30 net17 net13 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M31 net14 net15 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M32 net14 net15 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M33 net16 Y Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M34 net16 Y vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M35 net18 net16 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M36 S2 net13 net18 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M37 S2 net16 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M38 S2 net13 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+R2 Vout_2 well ntap1 A=7e-12 P=1.6e-05
+M39 net19 net14 Vout_1 well_1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M40 net19 net14 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M41 S1 net19 Vout_1 well_1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M42 S1 net19 vss vss sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+R3 Vout_1 well_1 ntap1 A=2e-12 P=6e-06
+.ends

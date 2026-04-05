@@ -1,0 +1,16 @@
+01-Apr-2026 18:56:16 | INFO    | Your Klayout version is: KLayout 0.30.5
+01-Apr-2026 18:56:16 | INFO    | Running SG13G2 LVS checks on design /home/designer/shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/comp_w_hyst.gds on cell comp_w_hyst
+01-Apr-2026 18:56:19 | INFO    | ==============================================================================
+01-Apr-2026 18:56:19 | INFO    | Important Summary
+01-Apr-2026 18:56:19 | INFO    | +------------------+------------------------------------------------------------------------------------------------------------+
+01-Apr-2026 18:56:19 | INFO    | | Status           | PASS                                                                                                       |
+01-Apr-2026 18:56:19 | INFO    | | Mode             | COMPARE                                                                                                    |
+01-Apr-2026 18:56:19 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                                    |
+01-Apr-2026 18:56:19 | INFO    | | Layout           | comp_w_hyst.gds                                                                                            |
+01-Apr-2026 18:56:19 | INFO    | | Top Cell         | comp_w_hyst                                                                                                |
+01-Apr-2026 18:56:19 | INFO    | | Results Dir      | /home/designer/shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/lvs_run_comp_w_hyst_2026_04_01_18_56_16 |
+01-Apr-2026 18:56:19 | INFO    | | Warnings         | 0                                                                                                          |
+01-Apr-2026 18:56:19 | INFO    | | Errors           | 0                                                                                                          |
+01-Apr-2026 18:56:19 | INFO    | | Run Time (s)     | 2.972                                                                                                      |
+01-Apr-2026 18:56:19 | INFO    | +------------------+------------------------------------------------------------------------------------------------------------+
+01-Apr-2026 18:56:19 | INFO    | ==============================================================================

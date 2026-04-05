@@ -1,0 +1,16 @@
+01-Apr-2026 18:45:07 | INFO    | Your Klayout version is: KLayout 0.30.5
+01-Apr-2026 18:45:07 | INFO    | Running SG13G2 LVS checks on design /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.gds on cell logic_controller
+01-Apr-2026 18:45:10 | INFO    | ==============================================================================
+01-Apr-2026 18:45:10 | INFO    | Important Summary
+01-Apr-2026 18:45:10 | INFO    | +------------------+----------------------------------------------------------------------------------------------------------------------+
+01-Apr-2026 18:45:10 | INFO    | | Status           | PASS                                                                                                                 |
+01-Apr-2026 18:45:10 | INFO    | | Mode             | COMPARE                                                                                                              |
+01-Apr-2026 18:45:10 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                                              |
+01-Apr-2026 18:45:10 | INFO    | | Layout           | logic_controller.gds                                                                                                 |
+01-Apr-2026 18:45:10 | INFO    | | Top Cell         | logic_controller                                                                                                     |
+01-Apr-2026 18:45:10 | INFO    | | Results Dir      | /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/lvs_run_logic_controller_2026_04_01_18_45_06 |
+01-Apr-2026 18:45:10 | INFO    | | Warnings         | 0                                                                                                                    |
+01-Apr-2026 18:45:10 | INFO    | | Errors           | 0                                                                                                                    |
+01-Apr-2026 18:45:10 | INFO    | | Run Time (s)     | 2.967                                                                                                                |
+01-Apr-2026 18:45:10 | INFO    | +------------------+----------------------------------------------------------------------------------------------------------------------+
+01-Apr-2026 18:45:10 | INFO    | ==============================================================================

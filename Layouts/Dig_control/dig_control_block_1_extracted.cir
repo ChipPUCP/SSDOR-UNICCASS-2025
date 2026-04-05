@@ -1,0 +1,213 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 05/04/2026 20:08
+
+.SUBCKT dig_control_block_1
+X$1 VSS \$3 VSS \$3 nmos$5
+X$2 VSS \$14 VSS \$13 nmos
+X$3 VSS \$15 VSS \$14 nmos$1
+X$4 VSS X VSS \$15 nmos$3
+X$5 Vout_2 \$7 \$36 \$6 VSS pmos$1
+X$6 X VSS via_stack$2
+X$7 \$6 Vout_2 VSS ntap1
+X$8 \$6 Vout_2 VSS ntap1
+X$9 Y VSS via_stack$2
+X$10 Vout_2 \$21 \$52 \$6 VSS pmos$1
+X$11 \$20 Vout_2 \$44 \$6 VSS pmos$1
+X$12 \$13 Vout_2 \$40 \$6 VSS pmos$1
+X$13 VSS Y VSS \$18 nmos$3
+X$14 VSS \$18 VSS \$19 nmos$1
+X$15 VSS \$19 VSS \$20 nmos
+X$16 VSS \$31 VSS \$31 nmos$5
+X$17 \$44 Vout_2 \$52 \$6 VSS pmos
+X$18 Vout_2 \$52 \$44 \$6 VSS pmos
+X$19 \$44 VSS via_stack
+X$20 \$52 VSS via_stack
+X$21 Vout_2 Y \$18 \$6 VSS pmos$4
+X$22 Vout_2 Y \$18 \$6 VSS pmos$4
+X$23 Vout_2 X \$15 \$6 VSS pmos$4
+X$24 Vout_2 X \$15 \$6 VSS pmos$4
+X$25 Vout_2 \$18 \$19 \$6 VSS pmos$3
+X$26 Vout_2 \$18 \$19 \$6 VSS pmos$3
+X$27 Vout_2 \$15 \$14 \$6 VSS pmos$3
+X$28 Vout_2 \$15 \$14 \$6 VSS pmos$3
+X$29 Vout_2 \$19 \$20 \$6 VSS pmos$2
+X$30 Vout_2 \$19 \$20 \$6 VSS pmos$2
+X$31 Vout_2 \$14 \$13 \$6 VSS pmos$2
+X$32 Vout_2 \$14 \$13 \$6 VSS pmos$2
+X$33 \$36 \$10 VSS Vb0v4 nmos$4
+X$34 Vb0v4 VSS via_stack
+X$35 \$10 \$40 VSS \$3 nmos$4
+X$36 \$3 VSS via_stack
+X$37 \$24 \$44 VSS Vin nmos$4
+X$38 \$52 \$24 VSS Vb0v5 nmos$4
+X$39 Vb0v5 VSS via_stack
+X$40 Vin VSS via_stack
+X$41 Ibias_6 VSS via_stack
+X$42 \$44 VSS via_stack
+X$43 \$44 Vout_2 \$44 \$6 VSS pmos
+X$44 \$52 VSS via_stack
+X$45 Vout_2 \$52 \$52 \$6 VSS pmos
+X$46 \$36 VSS via_stack
+X$47 Vout_2 \$36 \$36 \$6 VSS pmos
+X$48 \$40 VSS via_stack
+X$49 \$40 Vout_2 \$36 \$6 VSS pmos
+X$50 Vout_2 \$36 \$40 \$6 VSS pmos
+X$51 \$36 VSS via_stack
+X$52 \$40 VSS via_stack
+X$53 \$40 Vout_2 \$40 \$6 VSS pmos
+X$54 Ibias_5 VSS via_stack
+X$55 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$56 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$57 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$58 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$59 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$60 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$61 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$62 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$63 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$64 Vout_2 \$31 \$31 \$30 VSS pmos$5
+X$65 Vout_2 \$30 VSS ntap1$1
+X$66 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$67 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$68 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$69 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$70 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$71 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$72 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$73 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$74 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$75 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$76 \$3 VSS via_stack$3
+X$77 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$78 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$79 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$80 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$81 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$82 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$83 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$84 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$85 Vout_1 \$3 \$3 \$2 VSS pmos$5
+X$86 Vout_1 \$2 VSS ntap1$1
+X$87 VSS \$13 VSS \$7 nmos$2
+X$88 \$7 VSS via_stack
+X$89 \$21 VSS VSS \$21 nmos$2
+X$90 \$21 VSS via_stack
+X$91 Ibias_6 VSS VSS Ibias_6 nmos$2
+X$92 VSS \$24 VSS Ibias_6 nmos$2
+X$93 VSS \$20 VSS \$21 nmos$2
+X$94 \$21 VSS via_stack
+X$95 Ibias_5 VSS VSS Ibias_5 nmos$2
+X$96 VSS \$10 VSS Ibias_5 nmos$2
+X$97 \$7 VSS VSS \$7 nmos$2
+X$98 \$7 VSS via_stack
+M$1 \$44 Vin \$24 VSS sg13_lv_nmos L=0.5u W=5u AS=1.7p AD=0.95p PS=10.68u
++ PD=5.38u
+M$2 \$24 Vb0v5 \$52 VSS sg13_lv_nmos L=0.5u W=5u AS=0.95p AD=1.7p PS=5.38u
++ PD=10.68u
+M$3 \$36 Vb0v4 \$10 VSS sg13_lv_nmos L=0.5u W=5u AS=1.7p AD=0.95p PS=10.68u
++ PD=5.38u
+M$4 \$10 \$3 \$40 VSS sg13_lv_nmos L=0.5u W=5u AS=0.95p AD=1.7p PS=5.38u
++ PD=10.68u
+M$5 VSS \$21 \$21 VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$6 \$7 \$7 VSS VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
+M$7 Ibias_5 Ibias_5 VSS VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$8 VSS Ibias_5 \$10 VSS sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$9 VSS \$7 \$13 VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$10 \$20 \$21 VSS VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$11 \$24 Ibias_6 VSS VSS sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$12 VSS Ibias_6 Ibias_6 VSS sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$13 \$52 \$52 Vout_2 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$14 Vout_2 \$36 \$36 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$15 \$40 \$36 Vout_2 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.095p
++ PS=1.68u PD=0.88u
+M$16 Vout_2 \$40 \$36 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.095p AD=0.17p
++ PS=0.88u PD=1.68u
+M$17 \$40 \$40 Vout_2 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$18 \$52 \$44 Vout_2 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.095p
++ PS=1.68u PD=0.88u
+M$19 Vout_2 \$52 \$44 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.095p AD=0.17p
++ PS=0.88u PD=1.68u
+M$20 Vout_2 \$44 \$44 \$6 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+R$21 \$2 Vout_1 ntap1 A=10p P=22u
+R$22 \$30 Vout_2 ntap1 A=10p P=22u
+R$23 \$6 Vout_2 ntap1 A=12p P=26u
+R$24 \$6 Vout_2 ntap1 A=12p P=26u
+.ENDS dig_control_block_1
+
+.SUBCKT nmos$4 \$1 \$2 \$3 \$5
+.ENDS nmos$4
+
+.SUBCKT nmos$3 \$1 \$2 \$3 \$5
+M$1 \$1 \$5 \$2 \$3 sg13_lv_nmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+.ENDS nmos$3
+
+.SUBCKT nmos$2 \$1 \$2 \$3 \$5
+.ENDS nmos$2
+
+.SUBCKT nmos$1 \$1 \$2 \$3 \$5
+M$1 \$1 \$5 \$2 \$3 sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+.ENDS nmos$1
+
+.SUBCKT nmos$5 \$1 \$2 \$3 \$5
+M$1 \$1 \$5 \$2 \$3 sg13_lv_nmos L=10u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+.ENDS nmos$5
+
+.SUBCKT nmos \$1 \$2 \$3 \$5
+M$1 \$1 \$5 \$2 \$3 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+.ENDS nmos
+
+.SUBCKT via_stack$2 \$1 \$2
+.ENDS via_stack$2
+
+.SUBCKT pmos$2 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+.ENDS pmos$2
+
+.SUBCKT ntap1$1 \$1 \$2 \$4
+.ENDS ntap1$1
+
+.SUBCKT pmos \$1 \$2 \$3 \$4 \$6
+.ENDS pmos
+
+.SUBCKT ntap1 \$1 \$2 \$4
+.ENDS ntap1
+
+.SUBCKT via_stack$3 \$1 \$2
+.ENDS via_stack$3
+
+.SUBCKT pmos$5 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=10u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+.ENDS pmos$5
+
+.SUBCKT pmos$4 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+.ENDS pmos$4
+
+.SUBCKT pmos$3 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+.ENDS pmos$3
+
+.SUBCKT via_stack \$1 \$2
+.ENDS via_stack
+
+.SUBCKT pmos$1 \$1 \$2 \$3 \$4 \$6
+M$1 \$1 \$3 \$2 \$4 sg13_lv_pmos L=0.5u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+.ENDS pmos$1

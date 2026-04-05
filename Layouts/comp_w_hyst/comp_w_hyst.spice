@@ -1,0 +1,23 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/comp_w_hyst/comp_w_hyst.sch
+.subckt comp_w_hyst VDD VSS Vref Vin Vout I_bias
+*.PININFO I_bias:I Vref:I Vin:I VSS:B VDD:B Vout:O
+MM3 net1 net1 VDD well sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+MM6 net2 net1 VDD well sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+MM7 net1 net2 VDD well sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+MM4 net2 net2 VDD well sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+MM1 net1 Vref net5 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+MM2 net2 Vin net5 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+MM5 net5 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM9 net4 net1 VDD well sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+MM8 net3 net2 VDD well sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+MM11 net3 net4 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM10 net4 net4 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM12 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM13 net6 net3 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM14 net6 net3 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+RR1 VDD well ntap1 A=1.2e-11 P=2.6e-05
+MM15 net7 net6 VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+MM16 net7 net6 VDD well sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+MM17 Vout net7 VSS VSS sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+MM18 Vout net7 VDD well sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+.ends

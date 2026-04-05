@@ -1,0 +1,9 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_shift_down/logic_shift_down.sch
+.subckt logic_shift_down VDDL IN OUT VSS
+*.PININFO IN:I OUT:O VDDL:B VSS:B
+MM1 net1 IN VDDL well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+MM2 net1 IN VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM3 OUT net1 VDDL well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+MM4 OUT net1 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+RR1 VDDL well ntap1 A=2e-12 P=6e-06
+.ends

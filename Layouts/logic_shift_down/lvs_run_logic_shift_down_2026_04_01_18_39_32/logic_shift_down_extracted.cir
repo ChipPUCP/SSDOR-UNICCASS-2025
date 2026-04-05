@@ -1,0 +1,13 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 01/04/2026 18:39
+
+.SUBCKT logic_shift_down IN VSS VDDL OUT
+R$1 VDDL \$6 ntap1 A=2p P=6u
+M$2 VSS IN \$2 VSS sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$3 VSS \$2 OUT VSS sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$4 VDDL IN \$2 \$6 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+M$5 VDDL \$2 OUT \$6 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+.ENDS logic_shift_down

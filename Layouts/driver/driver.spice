@@ -1,0 +1,61 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/driver/driver.sch
+.subckt driver vdd ibias vout vac sel vss
+*.PININFO vdd:B ibias:B vac:B sel:B vss:B vout:O
+x2 vdd vdd sel net1 net2 vss mux
+x3 vdd net1 vout vss buffer wn=1u
+x1 vac vdd net2 ibias vss pmos_comp
+.ends
+
+* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.sym # of pins=6
+** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.sym
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.sch
+.subckt mux VDD IN0 S OUT IN1 VSS
+*.PININFO S:I IN0:I IN1:I OUT:O VDD:B VSS:B
+MM1 IN0 net1 OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM2 IN0 S OUT well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+MM3 IN1 S OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM4 IN1 net1 OUT well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+RR1 VDD well ntap1 A=3e-12 P=8e-06
+MM5 net1 S VSS VSS sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+MM6 net1 S VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sym # of pins=4
+** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sym
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sch
+.subckt buffer VDD IN OUT VSS  wn=1u
+*.PININFO VDD:B VSS:B IN:I OUT:O
+MM1 net1 IN VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM2 net1 IN VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+MM3 net2 net1 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=2
+MM4 net2 net1 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*2
+MM5 net3 net2 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=8
+MM6 net3 net2 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*8
+MM8 OUT net3 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*27
+MM7 OUT net3 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=27
+RR1 VDD well ntap1 A=2.4e-11 P=5e-05
+RR2 VDD well ntap1 A=4.1e-11 P=8.4e-05
+RR3 VDD well ntap1 A=4.1e-11 P=8.4e-05
+.ends
+
+
+* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sym # of pins=5
+** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sym
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sch
+.subckt pmos_comp Vin- Vin+ Vout I_bias VSS
+*.PININFO I_bias:I Vin-:I Vin+:I VSS:I Vout:O
+MM1 net2 net1 Vin- well3 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM2 net1 net1 Vin+ well1 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM3 Vout net3 Vin+ well1 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM4 net3 net3 Vin- well2 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM5 net2 net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM6 Vout net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM8 net1 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM7 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM9 net3 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+RR1 Vin+ well1 ntap1 A=2e-12 P=6e-06
+RR2 Vin- well2 ntap1 A=1e-12 P=4e-06
+RR3 Vin- well3 ntap1 A=1e-12 P=4e-06
+.ends
+

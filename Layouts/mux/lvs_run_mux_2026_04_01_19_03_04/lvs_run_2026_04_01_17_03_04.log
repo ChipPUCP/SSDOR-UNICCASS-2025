@@ -1,0 +1,16 @@
+01-Apr-2026 19:03:04 | INFO    | Your Klayout version is: KLayout 0.30.5
+01-Apr-2026 19:03:04 | INFO    | Running SG13G2 LVS checks on design /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.gds on cell mux
+01-Apr-2026 19:03:07 | INFO    | ==============================================================================
+01-Apr-2026 19:03:07 | INFO    | Important Summary
+01-Apr-2026 19:03:07 | INFO    | +------------------+--------------------------------------------------------------------------------------------+
+01-Apr-2026 19:03:07 | INFO    | | Status           | PASS                                                                                       |
+01-Apr-2026 19:03:07 | INFO    | | Mode             | COMPARE                                                                                    |
+01-Apr-2026 19:03:07 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                    |
+01-Apr-2026 19:03:07 | INFO    | | Layout           | mux.gds                                                                                    |
+01-Apr-2026 19:03:07 | INFO    | | Top Cell         | mux                                                                                        |
+01-Apr-2026 19:03:07 | INFO    | | Results Dir      | /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/lvs_run_mux_2026_04_01_19_03_04 |
+01-Apr-2026 19:03:07 | INFO    | | Warnings         | 0                                                                                          |
+01-Apr-2026 19:03:07 | INFO    | | Errors           | 0                                                                                          |
+01-Apr-2026 19:03:07 | INFO    | | Run Time (s)     | 3.464                                                                                      |
+01-Apr-2026 19:03:07 | INFO    | +------------------+--------------------------------------------------------------------------------------------+
+01-Apr-2026 19:03:07 | INFO    | ==============================================================================

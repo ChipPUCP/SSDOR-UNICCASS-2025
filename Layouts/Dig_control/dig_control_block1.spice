@@ -1,0 +1,48 @@
+** sch_path: /shared/designs/Layouts/Dig_control/dig_control_block1.sch
+.subckt dig_control_block1 Vb0v4 VSS Vout_2 X Y Vb0v5 Vout_1 Ibias_5 Ibias_6
+*.PININFO Vb0v4:I VSS:B Vout_2:B X:O Y:O Vb0v5:I Vout_1:B Ibias_5:I Ibias_6:I
+M3 net1 net1 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M6 net2 net1 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M7 net1 net2 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M4 net2 net2 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M1 net1 Vb0v4 net5 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M2 net2 Vx1 net5 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M5 net5 Ibias_5 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M9 net4 net1 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M8 net3 net2 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M11 net3 net4 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M10 net4 net4 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M12 Ibias_5 Ibias_5 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M13 net6 net3 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M14 net6 net3 Vout_2 wellb1 sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M15 net7 net6 VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M16 net7 net6 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+M17 X net7 VSS VSS sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+M18 X net7 Vout_2 wellb1 sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+M19 net8 net8 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M20 net9 net8 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M21 net8 net9 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M22 net9 net9 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M23 net8 Vb0v5 net12 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M24 net9 Vx2 net12 VSS sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M25 net12 Ibias_6 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M26 net11 net8 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M27 net10 net9 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M28 net10 net11 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M29 net11 net11 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M30 Ibias_6 Ibias_6 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M31 net13 net10 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M32 net13 net10 Vout_2 wellb1 sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M33 net14 net13 VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M34 net14 net13 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+M35 Y net14 VSS VSS sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+M36 Y net14 Vout_2 wellb1 sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+M37 Vx1 Vx1 Vout_1 wellu sg13_lv_pmos w=0.5u l=10u ng=1 m=19
+M38 Vx1 Vx1 VSS VSS sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+M39 Vx2 Vx2 Vout_2 welld sg13_lv_pmos w=0.5u l=10u ng=1 m=10
+M40 Vx2 Vx2 VSS VSS sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+R1 Vout_2 wellb1 ntap1 R=25.79 w=12.0e-6 l=1.0e-6
+R2 Vout_2 wellb1 ntap1 R=25.79 w=12.0e-6 l=1.0e-6
+R3 Vout_1 wellu ntap1 R=30.62 w=10.0e-6 l=1.0e-6
+R4 Vout_2 welld ntap1 R=30.62 w=10.0e-6 l=1.0e-6
+.ends

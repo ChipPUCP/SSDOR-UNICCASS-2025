@@ -1,0 +1,15 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sch
+.subckt buffer VDD IN OUT VSS
+*.PININFO VDD:B VSS:B IN:I OUT:O
+MM1 net1 IN VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM2 net1 IN VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+MM3 net2 net1 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=2
+MM4 net2 net1 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*2
+MM5 net3 net2 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=8
+MM6 net3 net2 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*8
+MM8 OUT net3 VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=2*27
+MM7 OUT net3 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=27
+RR1 VDD well ntap1 A=2.4e-11 P=5e-05
+RR2 VDD well ntap1 A=4.1e-11 P=8.4e-05
+RR3 VDD well ntap1 A=4.1e-11 P=8.4e-05
+.ends

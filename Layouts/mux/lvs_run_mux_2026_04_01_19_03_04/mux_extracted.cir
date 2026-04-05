@@ -1,0 +1,17 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 01/04/2026 19:03
+
+.SUBCKT mux S VSS IN1 IN0 VDD OUT
+M$1 IN0 \$2 OUT VSS sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u rfmode=0
+M$2 OUT S IN1 VSS sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p PS=1.38u PD=2.68u
++ rfmode=0
+M$3 IN0 S OUT \$8 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p PS=4.68u PD=2.38u
++ rfmode=0
+M$4 OUT \$2 IN1 \$8 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.68p PS=2.38u
++ PD=4.68u rfmode=0
+R$5 VDD \$8 ntap1 A=3p P=8u
+M$6 VSS S \$2 VSS sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u rfmode=0
+M$7 VDD S \$2 \$8 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
++ rfmode=0
+.ENDS mux

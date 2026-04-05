@@ -1,0 +1,11 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.sch
+.subckt mux VDD IN0 S OUT IN1 VSS
+*.PININFO S:I IN0:I IN1:I OUT:O VDD:B VSS:B
+MM1 IN0 net1 OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM2 IN0 S OUT well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+MM3 IN1 S OUT VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+MM4 IN1 net1 OUT well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+RR1 VDD well ntap1 A=3e-12 P=8e-06
+MM5 net1 S VSS VSS sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+MM6 net1 S VDD well sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+.ends

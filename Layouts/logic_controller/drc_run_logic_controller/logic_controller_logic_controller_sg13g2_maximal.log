@@ -1,9 +1,9 @@
-# Logfile created on 2026-03-18 04:10:28 +0100 by logger.rb/v1.4.3
-2026-03-18 04:10:28 +0100: Memory Usage (428664K) : Starting running IHP-SG13G2 Klayout DRC maximum runset on /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.gds
-2026-03-18 04:10:28 +0100: Memory Usage (428664K) : Ruby Version for klayout: 3.0.2
-2026-03-18 04:10:28 +0100: Memory Usage (429688K) : Loading database to memory is complete.
-2026-03-18 04:10:28 +0100: Memory Usage (429688K) : IHP-SG13G2 Klayout DRC maximum runset output at: /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/drc_run_logic_controller/logic_controller_logic_controller_sg13g2_maximal.lyrdb
-2026-03-18 04:10:28 +0100: Memory Usage (429688K) : Evaluate switches.
-2026-03-18 04:10:28 +0100: Memory Usage (429688K) : Klayout will use  thread(s)
-2026-03-18 04:10:28 +0100: Memory Usage (429688K) : deep mode is enabled for sg13g2_maximal runset.
-2026-03-18 04:10:30 +0100: Memory Usage (459216K) : KLayout DRC run for maximum ruleSet completed in 2.19 seconds
+# Logfile created on 2026-04-01 18:44:18 +0200 by logger.rb/v1.4.3
+2026-04-01 18:44:18 +0200: Memory Usage (428004K) : Starting running IHP-SG13G2 Klayout DRC maximum runset on /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/logic_controller.gds
+2026-04-01 18:44:18 +0200: Memory Usage (428004K) : Ruby Version for klayout: 3.0.2
+2026-04-01 18:44:18 +0200: Memory Usage (429156K) : Loading database to memory is complete.
+2026-04-01 18:44:18 +0200: Memory Usage (429156K) : IHP-SG13G2 Klayout DRC maximum runset output at: /home/designer/shared/designs/SSDOR_1.2V_v3/components/logic_controller/drc_run_logic_controller/logic_controller_logic_controller_sg13g2_maximal.lyrdb
+2026-04-01 18:44:18 +0200: Memory Usage (429156K) : Evaluate switches.
+2026-04-01 18:44:18 +0200: Memory Usage (429156K) : Klayout will use 1 thread(s)
+2026-04-01 18:44:18 +0200: Memory Usage (429156K) : deep mode is enabled for sg13g2_maximal runset.
+2026-04-01 18:44:20 +0200: Memory Usage (460348K) : KLayout DRC run for maximum ruleSet completed in 2.01 seconds

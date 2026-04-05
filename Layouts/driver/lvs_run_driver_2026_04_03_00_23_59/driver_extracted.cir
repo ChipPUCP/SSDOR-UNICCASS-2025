@@ -1,0 +1,55 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 03/04/2026 00:24
+
+.SUBCKT driver vss vout ibias sel vdd vac
+M$1 vss ibias \$40 vss sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$2 ibias ibias vss vss sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$3 \$36 ibias vss vss sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$4 \$23 \$23 vss vss sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u rfmode=0
+M$5 vss \$23 \$25 vss sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u rfmode=0
+M$6 vss \$11 \$5 vss sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p PS=21.44u
++ PD=21.44u rfmode=0
+M$7 vss \$5 vout vss sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p PS=72.36u
++ PD=72.36u rfmode=0
+M$18 vss \$29 \$30 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$19 vss \$30 \$11 vss sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p PS=4.06u
++ PD=4.06u rfmode=0
+M$43 vdd \$28 \$29 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u rfmode=0
+M$44 \$29 sel \$25 vss sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u rfmode=0
+M$46 vac \$40 \$40 \$41 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u rfmode=0
+M$47 \$23 \$36 vac \$35 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u rfmode=0
+M$48 \$36 \$36 vdd \$38 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=0.76p PS=8.68u
++ PD=4.38u rfmode=0
+M$49 vdd \$40 \$25 \$38 sg13_lv_pmos L=0.5u W=4u AS=0.76p AD=1.36p PS=4.38u
++ PD=8.68u rfmode=0
+M$50 vdd sel \$29 \$26 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p PS=4.68u
++ PD=2.38u rfmode=0
+M$51 \$29 \$28 \$25 \$26 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.68p PS=2.38u
++ PD=4.68u rfmode=0
+M$52 vdd \$11 \$5 \$45 sg13_lv_pmos L=0.13u W=16u AS=5.44p AD=5.44p PS=42.88u
++ PD=42.88u rfmode=0
+M$60 vdd \$5 vout \$45 sg13_lv_pmos L=0.13u W=54u AS=18.36p AD=18.36p
++ PS=144.72u PD=144.72u rfmode=0
+M$79 vdd \$29 \$30 \$45 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=5.36u
++ PD=5.36u rfmode=0
+M$120 vdd \$30 \$11 \$45 sg13_lv_pmos L=0.13u W=4u AS=1.06p AD=1.06p PS=8.12u
++ PD=8.12u rfmode=0
+M$124 vdd sel \$28 \$26 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+R$129 vac \$41 ntap1 A=1p P=4u
+R$130 vac \$35 ntap1 A=1p P=4u
+R$131 vdd \$38 ntap1 A=2p P=6u
+R$132 vdd \$26 ntap1 A=3p P=8u
+R$133 vdd \$45 ntap1 A=106p P=218u
+M$136 vss sel \$28 vss sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u rfmode=0
+.ENDS driver

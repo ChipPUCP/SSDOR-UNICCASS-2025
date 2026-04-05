@@ -1,0 +1,16 @@
+** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sch
+.subckt pmos_comp Vin- Vin+ Vout I_bias VSS
+*.PININFO I_bias:I Vin-:I Vin+:I VSS:I Vout:O
+MM1 net2 net1 Vin- well3 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM2 net1 net1 Vin+ well1 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM3 Vout net3 Vin+ well1 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM4 net3 net3 Vin- well2 sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+MM5 net2 net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM6 Vout net2 VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM8 net1 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM7 I_bias I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+MM9 net3 I_bias VSS VSS sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+RR1 Vin+ well1 ntap1 A=2e-12 P=6e-06
+RR2 Vin- well2 ntap1 A=1e-12 P=4e-06
+RR3 Vin- well3 ntap1 A=1e-12 P=4e-06
+.ends

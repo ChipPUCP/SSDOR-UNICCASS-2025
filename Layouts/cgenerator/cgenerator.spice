@@ -1,38 +1,31 @@
 ** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/cgenerator.sch
 .subckt cgenerator vdd vout vss
 *.PININFO vdd:B vss:B vout:O
-xi1 vdd net1 net9 vss inv_ring_osc
-xi2 vdd net9 net8 vss inv_ring_osc
-xi3 vdd net8 net7 vss inv_ring_osc
-xi4 vdd net7 net6 vss inv_ring_osc
-xi5 vdd net6 net5 vss inv_ring_osc
-xi6 vdd net5 net4 vss inv_ring_osc
-xi7 vdd net4 net3 vss inv_ring_osc
-xi8 vdd net3 net2 vss inv_ring_osc
-xi9 vdd net2 net11 vss inv_ring_osc
-x1 vdd net1 vout vss buff_ring_osc
-xi10 vdd net11 net10 vss inv_ring_osc
-xi11 vdd net10 net1 vss inv_ring_osc
+MM1 net1 net2 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM2 net1 net2 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM3 net3 net1 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM4 net3 net1 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM5 net4 net3 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM6 net4 net3 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM7 net5 net4 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM8 net5 net4 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM9 net6 net5 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM10 net6 net5 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM11 net7 net6 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM12 net7 net6 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM13 net8 net7 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM14 net8 net7 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM15 net9 net8 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM16 net9 net8 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM17 net10 net9 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM18 net10 net9 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM19 net11 net10 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM20 net11 net10 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM21 net2 net11 vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
+MM22 net2 net11 vdd well sg13_lv_pmos w=4u l=1u ng=1 m=1
+MM23 net12 net2 vss vss sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+MM24 net12 net2 vdd well sg13_lv_pmos w=4u l=0.13u ng=1 m=1
+MM26 vout net12 vdd well sg13_lv_pmos w=8u l=0.13u ng=2 m=1
+MM25 vout net12 vss vss sg13_lv_nmos w=4u l=0.13u ng=2 m=1
+RR1 vdd well ntap1 A=2.9e-11 P=6e-05
 .ends
-
-* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym # of pins=4
-** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sym
-** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/inv_ring_osc.sch
-.subckt inv_ring_osc vdd in out vss
-*.PININFO vdd:B vss:B in:I out:O
-M1 out in vss vss sg13_lv_nmos w=2u l=1u ng=1 m=1
-M2 out in vdd vdd sg13_lv_pmos w=4u l=1u ng=1 m=1
-.ends
-
-
-* expanding   symbol:  /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym # of pins=4
-** sym_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sym
-** sch_path: /home/designer/shared/designs/SSDOR_1.2V_v3/components/cgenerator/buff_ring_osc.sch
-.subckt buff_ring_osc vdd in out vss
-*.PININFO in:I vdd:B vss:B out:O
-M1 net1 in vss vss sg13_lv_nmos w=2u l=0.13u ng=1 m=1
-M2 net1 in vdd vdd sg13_lv_pmos w=4u l=0.13u ng=1 m=1
-M3 out net1 vdd vdd sg13_lv_pmos w=8u l=0.13u ng=2 m=1
-M4 out net1 vss vss sg13_lv_nmos w=4u l=0.13u ng=2 m=1
-.ends
-

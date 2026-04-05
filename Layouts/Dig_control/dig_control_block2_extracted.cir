@@ -1,0 +1,80 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 05/04/2026 21:41
+
+.SUBCKT dig_control_block2 vss X Y S2 S1 Vout_2 Vout_1
+M$1 vss \$18 S2 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$2 S2 \$20 vss vss sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.36p PS=1.38u
++ PD=2.72u
+M$3 vss \$23 \$24 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$4 vss Y \$18 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
+M$5 vss \$20 \$28 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$6 \$28 X \$23 vss sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.36p PS=1.38u
++ PD=2.72u
+M$7 Vout_2 \$23 \$24 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$8 Vout_2 \$20 \$23 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p PS=4.68u
++ PD=2.38u
+M$9 \$23 X Vout_2 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.72p PS=2.38u
++ PD=4.72u
+M$10 Vout_2 \$18 \$36 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p PS=4.68u
++ PD=2.38u
+M$11 \$36 \$20 S2 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.72p PS=2.38u
++ PD=4.72u
+M$12 Vout_2 Y \$18 \$15 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+R$13 \$31 Vout_1 ntap1 A=2p P=6u
+R$14 \$15 Vout_2 ntap1 A=36p P=76u
+M$16 Vout_2 \$2 \$14 \$15 sg13_lv_pmos L=0.13u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$17 vss \$2 \$14 vss sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$18 \$20 \$14 Vout_2 \$15 sg13_lv_pmos L=0.13u W=8u AS=2.12p AD=2.12p
++ PS=13.06u PD=13.06u
+M$20 vss \$14 \$20 vss sg13_lv_nmos L=0.13u W=4u AS=1.06p AD=1.06p PS=7.06u
++ PD=7.06u
+M$22 Vout_2 \$2 \$3 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$23 Vout_2 \$3 \$4 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$24 Vout_2 \$4 \$5 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$25 Vout_2 \$5 \$6 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$26 Vout_2 \$6 \$7 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$27 Vout_2 \$7 \$8 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$28 Vout_2 \$8 \$9 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$29 Vout_2 \$9 \$10 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$30 Vout_2 \$10 \$11 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$31 Vout_2 \$11 \$12 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$32 Vout_2 \$12 \$2 \$15 sg13_lv_pmos L=1u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$33 vss \$2 \$3 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$34 vss \$3 \$4 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$35 vss \$12 \$2 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$36 vss \$4 \$5 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$37 vss \$5 \$6 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$38 vss \$11 \$12 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$39 vss \$6 \$7 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$40 vss \$7 \$8 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$41 vss \$10 \$11 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$42 vss \$8 \$9 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$43 vss \$9 \$10 vss sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$44 vss \$26 S1 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$45 vss \$24 \$26 vss sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$46 Vout_1 \$24 \$26 \$31 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$47 Vout_1 \$26 S1 \$31 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+.ENDS dig_control_block2

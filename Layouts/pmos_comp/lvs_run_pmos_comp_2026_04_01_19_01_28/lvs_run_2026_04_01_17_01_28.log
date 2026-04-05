@@ -1,0 +1,16 @@
+01-Apr-2026 19:01:28 | INFO    | Your Klayout version is: KLayout 0.30.5
+01-Apr-2026 19:01:28 | INFO    | Running SG13G2 LVS checks on design /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.gds on cell pmos_comp
+01-Apr-2026 19:01:31 | INFO    | ==============================================================================
+01-Apr-2026 19:01:31 | INFO    | Important Summary
+01-Apr-2026 19:01:31 | INFO    | +------------------+--------------------------------------------------------------------------------------------------------+
+01-Apr-2026 19:01:31 | INFO    | | Status           | PASS                                                                                                   |
+01-Apr-2026 19:01:31 | INFO    | | Mode             | COMPARE                                                                                                |
+01-Apr-2026 19:01:31 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                                |
+01-Apr-2026 19:01:31 | INFO    | | Layout           | pmos_comp.gds                                                                                          |
+01-Apr-2026 19:01:31 | INFO    | | Top Cell         | pmos_comp                                                                                              |
+01-Apr-2026 19:01:31 | INFO    | | Results Dir      | /home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/lvs_run_pmos_comp_2026_04_01_19_01_28 |
+01-Apr-2026 19:01:31 | INFO    | | Warnings         | 0                                                                                                      |
+01-Apr-2026 19:01:31 | INFO    | | Errors           | 0                                                                                                      |
+01-Apr-2026 19:01:31 | INFO    | | Run Time (s)     | 2.887                                                                                                  |
+01-Apr-2026 19:01:31 | INFO    | +------------------+--------------------------------------------------------------------------------------------------------+
+01-Apr-2026 19:01:31 | INFO    | ==============================================================================

@@ -1,0 +1,16 @@
+03-Apr-2026 00:24:00 | INFO    | Your Klayout version is: KLayout 0.30.5
+03-Apr-2026 00:24:00 | INFO    | Running SG13G2 LVS checks on design /home/designer/shared/designs/SSDOR_1.2V_v3/components/driver/driver.gds on cell driver
+03-Apr-2026 00:24:02 | INFO    | ==============================================================================
+03-Apr-2026 00:24:02 | INFO    | Important Summary
+03-Apr-2026 00:24:02 | INFO    | +------------------+--------------------------------------------------------------------------------------------------+
+03-Apr-2026 00:24:02 | INFO    | | Status           | PASS                                                                                             |
+03-Apr-2026 00:24:02 | INFO    | | Mode             | COMPARE                                                                                          |
+03-Apr-2026 00:24:02 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                                                          |
+03-Apr-2026 00:24:02 | INFO    | | Layout           | driver.gds                                                                                       |
+03-Apr-2026 00:24:02 | INFO    | | Top Cell         | driver                                                                                           |
+03-Apr-2026 00:24:02 | INFO    | | Results Dir      | /home/designer/shared/designs/SSDOR_1.2V_v3/components/driver/lvs_run_driver_2026_04_03_00_23_59 |
+03-Apr-2026 00:24:02 | INFO    | | Warnings         | 0                                                                                                |
+03-Apr-2026 00:24:02 | INFO    | | Errors           | 0                                                                                                |
+03-Apr-2026 00:24:02 | INFO    | | Run Time (s)     | 2.732                                                                                            |
+03-Apr-2026 00:24:02 | INFO    | +------------------+--------------------------------------------------------------------------------------------------+
+03-Apr-2026 00:24:02 | INFO    | ==============================================================================
