@@ -1,0 +1,52 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 07/04/2026 07:29
+
+.SUBCKT driver_v2 vss vout ibias sel vdd vac
+M$1 vss ibias \$65 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$2 ibias ibias vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$3 \$78 ibias vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$4 \$62 \$62 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$5 vss \$62 \$76 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$6 vss \$69 \$30 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p PS=4.06u
++ PD=4.06u
+M$8 vss \$68 \$69 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$9 vss \$4 vout \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p PS=72.36u
++ PD=72.36u
+M$17 vdd \$67 \$68 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$18 \$68 sel \$76 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$25 vss \$30 \$4 \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p PS=21.44u
++ PD=21.44u
+M$46 vdd \$69 \$30 \$123 sg13_lv_pmos L=0.13u W=4u AS=1.06p AD=1.06p PS=8.12u
++ PD=8.12u
+M$48 vdd \$68 \$69 \$123 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p PS=5.36u
++ PD=5.36u
+M$49 vdd sel \$68 \$123 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p PS=4.68u
++ PD=2.38u
+M$50 \$68 \$67 \$76 \$123 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.68p PS=2.38u
++ PD=4.68u
+M$51 vdd sel \$67 \$123 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$52 \$62 \$78 vac \$123 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$53 \$78 \$78 vdd \$123 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=0.76p PS=8.68u
++ PD=4.38u
+M$54 vdd \$65 \$76 \$123 sg13_lv_pmos L=0.5u W=4u AS=0.76p AD=1.36p PS=4.38u
++ PD=8.68u
+M$55 vac \$65 \$65 \$123 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u
+M$59 vdd \$30 \$4 \$123 sg13_lv_pmos L=0.13u W=16u AS=5.44p AD=5.44p PS=42.88u
++ PD=42.88u
+M$67 vdd \$4 vout \$123 sg13_lv_pmos L=0.13u W=54u AS=18.36p AD=18.36p
++ PS=144.72u PD=144.72u
+R$129 \$123 vdd ntap1 A=114p P=242u
+R$136 \$1 vss ptap1 A=82p P=172u
+M$138 vss sel \$67 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p PS=1.68u
++ PD=1.68u
+.ENDS driver_v2

@@ -1,0 +1,160 @@
+** sch_path: /shared/designs/Layouts/digital_w_ibias/digital_w_ibias.sch
+.subckt digital_w_ibias Ibias_1 Ibias_2 Ibias_3 Ibias_4 VSS Vout_2 S2 S1 Vout_1
+*.PININFO Ibias_1:B Ibias_2:B Ibias_3:B Ibias_4:B VSS:B Vout_2:B S2:O S1:O Vout_1:B
+M1 net8 net3 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M2 net11 net3 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M3 net11 net1 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=6
+M4 net10 net1 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M12 net7 net3 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M13 net5 net3 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M5 net9 net1 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M7 net4 net5 net6 pt_well sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M10 net6 net7 VSS pt_well sg13_lv_nmos w=0.5u l=1.2u ng=1 m=1
+M11 net7 net7 net6 pt_well sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M16 net5 net5 net4 pt_well sg13_lv_nmos w=10u l=0.26u ng=1 m=30
+M24 VSS VSS net2 net12 sg13_lv_pmos w=10u l=0.36u ng=1 m=20
+M25 net2 VSS net10 net12 sg13_lv_pmos w=10u l=0.36u ng=1 m=1
+R1 net9 net13 rppd w=0.5e-6 l=1170e-6 m=1 b=0
+R3 net13 VSS rhigh w=0.5e-6 l=27e-6 m=1 b=0
+R10 net8 VSS rppd w=0.5e-6 l=2110e-6 m=1 b=0
+M6 Vout_2 Vout_2 Vout_2 net14 sg13_lv_pmos w=1u l=2u ng=1 m=1
+M8 net15 net8 VSS pt_well sg13_lv_nmos w=10u l=8u ng=1 m=6
+M9 net15 net15 Vout_2 net16 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M14 net3 net15 Vout_2 net16 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M15 net3 net4 VSS pt_well sg13_lv_nmos w=10u l=8u ng=1 m=6
+R2 Vout_2 net16 ntap1 A=2e-11 P=4.2e-05
+R4_opamp VSS pt_well ptap1 A=5.6e-11 P=0.000114
+M17 net17 net9 VSS pt_well sg13_lv_nmos w=10u l=8u ng=1 m=6
+M18 net17 net17 Vout_2 net18 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M19 net1 net17 Vout_2 net18 sg13_lv_pmos w=10u l=0.5u ng=1 m=4
+M20 net1 net2 VSS pt_well sg13_lv_nmos w=10u l=8u ng=1 m=6
+R5 Vout_2 net18 ntap1 A=2e-11 P=4.2e-05
+R6_opamp VSS pt_well ptap1 A=5.6e-11 P=0.000114
+R7 Vout_2 net14 ntap1 A=5e-12 P=1.2e-05
+R8 Vout_2 net14 ntap1 A=5e-12 P=1.2e-05
+R9 Vout_2 net12 ntap1 A=8e-12 P=1.8e-05
+R11_PTAT VSS pt_well ptap1 A=1.9e-11 P=4e-05
+M30 net11 net11 VSS pt_well sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+R4 net20 Vb0v5 rppd w=0.5e-6 l=972.9e-6 m=1 b=0
+R6 net21 Vb0v4 rppd w=0.5e-6 l=1167.4e-6 m=1 b=0
+M21 net19 net11 VSS pt_well sg13_lv_nmos w=1.1u l=2u ng=1 m=3
+M23 net19 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M22 Ibias_1 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M26 Ibias_2 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M27 Ibias_3 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M28 Ibias_4 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M29 Ibias_5 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M31 Ibias_6 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+C5 net11 VSS cap_cmim w=18e-6 l=18e-6 m=9
+C2 net19 Vout_2 cap_cmim w=2.6e-6 l=2.6e-6 m=1
+R11 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R12 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R13 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R14 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R15 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R16 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R17 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R18 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R19 Vout_2 net22 ntap1 A=4.2e-12 P=1.34e-05
+R20 VSS pt_well ptap1 A=5e-12 P=1.2e-05
+M32 net20 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+M33 net21 net19 Vout_2 net22 sg13_lv_pmos w=1.1u l=2u ng=1 m=6
+R21 Vb0v5 VSS rppd w=0.5e-6 l=994e-6 m=1 b=0
+R22 Vb0v4 VSS rppd w=0.5e-6 l=792e-6 m=1 b=0
+M34 net23 net23 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M35 net24 net23 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M36 net23 net24 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M37 net24 net24 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M38 net23 Vb0v4 net27 pt_well sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M39 net24 Vx1 net27 pt_well sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M40 net27 Ibias_5 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M41 net26 net23 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M42 net25 net24 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M43 net25 net26 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M44 net26 net26 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M45 Ibias_5 Ibias_5 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M46 net28 net25 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M47 net28 net25 Vout_2 wellb1 sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M48 net29 net28 VSS pt_well sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M49 net29 net28 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+M50 X net29 VSS pt_well sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+M51 X net29 Vout_2 wellb1 sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+M52 net30 net30 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M53 net31 net30 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M54 net30 net31 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M55 net31 net31 Vout_2 wellb1 sg13_lv_pmos w=0.5u l=0.13u ng=1 m=1
+M56 net30 Vb0v5 net34 pt_well sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M57 net31 Vx2 net34 pt_well sg13_lv_nmos w=5u l=0.5u ng=1 m=1
+M58 net34 Ibias_6 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M59 net33 net30 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M60 net32 net31 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.5u ng=1 m=1
+M61 net32 net33 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M62 net33 net33 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M63 Ibias_6 Ibias_6 VSS pt_well sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M64 net35 net32 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M65 net35 net32 Vout_2 wellb1 sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M66 net36 net35 VSS pt_well sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M67 net36 net35 Vout_2 wellb1 sg13_lv_pmos w=2u l=0.13u ng=1 m=2
+M68 Y net36 VSS pt_well sg13_lv_nmos w=3u l=0.13u ng=1 m=1
+M69 Y net36 Vout_2 wellb1 sg13_lv_pmos w=3u l=0.13u ng=1 m=2
+M70 Vx1 Vx1 Vout_1 wellu sg13_lv_pmos w=0.5u l=10u ng=1 m=19
+M71 Vx1 Vx1 VSS pt_well sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+M72 Vx2 Vx2 Vout_2 welld sg13_lv_pmos w=0.5u l=10u ng=1 m=10
+M73 Vx2 Vx2 VSS pt_well sg13_lv_nmos w=0.5u l=10u ng=1 m=1
+R23 Vout_2 wellb1 ntap1 A=1.2e-11 P=2.6e-05
+R24 Vout_2 wellb1 ntap1 A=1.2e-11 P=2.6e-05
+R25 Vout_1 wellu ntap1 A=1e-11 P=2.2e-05
+R26 Vout_2 welld ntap1 A=1e-11 P=2.2e-05
+M74 net37 net38 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M75 net37 net38 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M76 net39 net37 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M77 net39 net37 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M78 net40 net39 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M79 net40 net39 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M80 net41 net40 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M81 net41 net40 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M82 net42 net41 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M83 net42 net41 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M84 net43 net42 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M85 net43 net42 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M86 net44 net43 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M87 net44 net43 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M88 net45 net44 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M89 net45 net44 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M90 net46 net45 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M91 net46 net45 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M92 net47 net46 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M93 net47 net46 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M94 net38 net47 VSS pt_well sg13_lv_nmos w=2u l=1u ng=1 m=1
+M95 net38 net47 Vout_2 well sg13_lv_pmos w=4u l=1u ng=1 m=1
+M96 net48 net38 VSS pt_well sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+M97 net48 net38 Vout_2 well sg13_lv_pmos w=4u l=0.13u ng=1 m=1
+M98 net49 net48 Vout_2 well sg13_lv_pmos w=8u l=0.13u ng=2 m=1
+M99 net49 net48 VSS pt_well sg13_lv_nmos w=4u l=0.13u ng=2 m=1
+R27 Vout_2 well ntap1 A=2.9e-11 P=6e-05
+M100 net51 X Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M101 net51 net49 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M102 net51 X net53 pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M103 net53 net49 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M104 net50 net51 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M105 net50 net51 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M106 net52 Y Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M107 net52 Y VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M108 net54 net52 Vout_2 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M109 S2 net49 net54 well sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M110 S2 net52 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M111 S2 net49 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+R28 Vout_2 well ntap1 A=7e-12 P=1.6e-05
+M112 net55 net50 Vout_1 well_1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M113 net55 net50 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M114 S1 net55 Vout_1 well_1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M115 S1 net55 VSS pt_well sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+R29 Vout_1 well_1 ntap1 A=2e-12 P=6e-06
+R30 VSS pt_well ptap1 A=1.3e-11 P=2.8e-05
+R32 VSS pt_well ptap1 A=1e-11 P=2.2e-05
+R34 VSS pt_well ptap1 A=2.9e-11 P=6e-05
+R35 VSS pt_well ptap1 A=3e-12 P=8e-06
+R36 VSS pt_well ptap1 A=7e-12 P=1.6e-05
+R31 VSS pt_well ptap1 A=1.3e-11 P=2.8e-05
+R33 VSS pt_well ptap1 A=1e-11 P=2.2e-05
+.ends

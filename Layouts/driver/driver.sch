@@ -28,12 +28,12 @@ N 10 50 10 90 {lab=vss}
 N -150 90 10 90 {lab=vss}
 N -70 10 -70 60 {lab=sel}
 N -280 60 -70 60 {lab=sel}
-C {/home/designer/shared/designs/SSDOR_1.2V_v3/components/mux/mux.sym} 10 -10 0 0 {name=x2}
-C {/home/designer/shared/designs/SSDOR_1.2V_v3/components/buffer/buffer.sym} 90 70 0 0 {name=x3 wn=1u}
-C {/home/designer/shared/designs/SSDOR_1.2V_v3/components/pmos_comp/pmos_comp.sym} -170 -10 0 0 {name=x1}
 C {iopin.sym} -280 -110 0 1 {name=p1 lab=vdd}
 C {iopin.sym} -280 -10 0 1 {name=p2 lab=ibias}
 C {iopin.sym} -280 20 0 1 {name=p3 lab=vac}
 C {iopin.sym} -280 60 0 1 {name=p4 lab=sel}
 C {iopin.sym} -280 90 0 1 {name=p5 lab=vss}
 C {opin.sym} 250 -10 0 0 {name=p6 lab=vout}
+C {/shared/designs/SSDOR_1.2V_v4/components/pmos_comp/pmos_comp.sym} -170 -10 0 0 {name=x1}
+C {/shared/designs/SSDOR_1.2V_v4/components/mux/mux.sym} 10 -10 0 0 {name=x2}
+C {/shared/designs/SSDOR_1.2V_v4/components/buffer/buffer.sym} 90 70 0 0 {name=x3 wn=1u}

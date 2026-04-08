@@ -1,0 +1,38 @@
+** sch_path: /shared/designs/Layouts/driver/driver_v2.sch
+.subckt driver_v2 vdd vout ibias vac vss sel
+*.PININFO vdd:B vout:O ibias:B vac:B vss:B sel:B
+M1 net2 net1 vac nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M2 net1 net1 vdd nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M3 net3 net4 vdd nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M4 net4 net4 vac nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M5 net2 net2 vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M6 net3 net2 vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M8 net1 ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M7 ibias ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M9 net4 ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+R1 vdd nw ntap1 A=2.4e-11 P=5e-05
+R2 vdd nw ntap1 A=4.1e-11 P=8.4e-05
+R3 vdd nw ntap1 A=4.1e-11 P=8.4e-05
+M10 vdd net6 net5 pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M11 vdd sel net5 nw sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M12 net3 sel net5 pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M13 net3 net6 net5 nw sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M14 net7 net5 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M15 net7 net5 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M16 net8 net7 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=2
+M17 net8 net7 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=4
+M18 net9 net8 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=8
+M19 net9 net8 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=16
+M20 vout net9 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=54
+M21 vout net9 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=27
+R5 vdd nw ntap1 A=3e-12 P=8e-06
+R6 vdd nw ntap1 A=1e-12 P=4e-06
+R7 vdd nw ntap1 A=2e-12 P=6e-06
+R8 vdd nw ntap1 A=2e-12 P=6e-06
+R13 vss pw1 ptap1 A=2.3e-11 P=4.8e-05
+R11 vss pw1 ptap1 A=1.5e-11 P=3.2e-05
+R10 vss pw1 ptap1 A=2.2e-11 P=4.6e-05
+R9 vss pw1 ptap1 A=2.2e-11 P=4.6e-05
+M22 net6 sel vss pw1 sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+M23 net6 sel vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+.ends

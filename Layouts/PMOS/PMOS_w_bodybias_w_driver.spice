@@ -1,0 +1,66 @@
+** sch_path: /shared/designs/Layouts/PMOS/PMOS_w_bodybias_w_driver.sch
+.subckt PMOS_w_bodybias_w_driver vdd ibias vac vss sel pw1
+*.PININFO vdd:B ibias:B vac:B vss:B sel:B pw1:B
+M1 net1 vac vdd net2 sg13_lv_pmos w=9u l=0.13u ng=1 m=1
+M2 net1 vdd vac net2 sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+R2 net1 net2 ntap1 A=3.5e-12 P=1.14e-05
+M3 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M4 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M5 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M6 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M7 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M8 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M9 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M10 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M11 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M12 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M13 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M14 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M15 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M16 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M17 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+M18 vac net3 vdd net4 sg13_lv_pmos w=86.4u l=0.13u ng=36 m=1
+R9 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R1 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R3 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R4 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R5 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R6 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R7 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R8 net1 net4 ntap1 A=2.92e-10 P=0.000586
+R10 net1 net4 ntap1 A=2.92e-10 P=0.000586
+M19 net6 net5 vac nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M20 net5 net5 vdd nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M21 net7 net8 vdd nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M22 net8 net8 vac nw sg13_lv_pmos w=4u l=0.5u ng=1 m=1
+M23 net6 net6 vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M24 net7 net6 vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M25 net5 ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M26 ibias ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+M27 net8 ibias vss pw1 sg13_lv_nmos w=1u l=0.5u ng=1 m=1
+R11 vdd nw ntap1 A=2.4e-11 P=5e-05
+R12 vdd nw ntap1 A=4.1e-11 P=8.4e-05
+R13 vdd nw ntap1 A=4.1e-11 P=8.4e-05
+M28 vdd net10 net9 pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M29 vdd sel net9 nw sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M30 net7 sel net9 pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M31 net7 net10 net9 nw sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+M32 net11 net9 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+M33 net11 net9 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=2
+M34 net12 net11 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=2
+M35 net12 net11 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=4
+M36 net13 net12 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=8
+M37 net13 net12 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=16
+M38 net3 net13 vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=54
+M39 net3 net13 vss pw1 sg13_lv_nmos w=1u l=0.13u ng=1 m=27
+R14 vdd nw ntap1 A=3e-12 P=8e-06
+R15 vdd nw ntap1 A=1e-12 P=4e-06
+R16 vdd nw ntap1 A=2e-12 P=6e-06
+R17 vdd nw ntap1 A=2e-12 P=6e-06
+R18 vss pw1 ptap1 A=2.3e-11 P=4.8e-05
+R19 vss pw1 ptap1 A=1.5e-11 P=3.2e-05
+R20 vss pw1 ptap1 A=2.2e-11 P=4.6e-05
+R21 vss pw1 ptap1 A=2.2e-11 P=4.6e-05
+M40 net10 sel vss pw1 sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+M41 net10 sel vdd nw sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+.ends

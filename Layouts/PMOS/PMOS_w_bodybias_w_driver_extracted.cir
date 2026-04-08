@@ -1,0 +1,60 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 08/04/2026 12:42
+
+.SUBCKT PMOS_w_bodybias_w_driver vac vdd pw1|vss ibias sel
+M$1 vdd \$8282 \$8283 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$2 \$8283 sel \$8280 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$3 ibias ibias pw1|vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$4 \$8275 ibias pw1|vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$5 \$8274 \$8274 pw1|vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$6 pw1|vss \$8274 \$8280 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$7 pw1|vss ibias \$8278 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$8 pw1|vss \$7992 \$7538 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p
++ PS=4.06u PD=4.06u
+M$10 pw1|vss \$8283 \$7992 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$11 pw1|vss \$7542 \$31 \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p
++ PS=72.36u PD=72.36u
+M$18 pw1|vss \$7538 \$7542 \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p
++ PS=21.44u PD=21.44u
+M$46 vdd \$31 vac \$6 sg13_lv_pmos L=0.13u W=1382.4u AS=523.104p AD=523.056p
++ PS=6974.08u PD=6973.76u
+M$6958 vdd sel \$8282 \$8273 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$6959 vdd sel \$8283 \$8273 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.38p
++ PS=4.68u PD=2.38u
+M$6960 \$8283 \$8282 \$8280 \$8273 sg13_lv_pmos L=0.13u W=2u AS=0.38p AD=0.68p
++ PS=2.38u PD=4.68u
+M$6997 vdd \$8283 \$7992 \$8273 sg13_lv_pmos L=0.13u W=2u AS=0.68p AD=0.68p
++ PS=5.36u PD=5.36u
+M$6998 vdd \$7992 \$7538 \$8273 sg13_lv_pmos L=0.13u W=4u AS=1.06p AD=1.06p
++ PS=8.12u PD=8.12u
+M$7252 \$8274 \$8275 vac \$8273 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p
++ PS=8.68u PD=8.68u
+M$7253 \$8275 \$8275 vdd \$8273 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=0.76p
++ PS=8.68u PD=4.38u
+M$7254 vdd \$8278 \$8280 \$8273 sg13_lv_pmos L=0.5u W=4u AS=0.76p AD=1.36p
++ PS=4.38u PD=8.68u
+M$7255 vac \$8278 \$8278 \$8273 sg13_lv_pmos L=0.5u W=4u AS=1.36p AD=1.36p
++ PS=8.68u PD=8.68u
+M$7691 vdd \$7538 \$7542 \$8273 sg13_lv_pmos L=0.13u W=16u AS=5.44p AD=5.44p
++ PS=42.88u PD=42.88u
+M$7699 vdd \$7542 \$31 \$8273 sg13_lv_pmos L=0.13u W=54u AS=18.36p AD=18.36p
++ PS=144.72u PD=144.72u
+R$9345 \$8 \$10 ntap1 A=3.5p P=11.4u
+R$9346 \$8273 vdd ntap1 A=114p P=242u
+R$9353 \$6 \$10 ntap1 A=2628p P=5274u
+M$9362 \$10 vac vdd \$8 sg13_lv_pmos L=0.13u W=9u AS=3.06p AD=3.06p PS=18.68u
++ PD=18.68u
+M$9363 \$10 vdd vac \$8 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p PS=6.68u
++ PD=6.68u
+M$9364 pw1|vss sel \$8282 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+R$9365 \$1 pw1|vss ptap1 A=82p P=172u
+.ENDS PMOS_w_bodybias_w_driver
