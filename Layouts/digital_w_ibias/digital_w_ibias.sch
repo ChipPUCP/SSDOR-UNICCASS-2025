@@ -2299,7 +2299,6 @@ spiceprefix=X
 w=13e-6
 l=1e-6
 }
-C {lab_pin.sym} 7190 -710 0 0 {name=p41 sig_type=std_logic lab=pt_well}
 C {sg13g2_pr/ptap1.sym} 7430 -620 2 0 {name=R32
 model=ptap1
 spiceprefix=X
@@ -2338,3 +2337,4 @@ spiceprefix=X
 w=10e-6
 l=1e-6
 }
+C {iopin.sym} 7190 -710 0 1 {name=p66 lab=pt_well}

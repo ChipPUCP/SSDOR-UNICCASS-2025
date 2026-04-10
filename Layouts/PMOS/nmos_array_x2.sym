@@ -1,0 +1,24 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 7 -40 -60 -40 -40 {}
+L 7 40 -60 40 -40 {}
+L 7 40 40 40 60 {}
+L 7 -40 40 -40 60 {}
+B 5 -42.5 -62.5 -37.5 -57.5 {name=Vd_array_L dir=inout}
+B 5 37.5 -62.5 42.5 -57.5 {name=Vd_array_R dir=inout}
+B 5 37.5 57.5 42.5 62.5 {name=pw_nmos dir=inout}
+B 5 -42.5 57.5 -37.5 62.5 {name=Vs_array dir=inout}
+P 4 5 130 -40 -130 -40 -130 40 130 40 130 -40 {}
+T {@symname} -26.5 -6 0 0 0.2 0.2 {}
+T {@name} 135 -52 0 0 0.2 0.2 {}
+T {Vd_array_L} -15 -34 0 1 0.2 0.2 {}
+T {Vd_array_R} 75 -34 0 1 0.2 0.2 {}
+T {pw_nmos} 15 34 2 1 0.2 0.2 {}
+T {Vs_array} -65 34 2 1 0.2 0.2 {}
