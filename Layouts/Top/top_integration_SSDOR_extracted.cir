@@ -1,0 +1,478 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 11/04/2026 07:13
+
+.SUBCKT top_integration_SSDOR vss Vin_p Vin_n Vout0v8 Vout1v0
+M$1 \$6449 \$6449 \$6419 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u
++ PD=332u
+M$16 \$6407 \$6474 \$6474 \$1 sg13_lv_nmos L=0.26u W=300u AS=60p AD=60p PS=332u
++ PD=332u
+M$31 vss \$15394 \$17415 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$32 vss \$17415 \$16784 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$33 \$16784 \$17413 vss \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.36p
++ PS=1.38u PD=2.72u
+M$34 vss \$17413 \$17518 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$35 \$17518 \$15393 \$17419 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.36p
++ PS=1.38u PD=2.72u
+M$36 vss \$17419 \$17421 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$52 vss \$6449 \$6419 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.17p AD=0.095p
++ PS=1.68u PD=0.88u
+M$53 \$6419 \$6474 \$6407 \$1 sg13_lv_nmos L=1.2u W=0.5u AS=0.095p AD=0.17p
++ PS=0.88u PD=1.68u
+M$69 \$14704 \$14704 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$70 \$15471 \$11389 \$14736 \$1 sg13_lv_nmos L=0.5u W=5u AS=1.7p AD=0.95p
++ PS=10.68u PD=5.38u
+M$71 \$14736 \$14081 \$15472 \$1 sg13_lv_nmos L=0.5u W=5u AS=0.95p AD=1.7p
++ PS=5.38u PD=10.68u
+M$72 \$8700 \$8700 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$73 vss \$8700 \$14736 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$74 vss \$14704 \$14733 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$75 vss \$14733 \$15179 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$76 \$15176 \$14732 vss \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$77 \$14732 \$14707 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$78 \$14731 \$8699 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p PS=2.68u
++ PD=1.38u
+M$79 vss \$8699 \$8699 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p PS=1.38u
++ PD=2.68u
+M$80 \$15474 \$14082 \$14731 \$1 sg13_lv_nmos L=0.5u W=5u AS=1.7p AD=0.95p
++ PS=10.68u PD=5.38u
+M$81 \$14731 \$11390 \$15476 \$1 sg13_lv_nmos L=0.5u W=5u AS=0.95p AD=1.7p
++ PS=5.38u PD=10.68u
+M$82 vss \$14707 \$14707 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$83 vss \$17424 \$17425 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$84 vss \$17421 \$17424 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$85 \$1178 \$17429 vss \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p
++ PS=72.36u PD=72.36u
+M$86 vss \$17405 \$1162 \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p
++ PS=72.36u PD=72.36u
+M$103 vss \$17404 \$17405 \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p
++ PS=21.44u PD=21.44u
+M$104 \$17429 \$17434 vss \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p
++ PS=21.44u PD=21.44u
+M$129 \$18317 \$18317 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$130 vss \$18317 \$18323 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$131 \$18318 \$8697 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$132 \$8697 \$8697 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$133 vss \$8697 \$18321 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$134 Vout0v8 \$18324 \$18325 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$135 \$18325 \$17425 \$18323 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$136 vss \$18325 \$17735 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$137 vss \$17735 \$17404 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p
++ PS=4.06u PD=4.06u
+M$152 \$18365 \$18370 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$153 vss \$18370 \$18370 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$154 vss \$9351 \$18369 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$155 vss \$9351 \$9351 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$156 \$18366 \$9351 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$157 \$18365 \$17425 \$18363 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$158 \$18363 \$18364 Vout0v8 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$159 \$17714 \$18363 vss \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$160 vss \$17714 \$17434 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p
++ PS=4.06u PD=4.06u
+M$175 \$23443 \$39072 vss \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p
++ PS=72.36u PD=72.36u
+M$176 vss \$39071 \$23427 \$1 sg13_lv_nmos L=0.13u W=27u AS=9.18p AD=9.18p
++ PS=72.36u PD=72.36u
+M$193 \$39072 \$39126 vss \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p
++ PS=21.44u PD=21.44u
+M$194 vss \$39122 \$39071 \$1 sg13_lv_nmos L=0.13u W=8u AS=2.72p AD=2.72p
++ PS=21.44u PD=21.44u
+M$219 \$39922 \$39922 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$220 vss \$39922 \$39928 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$221 \$39923 \$9358 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$222 \$9358 \$9358 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$223 vss \$9358 \$39926 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$224 Vout1v0 \$39930 \$39931 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$225 \$39931 \$16784 \$39928 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$226 vss \$39931 \$39340 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$227 vss \$39340 \$39122 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p
++ PS=4.06u PD=4.06u
+M$255 vss \$39319 \$39126 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.53p AD=0.53p
++ PS=4.06u PD=4.06u
+M$257 \$39319 \$39969 vss \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$258 \$39971 \$16784 \$39969 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$259 \$39969 \$39970 Vout1v0 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$260 \$39972 \$9357 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$261 vss \$9357 \$9357 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u
+M$262 vss \$9357 \$39975 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$263 \$39971 \$39976 vss \$1 sg13_lv_nmos L=0.5u W=1u AS=0.34p AD=0.19p
++ PS=2.68u PD=1.38u
+M$264 vss \$39976 \$39976 \$1 sg13_lv_nmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u
+M$265 Vout0v8 \$1162 Vin_p \$1084 sg13_lv_pmos L=0.13u W=1382.4u AS=523.104p
++ AD=523.056p PS=6974.08u PD=6973.76u
+M$301 Vout0v8 \$1178 Vin_n \$1104 sg13_lv_pmos L=0.13u W=1382.4u AS=523.056p
++ AD=523.104p PS=6973.76u PD=6974.08u
+M$4873 \$6411 vss vss \$6415 sg13_lv_pmos L=0.36u W=200u AS=41p AD=39.5p
++ PS=228.2u PD=217.9u
+M$4883 \$6411 vss \$6444 \$6415 sg13_lv_pmos L=0.36u W=10u AS=1.9p AD=3.4p
++ PS=10.38u PD=20.68u
+M$12382 Vout1v0 \$14733 \$15179 \$15390 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$12384 Vout1v0 \$15179 \$15392 \$15390 sg13_lv_pmos L=0.13u W=4u AS=1.36p
++ AD=1.36p PS=9.36u PD=9.36u
+M$12385 \$15176 \$14732 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$12387 \$15395 \$15176 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=4u AS=1.36p
++ AD=1.36p PS=9.36u PD=9.36u
+M$12964 Vout1v0 \$15471 \$15471 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.17p PS=1.68u PD=1.68u
+M$12965 \$15472 \$15471 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.095p PS=1.68u PD=0.88u
+M$12966 Vout1v0 \$15472 \$15471 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.095p
++ AD=0.17p PS=0.88u PD=1.68u
+M$12967 \$15472 \$15472 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.17p PS=1.68u PD=1.68u
+M$12970 Vout1v0 \$15474 \$15474 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.17p PS=1.68u PD=1.68u
+M$12971 \$15476 \$15474 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.095p PS=1.68u PD=0.88u
+M$12972 Vout1v0 \$15476 \$15474 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.095p
++ AD=0.17p PS=0.88u PD=1.68u
+M$12973 \$15476 \$15476 Vout1v0 \$15390 sg13_lv_pmos L=0.13u W=0.5u AS=0.17p
++ AD=0.17p PS=1.68u PD=1.68u
+M$13550 Vout1v0 \$15394 \$17415 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$13551 Vout1v0 \$17415 \$17515 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$13552 \$17515 \$17413 \$16784 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.72p PS=2.38u PD=4.72u
+M$13553 Vout1v0 \$17413 \$17419 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$13554 \$17419 \$15393 Vout1v0 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.72p PS=2.38u PD=4.72u
+M$13555 Vout1v0 \$17419 \$17421 \$17412 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$14132 Vout0v8 \$17421 \$17424 \$17423 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$14133 Vout0v8 \$17424 \$17425 \$17423 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$14134 Vout0v8 \$17425 \$18324 \$18316 sg13_lv_pmos L=0.13u W=1u AS=0.34p
++ AD=0.34p PS=2.68u PD=2.68u
+M$14135 Vout0v8 \$17425 \$18325 \$18316 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$14136 \$18325 \$18324 \$18323 \$18316 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.68p PS=2.38u PD=4.68u
+M$14137 Vout0v8 \$18325 \$17735 \$18316 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$14138 \$18364 \$17425 Vout0v8 \$18360 sg13_lv_pmos L=0.13u W=1u AS=0.34p
++ AD=0.34p PS=2.68u PD=2.68u
+M$14139 Vout0v8 \$17735 \$17404 \$18316 sg13_lv_pmos L=0.13u W=4u AS=1.06p
++ AD=1.06p PS=8.12u PD=8.12u
+M$14141 \$18365 \$18364 \$18363 \$18360 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$14142 \$18363 \$17425 Vout0v8 \$18360 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.68p PS=2.38u PD=4.68u
+M$14179 \$17714 \$18363 Vout0v8 \$18360 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$14180 Vout0v8 \$17714 \$17434 \$18360 sg13_lv_pmos L=0.13u W=4u AS=1.06p
++ AD=1.06p PS=8.12u PD=8.12u
+M$14722 \$18317 \$18318 Vin_p \$18316 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$14723 \$18318 \$18318 Vout0v8 \$18316 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=0.76p PS=8.68u PD=4.38u
+M$14724 Vout0v8 \$18321 \$18323 \$18316 sg13_lv_pmos L=0.5u W=4u AS=0.76p
++ AD=1.36p PS=4.38u PD=8.68u
+M$14725 Vin_p \$18321 \$18321 \$18316 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$14729 Vin_n \$18369 \$18370 \$18360 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$14730 \$18365 \$18366 Vout0v8 \$18360 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=0.76p PS=8.68u PD=4.38u
+M$14731 Vout0v8 \$18369 \$18369 \$18360 sg13_lv_pmos L=0.5u W=4u AS=0.76p
++ AD=1.36p PS=4.38u PD=8.68u
+M$14732 \$18366 \$18366 Vin_n \$18360 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$15600 Vout0v8 \$17404 \$17405 \$18316 sg13_lv_pmos L=0.13u W=16u AS=5.44p
++ AD=5.44p PS=42.88u PD=42.88u
+M$15608 Vout0v8 \$17405 \$1162 \$18316 sg13_lv_pmos L=0.13u W=54u AS=18.36p
++ AD=18.36p PS=144.72u PD=144.72u
+M$15609 \$17429 \$17434 Vout0v8 \$18360 sg13_lv_pmos L=0.13u W=16u AS=5.44p
++ AD=5.44p PS=42.88u PD=42.88u
+M$15624 \$1178 \$17429 Vout0v8 \$18360 sg13_lv_pmos L=0.13u W=54u AS=18.36p
++ AD=18.36p PS=144.72u PD=144.72u
+M$18908 Vout1v0 \$23427 Vin_p \$23377 sg13_lv_pmos L=0.13u W=1382.4u
++ AS=523.104p AD=523.056p PS=6974.08u PD=6973.76u
+M$18944 Vout1v0 \$23443 Vin_n \$23382 sg13_lv_pmos L=0.13u W=1382.4u
++ AS=523.056p AD=523.104p PS=6973.76u PD=6974.08u
+M$32732 Vout1v0 \$16784 \$39930 \$39921 sg13_lv_pmos L=0.13u W=1u AS=0.34p
++ AD=0.34p PS=2.68u PD=2.68u
+M$32733 Vout1v0 \$16784 \$39931 \$39921 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$32734 \$39931 \$39930 \$39928 \$39921 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.68p PS=2.38u PD=4.68u
+M$32735 Vout1v0 \$39931 \$39340 \$39921 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$32736 \$39970 \$16784 Vout1v0 \$39966 sg13_lv_pmos L=0.13u W=1u AS=0.34p
++ AD=0.34p PS=2.68u PD=2.68u
+M$32737 Vout1v0 \$39340 \$39122 \$39921 sg13_lv_pmos L=0.13u W=4u AS=1.06p
++ AD=1.06p PS=8.12u PD=8.12u
+M$32739 \$39971 \$39970 \$39969 \$39966 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.38p PS=4.68u PD=2.38u
+M$32740 \$39969 \$16784 Vout1v0 \$39966 sg13_lv_pmos L=0.13u W=2u AS=0.38p
++ AD=0.68p PS=2.38u PD=4.68u
+M$32777 \$39319 \$39969 Vout1v0 \$39966 sg13_lv_pmos L=0.13u W=2u AS=0.68p
++ AD=0.68p PS=5.36u PD=5.36u
+M$32778 Vout1v0 \$39319 \$39126 \$39966 sg13_lv_pmos L=0.13u W=4u AS=1.06p
++ AD=1.06p PS=8.12u PD=8.12u
+M$33320 \$39922 \$39923 Vin_p \$39921 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$33321 \$39923 \$39923 Vout1v0 \$39921 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=0.76p PS=8.68u PD=4.38u
+M$33322 Vout1v0 \$39926 \$39928 \$39921 sg13_lv_pmos L=0.5u W=4u AS=0.76p
++ AD=1.36p PS=4.38u PD=8.68u
+M$33323 Vin_p \$39926 \$39926 \$39921 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$33327 Vin_n \$39975 \$39976 \$39966 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$33328 \$39971 \$39972 Vout1v0 \$39966 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=0.76p PS=8.68u PD=4.38u
+M$33329 Vout1v0 \$39975 \$39975 \$39966 sg13_lv_pmos L=0.5u W=4u AS=0.76p
++ AD=1.36p PS=4.38u PD=8.68u
+M$33330 \$39972 \$39972 Vin_n \$39966 sg13_lv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$34198 Vout1v0 \$39122 \$39071 \$39921 sg13_lv_pmos L=0.13u W=16u AS=5.44p
++ AD=5.44p PS=42.88u PD=42.88u
+M$34206 Vout1v0 \$39071 \$23427 \$39921 sg13_lv_pmos L=0.13u W=54u AS=18.36p
++ AD=18.36p PS=144.72u PD=144.72u
+M$34207 \$39072 \$39126 Vout1v0 \$39966 sg13_lv_pmos L=0.13u W=16u AS=5.44p
++ AD=5.44p PS=42.88u PD=42.88u
+M$34222 \$23443 \$39072 Vout1v0 \$39966 sg13_lv_pmos L=0.13u W=54u AS=18.36p
++ AD=18.36p PS=144.72u PD=144.72u
+R$37506 \$15390 Vout1v0 ntap1 A=24p P=52u
+R$37508 \$18316 Vout0v8 ntap1 A=114p P=242u
+R$37515 \$6415 Vout1v0 ntap1 A=8p P=18u
+R$37516 \$7306 Vout1v0 ntap1 A=10p P=24u
+R$37518 \$8720 Vout1v0 ntap1 A=37.8p P=120.6u
+R$37527 \$6424 Vout1v0 ntap1 A=20p P=42u
+R$37528 \$6430 Vout1v0 ntap1 A=20p P=42u
+R$37529 \$39966 Vout1v0 ntap1 A=114p P=242u
+R$37536 \$1101 \$1103 ntap1 A=3.5p P=11.4u
+R$37537 \$1094 \$1087 ntap1 A=3.5p P=11.4u
+R$37538 \$23382 \$23385 ntap1 A=2628p P=5274u
+R$37547 \$23379 \$23384 ntap1 A=3.5p P=11.4u
+R$37548 \$23377 \$23384 ntap1 A=2628p P=5274u
+R$37557 \$1104 \$1103 ntap1 A=2628p P=5274u
+R$37566 \$39921 Vout1v0 ntap1 A=114p P=242u
+R$37573 \$18360 Vout0v8 ntap1 A=114p P=242u
+R$37580 \$17423 Vout0v8 ntap1 A=2p P=6u
+R$37581 \$14701 Vout0v8 ntap1 A=10p P=22u
+R$37582 \$14712 Vout1v0 ntap1 A=10p P=22u
+R$37583 \$23380 \$23385 ntap1 A=3.5p P=11.4u
+R$37584 \$1084 \$1087 ntap1 A=2628p P=5274u
+R$37593 \$17412 Vout1v0 ntap1 A=36p P=76u
+R$37611 \$1602 \$5763 rppd w=0.5u l=1170u ps=0 b=0 m=1
+R$37620 \$1602 vss rhigh w=0.5u l=27u ps=0 b=0 m=1
+R$37626 \$9370 \$11390 rppd w=0.5u l=972.9u ps=0 b=0 m=1
+R$37643 vss \$11390 rppd w=0.5u l=994u ps=0 b=0 m=1
+M$37652 Vin_p Vin_n vss \$1 sg13_lv_nmos L=0.13u W=777.6u AS=294.192p
++ AD=294.192p PS=3922.56u PD=3922.56u
+M$40280 Vin_n Vin_p vss \$1 sg13_lv_nmos L=0.13u W=777.6u AS=294.192p
++ AD=294.192p PS=3922.56u PD=3922.56u
+R$48020 \$1 vss ptap1 A=3531p P=7144u
+M$48036 \$6090 \$6090 vss \$1 sg13_lv_nmos L=2u W=3.3u AS=1.122p AD=1.122p
++ PS=8.64u PD=8.64u
+M$48038 vss \$6090 \$8721 \$1 sg13_lv_nmos L=2u W=3.3u AS=1.122p AD=1.122p
++ PS=8.64u PD=8.64u
+C$48043 \$8721 Vout1v0 cap_cmim w=2.6u l=2.6u A=6.76p P=10.4u m=1
+M$48048 vss \$14081 \$14081 \$1 sg13_lv_nmos L=10u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48049 vss \$14082 \$14082 \$1 sg13_lv_nmos L=10u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48050 vss \$15392 \$15393 \$1 sg13_lv_nmos L=0.13u W=3u AS=1.02p AD=1.02p
++ PS=6.68u PD=6.68u
+M$48051 vss \$15395 \$15394 \$1 sg13_lv_nmos L=0.13u W=3u AS=1.02p AD=1.02p
++ PS=6.68u PD=6.68u
+R$48055 \$11389 vss rppd w=0.5u l=792u ps=0 b=0 m=1
+R$48070 \$9365 \$11389 rppd w=0.5u l=1167.4u ps=0 b=0 m=1
+M$48085 Vout1v0 \$6496 \$6426 \$6424 sg13_lv_pmos L=0.5u W=40u AS=13.6p
++ AD=13.6p PS=82.72u PD=82.72u
+M$48086 Vout1v0 \$6500 \$6432 \$6430 sg13_lv_pmos L=0.5u W=40u AS=13.6p
++ AD=13.6p PS=82.72u PD=82.72u
+M$48089 \$6500 \$6500 Vout1v0 \$6430 sg13_lv_pmos L=0.5u W=40u AS=13.6p
++ AD=13.6p PS=82.72u PD=82.72u
+M$48094 Vout1v0 \$6496 \$6496 \$6424 sg13_lv_pmos L=0.5u W=40u AS=13.6p
++ AD=13.6p PS=82.72u PD=82.72u
+M$48101 vss \$5760 \$6496 \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p
++ PS=124.08u PD=124.08u
+M$48102 \$6500 \$5763 vss \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p
++ PS=124.08u PD=124.08u
+M$48103 vss \$6411 \$6432 \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p
++ PS=124.08u PD=124.08u
+M$48114 \$6426 \$6407 vss \$1 sg13_lv_nmos L=8u W=60u AS=20.4p AD=20.4p
++ PS=124.08u PD=124.08u
+M$48125 \$17413 \$16801 Vout1v0 \$17412 sg13_lv_pmos L=0.13u W=8u AS=2.12p
++ AD=2.12p PS=13.06u PD=13.06u
+M$48127 vss \$16801 \$17413 \$1 sg13_lv_nmos L=0.13u W=4u AS=1.06p AD=1.06p
++ PS=7.06u PD=7.06u
+M$48131 Vout1v0 \$16789 \$16801 \$17412 sg13_lv_pmos L=0.13u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48132 vss \$15179 \$15392 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48133 vss \$15176 \$15395 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48134 vss \$16789 \$16801 \$1 sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48135 Vout1v0 \$15471 \$14704 \$15390 sg13_lv_pmos L=0.5u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$48136 Vout1v0 \$15476 \$14707 \$15390 sg13_lv_pmos L=0.5u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$48137 \$14732 \$15474 Vout1v0 \$15390 sg13_lv_pmos L=0.5u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$48138 \$14733 \$15472 Vout1v0 \$15390 sg13_lv_pmos L=0.5u W=2u AS=0.68p
++ AD=0.68p PS=4.68u PD=4.68u
+M$48139 \$1087 Vin_p Vout0v8 \$1094 sg13_lv_pmos L=0.13u W=9u AS=3.06p AD=3.06p
++ PS=18.68u PD=18.68u
+M$48140 \$23385 Vin_n Vout1v0 \$23380 sg13_lv_pmos L=0.13u W=9u AS=3.06p
++ AD=3.06p PS=18.68u PD=18.68u
+M$48141 \$1103 Vin_n Vout0v8 \$1101 sg13_lv_pmos L=0.13u W=9u AS=3.06p AD=3.06p
++ PS=18.68u PD=18.68u
+M$48142 \$23384 Vin_p Vout1v0 \$23379 sg13_lv_pmos L=0.13u W=9u AS=3.06p
++ AD=3.06p PS=18.68u PD=18.68u
+M$48143 vss \$17425 \$18324 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48144 vss \$16784 \$39970 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48145 vss \$17425 \$18364 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48146 vss \$16784 \$39930 \$1 sg13_lv_nmos L=0.13u W=0.5u AS=0.17p AD=0.17p
++ PS=1.68u PD=1.68u
+M$48163 \$1087 Vout0v8 Vin_p \$1094 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p
++ PS=6.68u PD=6.68u
+M$48164 Vout1v0 \$15395 \$15394 \$15390 sg13_lv_pmos L=0.13u W=6u AS=2.04p
++ AD=2.04p PS=13.36u PD=13.36u
+M$48166 \$1103 Vout0v8 Vin_n \$1101 sg13_lv_pmos L=0.13u W=3u AS=1.02p AD=1.02p
++ PS=6.68u PD=6.68u
+M$48167 \$23385 Vout1v0 Vin_n \$23380 sg13_lv_pmos L=0.13u W=3u AS=1.02p
++ AD=1.02p PS=6.68u PD=6.68u
+M$48168 Vout1v0 \$15392 \$15393 \$15390 sg13_lv_pmos L=0.13u W=6u AS=2.04p
++ AD=2.04p PS=13.36u PD=13.36u
+M$48170 \$23384 Vout1v0 Vin_p \$23379 sg13_lv_pmos L=0.13u W=3u AS=1.02p
++ AD=1.02p PS=6.68u PD=6.68u
+M$48171 Vout1v0 \$14082 \$14082 \$14712 sg13_lv_pmos L=10u W=5u AS=1.7p AD=1.7p
++ PS=16.8u PD=16.8u
+M$48181 Vout0v8 \$14081 \$14081 \$14701 sg13_lv_pmos L=10u W=9.5u AS=3.23p
++ AD=3.23p PS=31.92u PD=31.92u
+M$48200 Vout1v0 \$6426 \$6090 \$7306 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p
++ PS=16.08u PD=16.08u
+M$48201 \$6090 \$6432 Vout1v0 \$7306 sg13_lv_pmos L=2u W=6u AS=2.04p AD=2.04p
++ PS=16.08u PD=16.08u
+M$48207 Vout1v0 \$6426 \$6474 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48210 \$6444 \$6432 Vout1v0 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48211 \$5760 \$6426 Vout1v0 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48212 Vout1v0 \$6432 \$5763 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48213 Vout1v0 Vout1v0 Vout1v0 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48214 Vout1v0 \$6426 \$6449 \$7306 sg13_lv_pmos L=2u W=1u AS=0.34p AD=0.34p
++ PS=2.68u PD=2.68u
+M$48218 \$8721 \$8721 Vout1v0 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48219 Vout1v0 \$8721 \$8700 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48220 Vout1v0 \$8721 \$8699 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48222 \$8697 \$8721 Vout1v0 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48225 \$9365 \$8721 Vout1v0 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48227 \$9358 \$8721 Vout1v0 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48229 Vout1v0 \$8721 \$9351 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48230 \$9370 \$8721 Vout1v0 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+M$48239 Vout1v0 \$8721 \$9357 \$8720 sg13_lv_pmos L=2u W=6.6u AS=2.244p
++ AD=2.244p PS=17.28u PD=17.28u
+R$48284 vss \$5760 rppd w=0.5u l=2110u ps=0 b=0 m=1
+C$48298 \$6090 vss cap_cmim w=18u l=18u A=324p P=72u m=9
+M$48307 vss \$16789 \$16790 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48308 vss \$16790 \$16791 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48309 vss \$16796 \$16797 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48310 vss \$16791 \$16792 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48311 vss \$16797 \$16798 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48312 vss \$16792 \$16793 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48313 vss \$16793 \$16794 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48314 vss \$16798 \$16799 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48315 vss \$16794 \$16795 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48316 vss \$16795 \$16796 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48317 vss \$16799 \$16789 \$1 sg13_lv_nmos L=1u W=2u AS=0.68p AD=0.68p
++ PS=4.68u PD=4.68u
+M$48318 Vout1v0 \$16789 \$16790 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48319 Vout1v0 \$16790 \$16791 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48320 Vout1v0 \$16791 \$16792 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48321 Vout1v0 \$16792 \$16793 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48322 Vout1v0 \$16793 \$16794 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48323 Vout1v0 \$16794 \$16795 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48324 Vout1v0 \$16795 \$16796 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48325 Vout1v0 \$16796 \$16797 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48326 Vout1v0 \$16797 \$16798 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48327 Vout1v0 \$16798 \$16799 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+M$48328 Vout1v0 \$16799 \$16789 \$17412 sg13_lv_pmos L=1u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u
+.ENDS top_integration_SSDOR
