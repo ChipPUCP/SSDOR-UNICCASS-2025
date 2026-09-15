@@ -144,29 +144,6 @@ The inclusion of an integrated **CTAT/PTAT reference and bias circuit** further 
 
 ---
 
-## Repository Structure
-
-```text
-SSDOR-UNICCASS-2025/
-│
-├── images/
-│   ├── SSDOR_1.2V_v3.svg
-│   ├── CTAT_PTAT.svg
-│   └── top_ss_1.png
-│
-├── schematic/
-│
-├── simulation/
-│
-├── layout/
-│
-├── verification/
-│
-└── README.md
-```
-
----
-
 ## Program
 
 This project was developed as part of the **UNICCASS 2025 program**, an initiative of the **IEEE Circuits and Systems Society (IEEE CAS)** focused on providing students with hands-on experience in integrated circuit design and semiconductor technologies.
@@ -178,4 +155,5 @@ This project was developed as part of the **UNICCASS 2025 program**, an initiati
 **UNICCASS 2025 — SSDOR Project Team**
 
 * Rodrigo Marin
+* Marcos Leon
 * Rodrigo Herrera
