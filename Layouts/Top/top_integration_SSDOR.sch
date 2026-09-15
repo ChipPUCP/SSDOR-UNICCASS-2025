@@ -1,8 +1,9 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 1080 -100 1080 -70 {lab=vss}
 N 1070 -70 1080 -70 {lab=vss}
@@ -54,32 +55,32 @@ N 1130 -1380 1130 -1310 {lab=Vout0v8}
 N 1070 -1380 1070 -1310 {lab=Vout1v0}
 N 1400 -220 1430 -220 {lab=Vin_n}
 N 800 -220 840 -220 {lab=Vin_p}
-C {/shared/designs/Layouts/PMOS/PMOS_w_bodybias_w_driver.sym} 750 -340 0 0 {name=x1}
-C {/shared/designs/Layouts/PMOS/nmos_array_x2.sym} 1120 -160 0 0 {name=x2}
+C {PMOS/PMOS_w_bodybias_w_driver.sym} 750 -340 0 0 {name=x1}
+C {PMOS/nmos_array_x2.sym} 1120 -160 0 0 {name=x2}
 C {iopin.sym} 1070 -70 0 1 {name=p5 lab=vss}
 C {lab_pin.sym} 1170 -70 0 1 {name=p30 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 870 -320 0 1 {name=p1 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 810 -320 0 0 {name=p2 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 720 -420 0 0 {name=p3 sig_type=std_logic lab=S1}
 C {lab_pin.sym} 1520 -860 0 1 {name=p4 sig_type=std_logic lab=Ibias_1}
-C {/shared/designs/Layouts/PMOS/PMOS_w_bodybias_w_driver.sym} 1490 -340 0 1 {name=x3}
+C {PMOS/PMOS_w_bodybias_w_driver.sym} 1490 -340 0 1 {name=x3}
 C {lab_pin.sym} 1370 -320 0 0 {name=p6 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 1430 -320 0 1 {name=p7 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 1520 -420 0 1 {name=p8 sig_type=std_logic lab=S1}
 C {lab_pin.sym} 1520 -440 0 1 {name=p9 sig_type=std_logic lab=Ibias_2}
 C {iopin.sym} 1750 -530 0 0 {name=p10 lab=Vout0v8}
-C {/shared/designs/Layouts/PMOS/PMOS_w_bodybias_w_driver.sym} 750 -760 0 0 {name=x4}
+C {PMOS/PMOS_w_bodybias_w_driver.sym} 750 -760 0 0 {name=x4}
 C {lab_pin.sym} 870 -740 0 1 {name=p11 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 810 -740 0 0 {name=p12 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 720 -840 0 0 {name=p13 sig_type=std_logic lab=S2}
 C {lab_pin.sym} 720 -860 0 0 {name=p14 sig_type=std_logic lab=Ibias_3}
-C {/shared/designs/Layouts/PMOS/PMOS_w_bodybias_w_driver.sym} 1490 -760 0 1 {name=x5}
+C {PMOS/PMOS_w_bodybias_w_driver.sym} 1490 -760 0 1 {name=x5}
 C {lab_pin.sym} 1370 -740 0 0 {name=p15 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 1430 -740 0 1 {name=p16 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 1520 -840 0 1 {name=p17 sig_type=std_logic lab=S2}
 C {lab_pin.sym} 720 -440 0 0 {name=p18 sig_type=std_logic lab=Ibias_4}
 C {iopin.sym} 1750 -950 0 0 {name=p19 lab=Vout1v0}
-C {/shared/designs/Layouts/digital_w_ibias/digital_w_ibias.sym} 1110 -1190 0 0 {name=x6}
+C {digital_w_ibias/digital_w_ibias.sym} 1110 -1190 0 0 {name=x6}
 C {lab_pin.sym} 1070 -1040 0 0 {name=p20 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 1130 -1040 0 1 {name=p21 sig_type=std_logic lab=pw_conn}
 C {lab_pin.sym} 1310 -1230 0 1 {name=p22 sig_type=std_logic lab=Ibias_4}
